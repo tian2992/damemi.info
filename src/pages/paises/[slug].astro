@@ -1,0 +1,194 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { countries, getCountry } from "../../data/countries";
+import { kindLabel, languageLabel, lawStatusLabel, regionLabel, topicLabel } from "../../data/labels";
+
+export function getStaticPaths() {
+  return countries.map((country) => ({ params: { slug: country.slug } }));
+}
+
+const country = getCountry(Astro.params.slug);
+if (!country) {
+  throw new Error("País no encontrado");
+}
+
+const related = countries.filter(
+  (item) => item.region === country.region && item.slug !== country.slug,
+);
+const description = `${country.name}: ${country.deadlineShort}. ${country.summary}`;
+---
+
+<Layout title={country.name} description={description}>
+  <article class="mx-auto grid max-w-6xl gap-10 px-4 py-10 lg:grid-cols-[minmax(0,1fr)_300px]">
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-[0.16em] text-gold">
+        <a class="hover:text-terra-deep" href="/paises">Países</a>
+        <span aria-hidden="true"> · </span>
+        {regionLabel(country.region)}
+      </p>
+      <div class="mt-3 flex items-start gap-4">
+        <span class="mt-1 inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-line bg-card font-serif text-lg" aria-hidden="true">
+          {country.iso}
+        </span>
+        <div>
+          <h1 class="font-serif text-5xl tracking-tight">{country.name}</h1>
+          <p class="mt-3 max-w-2xl text-lg leading-relaxed text-ink-soft">{country.summary}</p>
+        </div>
+      </div>
+      <ul class="mt-5 flex flex-wrap gap-2 text-sm">
+        <li class="rounded-full bg-ink px-3 py-1 font-semibold text-paper">{lawStatusLabel(country.lawStatus)}</li>
+        <li class="rounded-full border border-line bg-card px-3 py-1 font-semibold">{country.deadlineShort}</li>
+        <li class="rounded-full border border-line bg-card px-3 py-1">Solicitud en {languageLabel(country.requestLanguage)}</li>
+      </ul>
+
+      <section class="mt-10" id="ficha">
+        <h2 class="font-serif text-3xl">Ficha</h2>
+        <dl class="mt-4 divide-y divide-line border-y border-line">
+          <div class="grid gap-1 py-3 sm:grid-cols-[180px_1fr]">
+            <dt class="text-sm font-semibold text-muted">Constitución</dt>
+            <dd>{country.constitution}</dd>
+          </div>
+          <div class="grid gap-1 py-3 sm:grid-cols-[180px_1fr]">
+            <dt class="text-sm font-semibold text-muted">Norma</dt>
+            <dd>
+              {country.lawName}
+              {country.lawUrl && (
+                <a class="mt-1 block font-semibold text-teal underline" href={country.lawUrl}>Ver la fuente</a>
+              )}
+            </dd>
+          </div>
+          <div class="grid gap-1 py-3 sm:grid-cols-[180px_1fr]">
+            <dt class="text-sm font-semibold text-muted">Quién responde</dt>
+            <dd>{country.obligated}</dd>
+          </div>
+          <div class="grid gap-1 py-3 sm:grid-cols-[180px_1fr]">
+            <dt class="text-sm font-semibold text-muted">Plazo</dt>
+            <dd>{country.deadline}</dd>
+          </div>
+          <div class="grid gap-1 py-3 sm:grid-cols-[180px_1fr]">
+            <dt class="text-sm font-semibold text-muted">Prórroga</dt>
+            <dd>{country.extension}</dd>
+          </div>
+          <div class="grid gap-1 py-3 sm:grid-cols-[180px_1fr]">
+            <dt class="text-sm font-semibold text-muted">Silencio</dt>
+            <dd>{country.silence}</dd>
+          </div>
+          <div class="grid gap-1 py-3 sm:grid-cols-[180px_1fr]">
+            <dt class="text-sm font-semibold text-muted">Si te niegan</dt>
+            <dd>{country.appeal}</dd>
+          </div>
+          <div class="grid gap-1 py-3 sm:grid-cols-[180px_1fr]">
+            <dt class="text-sm font-semibold text-muted">Quién puede pedir</dt>
+            <dd>{country.whoCanRequest}</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="mt-10" id="pasos">
+        <h2 class="font-serif text-3xl">Cómo pedirla</h2>
+        <ol class="mt-4 list-decimal space-y-3 pl-5 text-ink-soft">
+          {country.steps.map((step) => <li class="pl-1 leading-relaxed">{step}</li>)}
+        </ol>
+        <h3 class="mt-8 font-serif text-2xl">Canales</h3>
+        <ul class="mt-3 list-disc space-y-1 pl-5 text-ink-soft">
+          {country.channels.map((channel) => <li>{channel}</li>)}
+        </ul>
+      </section>
+
+      <section class="mt-10" id="consejos">
+        <h2 class="font-serif text-3xl">En la práctica</h2>
+        <ul class="mt-4 space-y-3">
+          {
+            country.tips.map((tip) => (
+              <li class="rounded-md border border-line bg-card px-4 py-3 leading-relaxed text-ink-soft">{tip}</li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <section class="mt-10" id="reservas">
+        <h2 class="font-serif text-3xl">Reservas frecuentes</h2>
+        <p class="mt-2 text-sm text-muted">No son una lista cerrada ni un consejo para clasificar. Son los límites que más se invocan.</p>
+        <ul class="mt-4 list-disc space-y-2 pl-5 text-ink-soft">
+          {country.exemptions.map((item) => <li>{item}</li>)}
+        </ul>
+      </section>
+
+      <section class="mt-10" id="datos">
+        <h2 class="font-serif text-3xl">Dónde están los datos</h2>
+        <ul class="mt-4 space-y-3">
+          {
+            country.resources.map((resource) => (
+              <li class="rounded-md border border-line bg-card p-4" id={resource.id}>
+                <div class="flex flex-wrap items-baseline justify-between gap-2">
+                  <a class="font-serif text-2xl text-ink underline decoration-line underline-offset-4 hover:decoration-terra" href={resource.url}>
+                    {resource.name}
+                  </a>
+                  <span class="text-xs font-semibold uppercase tracking-wider text-muted">{kindLabel(resource.kind)}</span>
+                </div>
+                <p class="mt-2 text-sm leading-relaxed text-ink-soft">{resource.description}</p>
+                <p class="mt-2 text-xs text-muted">{resource.publisher} · {resource.topics.map((topic) => topicLabel(topic)).join(" · ")}</p>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <section class="mt-10 rounded-md border border-terra/30 bg-[#f8efe8] p-5" id="nota">
+        <h2 class="font-serif text-2xl">Contexto</h2>
+        <p class="mt-2 leading-relaxed text-ink-soft">{country.notes}</p>
+      </section>
+
+      <section class="mt-10" id="fuentes">
+        <h2 class="font-serif text-3xl">Fuentes</h2>
+        <ul class="mt-4 space-y-2 text-sm">
+          {
+            country.sources.map((source) => (
+              <li>
+                <a class="font-semibold text-teal underline" href={source.url}>{source.label}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      {
+        related.length > 0 && (
+          <section class="mt-12">
+            <h2 class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">También en {regionLabel(country.region)}</h2>
+            <ul class="mt-3 flex flex-wrap gap-2">
+              {related.map((item) => (
+                <li>
+                  <a class="rounded-full border border-line bg-card px-3 py-1 text-sm font-semibold hover:border-ink" href={`/paises/${item.slug}`}>
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+    </div>
+
+    <aside class="no-print h-fit rounded-md border border-line bg-card p-5 lg:sticky lg:top-28">
+      <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">Plazo</p>
+      <p class="mt-1 font-serif text-3xl italic leading-tight text-terra-deep">{country.deadlineShort}</p>
+      <p class="mt-4 text-sm leading-relaxed text-ink-soft">{country.oversight}</p>
+      {
+        country.requestPortalUrl ? (
+          <a class="mt-5 block rounded-md bg-ink px-4 py-2.5 text-center text-sm font-semibold text-paper hover:bg-teal" href={country.requestPortalUrl}>
+            Ir a {country.requestPortalName}
+          </a>
+        ) : (
+          <p class="mt-5 rounded-md border border-line px-3 py-2 text-sm">{country.requestPortalName}</p>
+        )
+      }
+      <a class="mt-2 block rounded-md border border-ink px-4 py-2.5 text-center text-sm font-semibold hover:bg-paper-deep" href={`/plantilla?pais=${country.slug}`}>
+        Armar la carta
+      </a>
+      <p class="mt-4 text-xs leading-relaxed text-muted">
+        Confirma el canal en el sitio oficial. Esta ficha no presenta la solicitud por ti.
+      </p>
+    </aside>
+  </article>
+</Layout>

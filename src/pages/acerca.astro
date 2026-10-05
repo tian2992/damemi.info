@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { countries } from "../data/countries";
+import { allResources } from "../data/catalog";
+import { site } from "../data/site";
+---
+
+<Layout
+  title="Acerca de"
+  description="Qué es damemi.info, cómo se armó el directorio y qué no hace este sitio."
+>
+  <article class="prose-guide mx-auto max-w-3xl px-4 py-10">
+    <p class="text-xs font-semibold uppercase tracking-[0.16em] text-gold">Acerca de</p>
+    <h1 class="mt-2 font-serif text-4xl tracking-tight text-ink sm:text-5xl">Qué es damemi</h1>
+    <p>
+      damemi sale de «dame mi»: la información pública no es un favor del funcionario. Este sitio reúne, en un solo directorio, cómo pedirla en América Latina y el Caribe y dónde están los datos que el Estado ya publicó.
+    </p>
+    <p>
+      Cubre {countries.length} países y {allResources().length} recursos. La interfaz está en español. La carta de Belice sale en inglés, la de Brasil en portugués y la de Haití en francés, porque así trabaja la administración.
+    </p>
+    <h2>Cómo se armó</h2>
+    <p>
+      Las fichas se cerraron el {site.updatedLabel}. Se contrastaron con textos oficiales y portales en línea: diarios y gacetas, órganos de acceso, catálogos de datos y sistemas de compras. Cuando una institución cambió de nombre, la ficha usa el nombre actual. México ya no pasa por el INAI. Perú lista al OECE, no al antiguo OSCE. Costa Rica tiene ley marco desde noviembre de 2024. Bolivia, al 27 de agosto de 2026, tenía un proyecto aprobado por el Senado y todavía no una ley promulgada.
+    </p>
+    <p>
+      No se inventaron portales para llenar huecos. Si un país no tiene trámite útil, la ficha lo dice. Algunos sitios oficiales bloquean visitas automatizadas o tienen el certificado vencido; cuando eso importa para no dejar un dato personal en el dominio equivocado, está escrito en la ficha.
+    </p>
+    <h2>Qué no es</h2>
+    <p>
+      No es asesoría legal, no presenta solicitudes y no guarda lo que escribes en la plantilla. No sustituye la ley de una provincia, un estado o un municipio cuando el régimen nacional no les aplica. Argentina es el caso más claro: la Ley 27.275 es del Estado nacional.
+    </p>
+    <p>
+      Los plazos son los de la norma citada, no una promesa de que la oficina cumpla. Antes de presentar, abre el enlace de la ficha y confirma que el canal sigue en pie.
+    </p>
+    <h2>Qué revisar si una ficha envejece</h2>
+    <ul>
+      <li>Si Bolivia promulga la ley, el plazo y el recurso dejan de ser «sin ley».</li>
+      <li>Si un estado mexicano conserva o elimina su instituto local, el recurso de ese estado cambia.</li>
+      <li>Si un dominio de compras se muda, manda el de la ficha y no un buscador.</li>
+    </ul>
+    <p>
+      El código es un sitio estático. Los datos viven en <span class="font-semibold text-ink">src/data</span>. Una ficha nueva es un objeto más en esa carpeta, no un panel de administración.
+    </p>
+  </article>
+</Layout>

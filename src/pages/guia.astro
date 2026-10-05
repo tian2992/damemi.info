@@ -1,0 +1,150 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { countries } from "../data/countries";
+import { regions } from "../data/types";
+import { regionLabel } from "../data/labels";
+
+const rows = regions.flatMap((region) => countries.filter((country) => country.region === region.id));
+---
+
+<Layout
+  title="Cómo pedir información"
+  description="Guía práctica para redactar una petición de acceso a la información pública en América Latina: qué pedir, plazos, silencio y recursos."
+>
+  <article class="mx-auto max-w-3xl px-4 py-10">
+    <p class="text-xs font-semibold uppercase tracking-[0.16em] text-gold">Guía</p>
+    <h1 class="mt-2 font-serif text-4xl tracking-tight sm:text-5xl">Cómo hacer una petición de acceso a la información</h1>
+    <p class="mt-4 text-lg leading-relaxed text-ink-soft">
+      El nombre cambia —solicitud, petición, pedido, derecho de petición— y el plazo también. La tarea es la misma: pedirle a una autoridad un documento que ya tiene, sin explicar tu vida.
+    </p>
+
+    <nav class="mt-6 rounded-md border border-line bg-card p-4 text-sm" aria-label="En esta guía">
+      <ol class="grid gap-1 sm:grid-cols-2">
+        <li><a class="text-teal underline" href="#que-es">Qué es</a></li>
+        <li><a class="text-teal underline" href="#activa-pasiva">Activa y pasiva</a></li>
+        <li><a class="text-teal underline" href="#antes">Antes de pedir</a></li>
+        <li><a class="text-teal underline" href="#redactar">Cómo redactar</a></li>
+        <li><a class="text-teal underline" href="#plazos">Plazos</a></li>
+        <li><a class="text-teal underline" href="#recursos">Si te niegan</a></li>
+        <li><a class="text-teal underline" href="#datos-abiertos">Datos abiertos</a></li>
+        <li><a class="text-teal underline" href="#errores">Errores frecuentes</a></li>
+      </ol>
+    </nav>
+
+    <div class="prose-guide">
+      <h2 id="que-es">Qué estás pidiendo</h2>
+      <p>
+        Una petición de acceso pide <strong>información que la autoridad ya produjo, recibió o guarda</strong>: un contrato, una ejecución presupuestaria, un permiso, un padrón, un informe que exista, un correo institucional, un acta. No es una denuncia, no es una consulta legal y no es un encargo para que investiguen un hecho y te escriban un ensayo.
+      </p>
+      <p>
+        En la región el derecho suele reconocerse a cualquier persona. No hace falta ser periodista, abogado ni residente. En la mayoría de las leyes vigentes <strong>no tienes que decir para qué quieres la información</strong>. Si el formulario te lo pregunta, puedes dejar el motivo en blanco o escribir que la ley no lo exige.
+      </p>
+
+      <h2 id="activa-pasiva">Transparencia activa y transparencia pasiva</h2>
+      <p>
+        La transparencia activa es lo que el organismo debe publicar solo: sueldos de altos cargos, contratos, organigrama, presupuesto. La pasiva es la solicitud. Chile usa esos nombres en la Ley 20.285. Otros países dicen «publicación oficiosa» o «obligaciones de transparencia».
+      </p>
+      <p>
+        Empieza por la activa. Si el documento ya está completo en el portal, una solicitud solo te hace perder el plazo de otra cosa. Si está publicado a medias —un contrato sin anexos, un monto sin el acto— pide la pieza que falta y cita la publicación.
+      </p>
+
+      <h2 id="antes">Antes de redactar</h2>
+      <ol>
+        <li>Mira la ficha del país en este directorio y anota el plazo y el canal.</li>
+        <li>Busca en el <a href="/datos">catálogo de datos</a>: compras, presupuesto, estadística, datos abiertos.</li>
+        <li>Identifica a la autoridad que tiene el documento, no a «el gobierno» en abstracto.</li>
+        <li>Anota número de contrato, programa, año o dirección. Mientras más localizable, menos pretextos.</li>
+      </ol>
+
+      <h2 id="redactar">Cómo redactar</h2>
+      <p>Una solicitud completa cabe en una página. Lleva:</p>
+      <ul>
+        <li>Tu nombre y un medio de notificación. Algunos países piden identificación. No mandes más datos de los que la ley exige.</li>
+        <li>La autoridad concreta.</li>
+        <li>La norma del país, si la tienes a mano. La <a href="/plantilla">plantilla</a> ya la cita.</li>
+        <li>Una lista de documentos o registros, con periodo.</li>
+        <li>El formato: archivo abierto, no un PDF escaneado, cuando el registro ya exista así.</li>
+        <li>El pedido de acuse con fecha y número de folio.</li>
+      </ul>
+      <p>
+        Pide documentos existentes. «Todos los contratos de obra de 2024 del ministerio, con anexos y montos» es una solicitud. «Explíquenme por qué la obra está mal» es una opinión. «Elabórenme un estudio de impacto» es un trabajo nuevo, y varias leyes permiten rechazarlo.
+      </p>
+      <p>
+        Si el expediente mezcla gestión pública y datos personales de terceros, pide la <strong>versión pública</strong>: que tachen teléfonos, domicilios o salud, y entreguen el resto. La reserva de un dato no cierra el documento entero.
+      </p>
+
+      <h2 id="plazos">Plazos, días hábiles y silencio</h2>
+      <p>
+        Día hábil significa que no cuentas sábados, domingos ni feriados de esa administración. Día calendario significa que sí. Panamá, con la Ley 6 de 2002, usa 30 días calendario. La mayoría de las leyes más nuevas hablan de días hábiles.
+      </p>
+      <p>
+        El silencio, en esta región, <strong>casi nunca te entrega la información</strong>. Te habilita el recurso, la tutela o el amparo. Guarda la fecha de recepción: sin acuse no puedes probar cuándo empezó a correr el plazo.
+      </p>
+      <p>
+        Una prórroga válida se avisa antes de que venza el plazo original y dice por qué. Una prórroga genérica, o avisada al día siguiente del vencimiento, es un incumplimiento más.
+      </p>
+
+      <div class="not-prose mt-6 overflow-x-auto">
+        <table class="w-full min-w-[640px] border-collapse text-left text-sm">
+          <caption class="mb-2 text-left text-xs font-semibold uppercase tracking-wider text-muted">Plazo de la primera respuesta</caption>
+          <thead class="border-b border-ink text-xs uppercase tracking-wider text-muted">
+            <tr>
+              <th class="py-2 pr-3 font-semibold" scope="col">País</th>
+              <th class="py-2 pr-3 font-semibold" scope="col">Región</th>
+              <th class="py-2 font-semibold" scope="col">Plazo</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              rows.map((country) => (
+                <tr class="border-b border-line">
+                  <th class="py-2 pr-3 font-medium" scope="row">
+                    <a class="underline decoration-line underline-offset-2" href={`/paises/${country.slug}`}>{country.name}</a>
+                  </th>
+                  <td class="py-2 pr-3 text-muted">{regionLabel(country.region)}</td>
+                  <td class="py-2">{country.deadlineShort}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="recursos">Si niegan el acceso o no responden</h2>
+      <p>Lee la ficha del país antes de elegir el recurso. El mapa real es este:</p>
+      <ul>
+        <li><strong>Órgano garante.</strong> Chile (Consejo para la Transparencia), Uruguay (UAIP), Honduras y El Salvador (sus institutos), Argentina (la Agencia), Brasil (la CGU en el Ejecutivo federal), República Dominicana (SAIP y DIGEIG).</li>
+        <li><strong>México, desde 2025.</strong> El INAI ya no existe. En el Ejecutivo federal el recurso de revisión lo ve Transparencia para el Pueblo. En otros poderes y en varios estados, una contraloría. El plazo del recurso sigue siendo corto: 15 días hábiles.</li>
+        <li><strong>Juez, sin órgano intermedio.</strong> Costa Rica manda al amparo. Ecuador tiene la acción de acceso del artículo 91. Colombia usa la tutela porque el acceso y el derecho de petición son fundamentales.</li>
+        <li><strong>Sin vía útil.</strong> Cuba, Haití, Venezuela y, mientras no se promulgue la ley, Bolivia. La ficha lo dice para que no busques un botón que no está.</li>
+      </ul>
+      <p>
+        El recurso suele tener un plazo más corto que la solicitud. No lo dejes «para la semana que viene». Adjunta la solicitud, el acuse y la respuesta, si hubo.
+      </p>
+
+      <h2 id="datos-abiertos">Cuándo alcanza con el dato abierto</h2>
+      <p>
+        Un dato abierto se descarga sin identificarte, en un formato que una hoja de cálculo puede abrir, y con permiso de reutilización. Un PDF escaneado en una página de transparencia no es eso, aunque sea público.
+      </p>
+      <p>
+        Pide por la ley de acceso cuando el portal no tiene el anexo, la serie está cortada, o la autoridad tiene el registro y no lo publica. No pidas por la ley de acceso el censo que el instituto de estadística ya dejó en su sitio.
+      </p>
+      <p>
+        La <a href="https://opendatacharter.org/">Carta Internacional de Datos Abiertos</a> y la <a href="https://www.oas.org/ext/es/democracia/acceso-a-la-informacion-publica">Ley Modelo interamericana 2.0</a> son estándares regionales, no leyes de tu país. Sirven para argumentar, no para reemplazar el artículo local.
+      </p>
+
+      <h2 id="errores">Errores que retrasan la respuesta</h2>
+      <ul>
+        <li>Pedir «toda la información sobre la corrupción».</li>
+        <li>Mandar la solicitud a la institución equivocada y no guardar el rechazo.</li>
+        <li>Olvidar el periodo. «Los contratos» son todos los contratos desde que existe el organismo.</li>
+        <li>Explicar de más: el motivo no mejora el derecho y a veces lo complica.</li>
+        <li>Contar días corridos cuando la ley dice hábiles, o al revés.</li>
+        <li>Usar un portal que ya no existe. En México la puerta sigue siendo la Plataforma Nacional, no una página del INAI. En Brasil es Fala.BR. En Perú las contrataciones están en el OECE.</li>
+      </ul>
+      <p>
+        Cuando la carta esté clara, <a href="/plantilla">ármala con la ley del país</a> y preséntala por el canal de la ficha. Este sitio no la envía.
+      </p>
+    </div>
+  </article>
+</Layout>

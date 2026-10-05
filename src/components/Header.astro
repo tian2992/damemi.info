@@ -1,0 +1,74 @@
+---
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+const links = [
+  { href: "/paises", label: "Países" },
+  { href: "/datos", label: "Datos abiertos" },
+  { href: "/guia", label: "Cómo pedir" },
+  { href: "/plantilla", label: "Plantilla" },
+];
+function current(href: string) {
+  return path === href || path.startsWith(`${href}/`);
+}
+---
+
+<header class="sticky top-0 z-40 border-b border-line/80 bg-paper/90 backdrop-blur-md">
+  <div class="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3">
+    <a href="/" class="shrink-0 leading-none">
+      <span class="font-serif text-[1.7rem] tracking-tight text-ink">dame<span class="italic text-terra">mi</span></span>
+      <span class="ml-0.5 font-sans text-sm font-semibold text-muted">.info</span>
+    </a>
+    <nav class="ml-4 hidden items-center gap-5 text-sm font-semibold md:flex" aria-label="Principal">
+      {
+        links.map((link) => (
+          <a
+            href={link.href}
+            aria-current={current(link.href) ? "page" : undefined}
+            class:list={[
+              "hover:text-terra-deep",
+              current(link.href) ? "text-terra-deep underline decoration-terra/40 underline-offset-4" : "text-ink-soft",
+            ]}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+    <form action="/buscar" method="get" role="search" class="relative ml-auto hidden w-64 lg:block" data-search-root>
+      <label class="sr-only" for="q-header">Buscar en el directorio</label>
+      <input
+        id="q-header"
+        name="q"
+        data-search-input
+        autocomplete="off"
+        placeholder="Buscar país, ley o portal"
+        class="w-full rounded-md border border-line bg-card px-3 py-2 text-sm text-ink placeholder:text-muted"
+      />
+      <div data-search-panel hidden class="absolute left-0 right-0 top-[calc(100%+0.35rem)] z-50 overflow-hidden rounded-md border border-line bg-card shadow-lg"></div>
+    </form>
+    <details class="relative ml-auto md:hidden">
+      <summary class="cursor-pointer list-none rounded-md border border-line bg-card px-3 py-2 text-sm font-semibold">Menú</summary>
+      <nav class="absolute right-0 z-50 mt-2 w-56 rounded-md border border-line bg-card p-3 shadow-lg" aria-label="Móvil">
+        {
+          links.map((link) => (
+            <a class="block py-2 font-semibold text-ink" href={link.href}>
+              {link.label}
+            </a>
+          ))
+        }
+        <a class="block py-2 font-semibold text-ink" href="/acerca">Acerca de</a>
+      </nav>
+    </details>
+  </div>
+  <form action="/buscar" method="get" role="search" class="relative mx-auto max-w-6xl px-4 pb-3 lg:hidden" data-search-root>
+    <label class="sr-only" for="q-mobile">Buscar en el directorio</label>
+    <input
+      id="q-mobile"
+      name="q"
+      data-search-input
+      autocomplete="off"
+      placeholder="Buscar país, ley, portal o tema"
+      class="w-full rounded-md border border-line bg-card px-3 py-2 text-base text-ink placeholder:text-muted"
+    />
+    <div data-search-panel hidden class="absolute left-4 right-4 top-[calc(100%-0.35rem)] z-50 overflow-hidden rounded-md border border-line bg-card shadow-lg"></div>
+  </form>
+</header>

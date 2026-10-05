@@ -1,0 +1,140 @@
+@import "@fontsource/fraunces/latin-400.css";
+@import "@fontsource/fraunces/latin-500.css";
+@import "@fontsource/fraunces/latin-600.css";
+@import "@fontsource/fraunces/latin-700.css";
+@import "@fontsource/fraunces/latin-400-italic.css";
+@import "@fontsource/fraunces/latin-600-italic.css";
+@import "@fontsource/source-sans-3/latin-400.css";
+@import "@fontsource/source-sans-3/latin-600.css";
+@import "@fontsource/source-sans-3/latin-700.css";
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Fraunces", "Iowan Old Style", Palatino, serif;
+  --font-sans: "Source Sans 3", "Source Sans Pro", "Segoe UI", sans-serif;
+  --color-paper: #f3eee4;
+  --color-paper-deep: #e6dfd0;
+  --color-card: #fbf7f0;
+  --color-ink: #1b1713;
+  --color-ink-soft: #3c362f;
+  --color-muted: #5c564e;
+  --color-line: #d5cdbf;
+  --color-terra: #b8431f;
+  --color-terra-deep: #8a3014;
+  --color-teal: #163f3a;
+  --color-teal-mid: #1f5c54;
+  --color-gold: #8d6b2f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  background-image:
+    radial-gradient(ellipse at top left, rgba(184, 67, 31, 0.07), transparent 42%),
+    linear-gradient(180deg, rgba(255, 252, 246, 0.65), transparent 320px);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-teal-mid);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: #efd3c4;
+  color: var(--color-ink);
+}
+
+.topic-chip:has(input:checked) {
+  border-color: var(--color-ink);
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.stamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-terra);
+  color: var(--color-terra-deep);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+  font-size: 0.68rem;
+  line-height: 1;
+  padding: 0.45rem 0.55rem;
+  border-radius: 2px;
+  transform: rotate(-8deg);
+}
+
+.prose-guide {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--color-ink-soft);
+}
+
+.prose-guide h2 {
+  font-family: var(--font-serif);
+  font-weight: 560;
+  font-size: 1.85rem;
+  line-height: 1.15;
+  color: var(--color-ink);
+  margin-top: 2.75rem;
+  letter-spacing: -0.02em;
+}
+
+.prose-guide h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  color: var(--color-ink);
+}
+
+.prose-guide p,
+.prose-guide ul,
+.prose-guide ol {
+  margin-top: 0.9rem;
+}
+
+.prose-guide ul,
+.prose-guide ol {
+  padding-left: 1.2rem;
+}
+
+.prose-guide li + li {
+  margin-top: 0.4rem;
+}
+
+.prose-guide a {
+  color: var(--color-teal);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.prose-guide strong {
+  color: var(--color-ink);
+  font-weight: 700;
+}
+
+@media print {
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+  }
+
+  .letter-sheet {
+    border: none !important;
+    box-shadow: none !important;
+  }
+}

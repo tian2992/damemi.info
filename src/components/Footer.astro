@@ -1,0 +1,31 @@
+---
+import { site } from "../data/site";
+---
+
+<footer class="mt-20 border-t border-line">
+  <div class="mx-auto grid max-w-6xl gap-8 px-4 py-10 md:grid-cols-[1.4fr_1fr_1fr]">
+    <div>
+      <p class="font-serif text-2xl">damemi.info</p>
+      <p class="mt-2 max-w-sm text-sm leading-relaxed text-muted">
+        Dame mi información. Un directorio cívico para encontrar datos abiertos y presentar una solicitud de acceso en América Latina y el Caribe.
+      </p>
+    </div>
+    <div class="text-sm">
+      <p class="font-semibold text-ink">Directorio</p>
+      <ul class="mt-2 space-y-1.5 text-ink-soft">
+        <li><a class="hover:text-terra-deep" href="/paises">Países y plazos</a></li>
+        <li><a class="hover:text-terra-deep" href="/datos">Catálogo de recursos</a></li>
+        <li><a class="hover:text-terra-deep" href="/guia">Cómo pedir</a></li>
+        <li><a class="hover:text-terra-deep" href="/plantilla">Plantilla de solicitud</a></li>
+      </ul>
+    </div>
+    <div class="text-sm">
+      <p class="font-semibold text-ink">Actualizado</p>
+      <p class="mt-2 text-ink-soft">{site.updatedLabel}</p>
+      <p class="mt-3 text-muted">
+        No es asesoría legal ni un sitio del Estado. Confirma el canal y el plazo en el portal oficial antes de presentar la solicitud.
+      </p>
+      <a class="mt-3 inline-block font-semibold text-teal" href="/acerca">Cómo se armó este directorio</a>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Página no encontrada" description="Esa ruta no está en el directorio de damemi.info.">
+  <div class="mx-auto max-w-xl px-4 py-20">
+    <p class="text-xs font-semibold uppercase tracking-[0.16em] text-gold">404</p>
+    <h1 class="mt-2 font-serif text-4xl tracking-tight">Esa página no está en el directorio.</h1>
+    <p class="mt-4 text-lg text-ink-soft">
+      El enlace puede ser viejo o el país puede estar bajo otro nombre. Busca por la ley, el portal o el país.
+    </p>
+    <form action="/buscar" method="get" role="search" class="mt-6">
+      <label class="sr-only" for="q-404">Buscar</label>
+      <input id="q-404" name="q" class="w-full rounded-md border border-line bg-card px-3 py-3" placeholder="País, ley o portal" />
+    </form>
+    <ul class="mt-6 space-y-2 text-sm font-semibold">
+      <li><a class="text-teal underline" href="/">Inicio</a></li>
+      <li><a class="text-teal underline" href="/paises">Países</a></li>
+      <li><a class="text-teal underline" href="/datos">Datos abiertos</a></li>
+      <li><a class="text-teal underline" href="/guia">Cómo pedir</a></li>
+    </ul>
+  </div>
+</Layout>

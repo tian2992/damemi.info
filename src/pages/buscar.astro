@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { countries } from "../data/countries";
+---
+
+<Layout
+  title="Buscar"
+  description="Busca países, leyes, portales de datos abiertos y pasos para pedir información pública."
+>
+  <div class="mx-auto max-w-3xl px-4 py-10">
+    <p class="text-xs font-semibold uppercase tracking-[0.16em] text-gold">Búsqueda</p>
+    <h1 class="mt-2 font-serif text-4xl tracking-tight">Buscar en el directorio</h1>
+    <form action="/buscar" method="get" role="search" class="relative mt-6" data-search-root>
+      <label class="sr-only" for="q-buscar">Término</label>
+      <input
+        id="q-buscar"
+        name="q"
+        data-buscar-input
+        data-search-input
+        autocomplete="off"
+        class="w-full rounded-md border border-ink/20 bg-card px-4 py-3 text-lg"
+        placeholder="País, ley, portal o tema"
+      />
+      <div data-search-panel hidden class="absolute left-0 right-0 top-full z-30 mt-2 overflow-hidden rounded-md border border-line bg-card shadow-lg"></div>
+    </form>
+    <div id="buscar-results" class="mt-8"></div>
+    <noscript>
+      <p class="mt-6 text-ink-soft">La búsqueda filtrada necesita JavaScript. Mientras tanto, el índice de países:</p>
+      <ul class="mt-3 columns-2 gap-6 text-sm">
+        {countries.map((country) => (
+          <li class="py-1">
+            <a class="font-semibold text-teal underline" href={`/paises/${country.slug}`}>{country.name}</a>
+          </li>
+        ))}
+      </ul>
+    </noscript>
+  </div>
+</Layout>
