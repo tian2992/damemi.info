@@ -31,9 +31,30 @@ npm run preview
 
 `npm run build` genera el sitio estático en `dist/`.
 
+## Publicar en GitHub Pages
+
+El dominio es [https://damemi.info](https://damemi.info). El sitio se sirve en la raíz de ese dominio: `astro.config.mjs` define `site` y no define `base`.
+
+- `public/CNAME` contiene `damemi.info`. El build lo copia a `dist/CNAME`.
+- `.github/workflows/deploy.yml` instala, construye y publica el sitio en cada push a `main`.
+
+En el repositorio de GitHub, en Settings → Pages → Build and deployment, elige Source: **GitHub Actions**. Un repositorio privado necesita un plan de GitHub que incluya Pages.
+
+En el DNS del dominio, apunta el ápice a las direcciones de GitHub Pages y `www` al sitio del usuario o de la organización:
+
+| Nombre | Tipo | Valor |
+| --- | --- | --- |
+| `damemi.info` | A | `185.199.108.153` |
+| `damemi.info` | A | `185.199.109.153` |
+| `damemi.info` | A | `185.199.110.153` |
+| `damemi.info` | A | `185.199.111.153` |
+| `www` | CNAME | `<usuario>.github.io` |
+
+Cuando el certificado esté listo, activa **Enforce HTTPS** en la misma pantalla de Pages.
+
 ## Dónde está el contenido
 
-Las fichas viven en `src/data/countries/`. Los recursos regionales están en `src/data/regional.ts`. La guía que alimenta el buscador está en `src/data/guide.ts`. Agregar un país es agregar un objeto con el mismo formato y volver a construir.
+Las fichas viven en `src/data/countries/`. Cada país es un archivo que exporta `country`; hay que importarlo en `src/data/countries/index.ts`. Los recursos regionales están en `src/data/regional.ts`. La guía que alimenta el buscador está en `src/data/guide.ts`.
 
 ## Aviso
 
