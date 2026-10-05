@@ -6,7 +6,7 @@ El sitio es estático. Está hecho con [Astro](https://astro.build/).
 
 ## Qué incluye
 
-- Fichas de 21 países: cómo presentar una solicitud, qué pasa si no responden y dónde están los datos que ya se publican.
+- Fichas de los países de la región: cómo presentar una solicitud, qué pasa si no responden y dónde están los datos que ya se publican.
 - Un catálogo filtrable de portales de datos, compras, presupuesto, estadística y ventanillas de solicitud, más recursos regionales.
 - Una guía para redactar la petición.
 - Una plantilla de carta que cita la norma del país y se arma en el navegador, sin enviar el texto a un servidor.

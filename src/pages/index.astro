@@ -24,14 +24,14 @@ const grouped = regions.map((region) => ({
       <p class="mt-5 max-w-xl text-lg leading-relaxed text-ink-soft">
         Leyes, plazos, recursos y catálogos de datos abiertos de {countries.length} países. Para quien va a presentar una solicitud, no para quien busca un discurso.
       </p>
-      <form action="/buscar" method="get" role="search" class="relative mt-7 max-w-xl" data-search-root>
+      <form action="/buscar" method="get" role="search" class="relative z-20 mt-7 max-w-xl" data-search-root>
         <label class="sr-only" for="q-home">Buscar en el directorio</label>
         <input
           id="q-home"
           name="q"
           data-search-input
           autocomplete="off"
-          placeholder="México, Ley 1712, datos abiertos, compras…"
+          placeholder="México, Ley 1712, datos…"
           class="w-full rounded-md border border-ink/20 bg-card px-4 py-3.5 text-lg text-ink shadow-sm placeholder:text-muted sm:pr-28"
         />
         <button class="mt-3 rounded-md bg-ink px-4 py-2.5 text-sm font-semibold text-paper hover:bg-teal sm:absolute sm:right-1.5 sm:top-1.5 sm:mt-0" type="submit">

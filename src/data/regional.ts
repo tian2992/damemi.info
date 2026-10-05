@@ -4,10 +4,10 @@ export const regionalResources: Resource[] = [
   {
     id: "reg-rta",
     name: "Red de Transparencia y Acceso a la Información",
-    url: "https://redrta.org/",
+    url: "https://rtared.org/",
     publisher: "RTA",
     description:
-      "Red de órganos garantes de acceso a la información de Iberoamérica. Publica estándares, informes y el trabajo compartido de los institutos que sí existen.",
+      "Red de órganos garantes de acceso a la información. El sitio vigente es rtared.org. redrta.org ya no es la red.",
     topics: ["transparencia", "justicia"],
     kind: "red",
     countryId: "regional",
@@ -113,11 +113,11 @@ export const regionalResources: Resource[] = [
   },
   {
     id: "reg-bid",
-    name: "BID Números para el Desarrollo",
-    url: "https://data.iadb.org/",
+    name: "Datos abiertos del BID",
+    url: "https://data.iadb.org/es/",
     publisher: "Banco Interamericano de Desarrollo",
     description:
-      "Datos de desarrollo de los países miembros del BID, con indicadores sociales, económicos y de infraestructura.",
+      "Catálogo abierto del BID, con indicadores sociales, económicos y de infraestructura. «Números para el Desarrollo» quedó como librería, no como el tablero principal.",
     topics: ["economia", "estadistica", "educacion", "salud"],
     kind: "datos",
     countryId: "regional",
@@ -172,7 +172,7 @@ export const regionalResources: Resource[] = [
     url: "https://abrelatam.org/",
     publisher: "Abrelatam / Condatos",
     description:
-      "Encuentro regional de la comunidad de datos abiertos y gobierno abierto. El sitio reúne ediciones y materiales de la red.",
+      "Encuentro regional de datos abiertos. La edición de 2025 fue en La Paz y la de 2026 está convocada del 7 al 9 de octubre en Ciudad de Guatemala.",
     topics: ["transparencia"],
     kind: "red",
     countryId: "regional",

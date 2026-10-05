@@ -8,42 +8,48 @@ export const sur: Country[] = [
     region: "brasil",
     lawStatus: "vigente",
     summary:
-      "La Lei de Acesso à Informação, Lei 12.527, obliga a los órganos públicos a responder en 20 días, prorrogables por 10. El canal del Ejecutivo federal es Fala.BR, de la Controladoria-Geral da União. Los datos abiertos están en dados.gov.br y el gasto, en el Portal da Transparência.",
+      "La Lei de Acesso à Informação, Lei 12.527, obliga a los órganos públicos a responder en 20 días, prorrogables por 10. Desde el 30 de junio de 2026 los pedidos nuevos del Ejecutivo federal entran por Informa.BR, de la Controladoria-Geral da União. Los datos abiertos están en dados.gov.br y el gasto, en el Portal da Transparência.",
     constitution:
       "Artículo 5, inciso XXXIII, de la Constitución: toda persona tiene derecho a recibir de los órganos públicos información de su interés particular o de interés colectivo, que se prestará en el plazo de la ley, salvo lo imprescindible para la seguridad de la sociedad y del Estado.",
     lawName: "Lei nº 12.527, de 18 de novembro de 2011 (Lei de Acesso à Informação).",
     lawUrl: "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm",
     obligated:
       "Órganos públicos de los tres poderes y de los niveles federal, estatal y municipal, tribunales de cuentas, y entidades privadas sin fines de lucro que reciban recursos públicos, en lo que toca a esos recursos.",
-    deadline: "20 días, prorrogables por 10 más.",
-    deadlineShort: "20 días + 10",
+    deadline:
+      "20 días, prorrogables por 10 más. La CGU los cuenta como días corridos, según la Lei 9.784/1999: se excluye el día del aviso y, si el vencimiento cae en fin de semana, feriado o jornada corta, pasa al día hábil siguiente.",
+    deadlineShort: "20 días corridos + 10",
     deadlineDays: 20,
     extension:
-      "Una única prórroga de 10 días, comunicada por escrito y motivada, dentro del plazo original.",
+      "Una única prórroga de 10 días, comunicada con razones al solicitante antes de que termine el plazo original.",
     silence:
-      "No responder permite recurrir. El silencio no entrega la información.",
+      "No hay silencio positivo. A partir del día 30 se puede registrar la falta de respuesta ante la autoridad de monitoreo del órgano y, si eso falla, quejarse ante la CGU.",
     appeal:
-      "Recurso ante la autoridad superior dentro de los 10 días siguientes a la respuesta o al vencimiento. En el Ejecutivo federal la instancia siguiente llega a la Controladoria-Geral da União, por Fala.BR. Después queda la vía judicial.",
+      "Recurso dentro de los 10 días siguientes a la respuesta. En el Ejecutivo federal las instancias suben del superior jerárquico a la máxima autoridad del órgano y luego a la CGU, por Informa.BR. Después queda la vía judicial.",
     oversight:
       "Controladoria-Geral da União, para el Poder Ejecutivo federal. Los estados, municipios y otros poderes tienen sus propias autoridades de seguimiento.",
-    oversightUrl: "https://falabr.cgu.gov.br/",
-    requestPortalName: "Fala.BR",
-    requestPortalUrl: "https://falabr.cgu.gov.br/",
-    channels: ["Fala.BR, para el Ejecutivo federal", "e-SIC o protocolo del órgano estatal o municipal", "Presencial"],
+    oversightUrl: "https://www.gov.br/acessoainformacao/pt-br",
+    requestPortalName: "Informa.BR",
+    requestPortalUrl: "https://informabr.cgu.gov.br/",
+    channels: [
+      "Informa.BR, con cuenta gov.br, para el Ejecutivo federal",
+      "Servicio de información del órgano estatal o municipal",
+      "Presencial, en el SIC del órgano",
+    ],
     whoCanRequest:
-      "Cualquier persona, incluso quien no vive en Brasil ni tiene nacionalidad brasileña. No se exige explicar el motivo. La interfaz de Fala.BR está en portugués.",
+      "Cualquier persona, incluso quien no vive en Brasil ni tiene nacionalidad brasileña. No se exige explicar el motivo. La interfaz de Informa.BR está en portugués.",
     steps: [
       "Mira el Portal da Transparência y dados.gov.br. Buena parte del gasto, los convenios y los servidores ya están publicados.",
-      "Si el documento no está, entra a Fala.BR para órganos del Ejecutivo federal, o al servicio de información del estado o municipio.",
+      "Si el documento no está, entra a Informa.BR para órganos del Ejecutivo federal, o al servicio de información del estado o municipio.",
       "Crea el registro que pida el sistema. Describe el documento, el periodo y el formato. No tienes que decir para qué lo quieres.",
-      "Guarda el número de protocolo. El plazo es de 20 días, con una prórroga posible de 10.",
+      "Guarda el número de protocolo. El plazo es de 20 días corridos, con una prórroga posible de 10.",
       "Si la respuesta es incompleta, negativa o no llega, presenta recurso en el mismo sistema dentro de los 10 días.",
     ],
     tips: [
       "Puedes pedir en español si hace falta, pero el trámite y la respuesta salen en portugués. Una frase clara en portugués reduce idas y vueltas.",
       "Pide datos en CSV cuando existan así. El Portal da Transparência ya deja descargar varias bases sin solicitud.",
       "La LAI no obliga al órgano a producir un análisis nuevo. Pide registros existentes.",
-      "Estados y municipios no están todos dentro de Fala.BR. Busca el e-SIC local.",
+      "Estados y municipios no están todos dentro de Informa.BR. Busca el servicio de información local.",
+      "Un pedido cargado en Informa.BR entre las 19:00 y las 23:59 cuenta como presentado el día hábil siguiente.",
     ],
     exemptions: [
       "Información imprescindible para la seguridad de la sociedad o del Estado, con clasificación temporal.",
@@ -52,18 +58,18 @@ export const sur: Country[] = [
       "Información de investigaciones en curso, cuando la divulgación las ponga en riesgo.",
     ],
     notes:
-      "Fala.BR absorbió al antiguo e-SIC federal. El sitio de Planalto, donde está el texto de la lei, a veces corta conexiones automatizadas; la URL canónica sigue siendo la de planalto.gov.br.",
+      "El e-SIC federal dejó de recibir pedidos nuevos en 2020. Fala.BR (falabr.cgu.gov.br) dejó de ser la puerta de la LAI el 30 de junio de 2026: sigue como canal de ouvidoria y de descargas históricas, no para un pedido nuevo. El sitio de Planalto a veces corta conexiones automatizadas; la URL canónica de la lei sigue siendo planalto.gov.br.",
     letterBasis:
       "o artigo 5º, inciso XXXIII, da Constituição e a Lei nº 12.527, de 18 de novembro de 2011 (Lei de Acesso à Informação)",
     requestLanguage: "pt",
     resources: [
       {
-        id: "br-fala",
-        name: "Fala.BR",
-        url: "https://falabr.cgu.gov.br/",
+        id: "br-informa",
+        name: "Informa.BR",
+        url: "https://informabr.cgu.gov.br/",
         publisher: "Controladoria-Geral da União",
         description:
-          "Sistema para presentar pedidos de acceso a la información al Poder Ejecutivo federal y para recurrir la respuesta.",
+          "Plataforma para presentar pedidos de acceso a la información al Poder Ejecutivo federal y para recurrir la respuesta. Reemplazó a Fala.BR en ese trámite el 30 de junio de 2026.",
         topics: ["transparencia"],
         kind: "solicitudes",
       },
@@ -107,13 +113,45 @@ export const sur: Country[] = [
         topics: ["estadistica", "economia", "geoespacial"],
         kind: "estadistica",
       },
+      {
+        id: "br-pncp",
+        name: "Portal Nacional de Contratações Públicas",
+        url: "https://pncp.gov.br/app/editais",
+        publisher: "Governo Federal",
+        description:
+          "Editais y contratos publicados bajo la Lei 14.133 de contrataciones públicas.",
+        topics: ["contrataciones", "presupuesto"],
+        kind: "compras",
+      },
+      {
+        id: "br-tesouro",
+        name: "Tesouro Transparente",
+        url: "https://www.tesourotransparente.gov.br/",
+        publisher: "Tesouro Nacional",
+        description: "Biblioteca de datos de finanzas públicas federales.",
+        topics: ["presupuesto", "economia"],
+        kind: "presupuesto",
+      },
+      {
+        id: "br-compras-dados",
+        name: "Datos abiertos de Compras.gov.br",
+        url: "https://www.gov.br/compras/pt-br/cidadao/portal-de-dados-abertos",
+        publisher: "Governo Federal",
+        description: "Bases y API de las contrataciones del gobierno federal.",
+        topics: ["contrataciones", "presupuesto"],
+        kind: "compras",
+      },
     ],
     sources: [
       {
         label: "Lei 12.527 en Planalto",
         url: "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm",
       },
-      { label: "Fala.BR", url: "https://falabr.cgu.gov.br/" },
+      { label: "Informa.BR", url: "https://informabr.cgu.gov.br/" },
+      {
+        label: "Preguntas frecuentes de la CGU sobre plazos",
+        url: "https://www.gov.br/acessoainformacao/pt-br/perguntas-frequentes/aspectos-gerais",
+      },
     ],
   },
   {
@@ -128,16 +166,17 @@ export const sur: Country[] = [
       "Artículo 28 de la Constitución: derecho a recibir información verdadera, responsable y ecuánime, y a acceder a fuentes e información públicas.",
     lawName:
       "Ley 5282/2014 de Libre Acceso a la Información Pública y Transparencia Gubernamental.",
-    lawUrl: "https://informacionpublica.paraguay.gov.py/",
+    lawUrl:
+      "https://www.bacn.gov.py/leyes-paraguayas/3013/ley-n-5282-libre-acceso-ciudadano-a-la-informacion-publica-y-transparencia-gubernamental",
     obligated:
       "Organismos de la administración central y descentralizada, gobiernos departamentales y municipales, y entes que administren recursos públicos.",
     deadline: "15 días hábiles desde la presentación.",
     deadlineShort: "15 días hábiles",
     deadlineDays: 15,
     extension:
-      "La ley permite ampliar el plazo cuando la información es voluminosa o está dispersa. La ampliación tiene que notificarse de forma motivada.",
+      "La Ley 5282 no escribe una prórroga. En el portal, el reloj empieza cuando la solicitud está completa y el sistema entrega el código único.",
     silence:
-      "El silencio habilita el reclamo. No sustituye la entrega del documento.",
+      "El silencio se tiene por denegatoria. No entrega el documento.",
     appeal:
       "Reclamo ante la Oficina de Acceso a la Información del Ministerio de Justicia y, si persiste el incumplimiento, la vía judicial.",
     oversight:
@@ -209,6 +248,16 @@ export const sur: Country[] = [
         topics: ["estadistica", "economia"],
         kind: "estadistica",
       },
+      {
+        id: "py-hacienda",
+        name: "Datos abiertos de Hacienda",
+        url: "https://datos.hacienda.gov.py/",
+        publisher: "Ministerio de Hacienda",
+        description:
+          "Presupuesto, ingresos, ejecución, deuda y nómina, con API. El sitio sigue diciendo Hacienda.",
+        topics: ["presupuesto", "economia"],
+        kind: "presupuesto",
+      },
     ],
     sources: [
       {
@@ -238,22 +287,23 @@ export const sur: Country[] = [
     extension:
       "Prórroga excepcional de hasta 20 días hábiles más, cuando el volumen o la búsqueda lo justifican, notificada dentro del plazo original.",
     silence:
-      "El silencio se considera rechazo y abre la acción judicial de acceso a la información.",
+      "El silencio es positivo. Vencidos los 20 días hábiles sin prórroga, o vencida la prórroga sin decisión notificada, la persona puede acceder a la información. Negarla en ese caso es una falta grave. También cabe la acción judicial.",
     appeal:
-      "Acción de acceso a la información pública ante el Poder Judicial. La Unidad de Acceso a la Información Pública recibe denuncias y orienta, y puede intervenir según sus competencias de control.",
+      "No hay una apelación administrativa ante la UAIP que reemplace la decisión del organismo. La vía es la acción de acceso a la información ante el Poder Judicial. La UAIP orienta, recibe denuncias y controla la clasificación, y no guarda los expedientes de otros organismos.",
     oversight: "Unidad de Acceso a la Información Pública (UAIP).",
     oversightUrl: "https://www.gub.uy/unidad-acceso-informacion-publica/",
-    requestPortalName: "Unidad de Acceso a la Información Pública",
-    requestPortalUrl: "https://www.gub.uy/unidad-acceso-informacion-publica/",
+    requestPortalName: "Sistema de Acceso a la Información Pública",
+    requestPortalUrl: "https://solicitudes.gub.uy",
     channels: [
-      "Escrito o formulario ante el organismo",
-      "Orientación y denuncia en la UAIP",
+      "SAIP en solicitudes.gub.uy, solo para los organismos que lo usan",
+      "Formulario o correo de transparencia del organismo",
+      "Escrito presencial",
     ],
     whoCanRequest:
       "Cualquier persona física o jurídica, sin necesidad de justificar las razones por las que pide la información.",
     steps: [
       "Busca en el Catálogo de Datos Abiertos. Uruguay publica ahí conjuntos que en otros países solo aparecen después de una solicitud.",
-      "Si el documento no está, preséntalo ante el organismo que lo tiene, con tu identidad, la descripción de la información y un medio de contacto.",
+      "Si el documento no está, preséntalo en solicitudes.gub.uy cuando el organismo esté en el SAIP, o ante el organismo, con tu identidad, la descripción de la información y un medio de contacto.",
       "No expliques el motivo. Pide acuse.",
       "El plazo es de 20 días hábiles. Una prórroga tiene que avisarse y no puede ser genérica.",
       "Si hay silencio o negativa, puedes denunciar ante la UAIP y presentar la acción judicial de acceso.",
@@ -275,6 +325,16 @@ export const sur: Country[] = [
       "la Ley N.° 18.381 de acceso a la información pública",
     requestLanguage: "es",
     resources: [
+      {
+        id: "uy-saip",
+        name: "Sistema de Acceso a la Información Pública",
+        url: "https://solicitudes.gub.uy",
+        publisher: "AGESIC y UAIP",
+        description:
+          "Formulario electrónico para pedir información a los organismos que están en el sistema. No cubre a todos.",
+        topics: ["transparencia"],
+        kind: "solicitudes",
+      },
       {
         id: "uy-uaip",
         name: "Unidad de Acceso a la Información Pública",
@@ -314,9 +374,20 @@ export const sur: Country[] = [
         topics: ["estadistica", "economia"],
         kind: "estadistica",
       },
+      {
+        id: "uy-presupuesto",
+        name: "Datos abiertos del Presupuesto Nacional",
+        url: "https://presupuestonacional.gub.uy/datos_abiertos_presupuesto_2025-2029",
+        publisher: "Contaduría General de la Nación",
+        description:
+          "Recursos, créditos y partidas del presupuesto 2025-2029, en CSV.",
+        topics: ["presupuesto", "economia"],
+        kind: "presupuesto",
+      },
     ],
     sources: [
       { label: "Ley 18.381 en IMPO", url: "https://www.impo.com.uy/bases/leyes/18381-2008" },
+      { label: "SAIP", url: "https://solicitudes.gub.uy" },
       { label: "UAIP", url: "https://www.gub.uy/unidad-acceso-informacion-publica/" },
     ],
   },
@@ -350,9 +421,9 @@ export const sur: Country[] = [
     requestPortalName: "Trámites a Distancia y Portal Nacional de Transparencia",
     requestPortalUrl: "https://portal.transparencia.gob.ar/",
     channels: [
-      "Trámites a Distancia (TAD)",
+      "Trámites a Distancia (TAD), trámite «Acceso a la Información Pública»",
+      "Guía en argentina.gob.ar/solicitar-informacion-publica",
       "Mesa de entradas del organismo",
-      "El canal que el propio sujeto obligado publique",
     ],
     whoCanRequest:
       "Cualquier persona humana o jurídica, sin acreditar un interés ni explicar el motivo. La Ley 27.275 es nacional: para una provincia o un municipio rige la norma local.",
@@ -576,6 +647,16 @@ export const sur: Country[] = [
         description: "Censos, encuestas de empleo, precios y estadísticas vitales.",
         topics: ["estadistica", "economia"],
         kind: "estadistica",
+      },
+      {
+        id: "cl-presupuesto",
+        name: "Presupuesto Abierto",
+        url: "https://presupuestoabierto.gob.cl/",
+        publisher: "Dirección de Presupuestos",
+        description:
+          "Presupuesto del gobierno central y ejecución mensual, en un explorador público.",
+        topics: ["presupuesto", "economia"],
+        kind: "presupuesto",
       },
     ],
     sources: [

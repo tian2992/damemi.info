@@ -14,18 +14,38 @@ function norm(value: string): string {
     .replace(/\p{M}/gu, "");
 }
 
+function tokens(value: string): string[] {
+  return norm(value).split(/[^a-z0-9]+/).filter(Boolean);
+}
+
+function fieldScore(value: string, query: string): number {
+  const words = tokens(value);
+  if (words.length === 0) return 0;
+  if (words.includes(query)) return 3;
+  if (words.some((word) => word.startsWith(query))) return 2;
+  return 0;
+}
+
 function score(doc: SearchDoc, query: string): number {
-  const title = norm(doc.title);
-  const text = norm(doc.text);
   const q = norm(query).trim();
   if (!q) return 0;
+  const title = norm(doc.title);
+  const text = norm(doc.text);
   if (title === q) return 100;
-  if (title.startsWith(q)) return 86;
-  if (title.includes(q)) return 72;
-  const words = q.split(/\s+/).filter(Boolean);
-  if (!words.every((word) => title.includes(word) || text.includes(word))) return 0;
-  const inTitle = words.filter((word) => title.includes(word)).length;
-  return 28 + inTitle * 12;
+  const titleHit = fieldScore(doc.title, q);
+  const textHit = fieldScore(`${doc.title} ${doc.text}`, q);
+  if (title.startsWith(q)) return 90;
+  if (titleHit === 3) return 84;
+  if (titleHit === 2) return 70;
+  if (title.includes(q)) return 64;
+  const parts = q.split(/\s+/).filter(Boolean);
+  if (parts.length > 1 && parts.every((part) => fieldScore(`${doc.title} ${doc.text}`, part) > 0)) {
+    return 40 + parts.filter((part) => fieldScore(doc.title, part) > 0).length * 8;
+  }
+  if (textHit === 3) return 36;
+  if (textHit === 2) return 18;
+  if (text.includes(q)) return 12;
+  return 0;
 }
 
 function rank(docs: SearchDoc[], query: string): SearchDoc[] {

@@ -52,7 +52,7 @@ function mediumLabel(language: LetterCountry["requestLanguage"], key: string): s
 }
 
 function deadlineLabel(country: LetterCountry): string {
-  if (country.slug === "brasil") return "20 dias, prorrogáveis por mais 10";
+  if (country.slug === "brasil") return "20 dias corridos, prorrogáveis por mais 10";
   return country.deadlineShort;
 }
 

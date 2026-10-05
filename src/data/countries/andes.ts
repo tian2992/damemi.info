@@ -13,7 +13,7 @@ export const andes: Country[] = [
       "Artículos 20, 23 y 74 de la Constitución: libertad de informar y recibir información, derecho de petición y acceso a documentos públicos.",
     lawName:
       "Ley 1712 de 2014, de transparencia y del derecho de acceso a la información pública, y Ley 1755 de 2015, que regula el derecho de petición.",
-    lawUrl: "https://www.secretariatransparencia.gov.co/",
+    lawUrl: "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=56882",
     obligated:
       "Entidades públicas de todas las ramas y niveles, y personas privadas que cumplan funciones públicas o administren recursos públicos, respecto de esa información.",
     deadline:
@@ -21,9 +21,9 @@ export const andes: Country[] = [
     deadlineShort: "10 días hábiles",
     deadlineDays: 10,
     extension:
-      "En la Ley 1712 la prórroga es de hasta 5 días hábiles, avisada dentro del plazo inicial. En el derecho de petición la ampliación también debe informarse antes de que venza el término.",
+      "Si el término no alcanza, la autoridad debe avisar antes de que venza, explicar la demora y fijar un plazo nuevo que no supere el doble del original.",
     silence:
-      "El silencio no entrega el documento. Habilita la tutela, porque el acceso y el derecho de petición son derechos fundamentales, y puede tener consecuencias disciplinarias.",
+      "En peticiones de documentos e información, la Ley 1755 trata la falta de respuesta en 10 días como aceptación: las copias deben entregarse en los 3 días siguientes. En el derecho de petición general, de 15 días, no hay silencio positivo. La tutela sigue siendo la vía judicial práctica.",
     appeal:
       "Reposición ante la misma entidad y, cuando proceda, apelación. En la práctica, la tutela ante un juez es la vía rápida si niegan información pública o no responden. La Procuraduría vigila la conducta del servidor; no sustituye al juez.",
     oversight:
@@ -103,10 +103,50 @@ export const andes: Country[] = [
         topics: ["transparencia", "justicia"],
         kind: "solicitudes",
       },
+      {
+        id: "co-pte",
+        name: "Portal de Transparencia Económica",
+        url: "https://www.pte.gov.co/",
+        publisher: "Ministerio de Hacienda",
+        description:
+          "Consulta ciudadana de la ejecución del presupuesto nacional.",
+        topics: ["presupuesto", "economia"],
+        kind: "presupuesto",
+      },
+      {
+        id: "co-secop",
+        name: "Consulta de procesos de contratación",
+        url: "https://consultaprocesos.colombiacompra.gov.co/",
+        publisher: "Colombia Compra Eficiente",
+        description: "Buscador público de procesos del SECOP.",
+        topics: ["contrataciones", "presupuesto"],
+        kind: "compras",
+      },
+      {
+        id: "co-mapas",
+        name: "Colombia en Mapas",
+        url: "https://www.colombiaenmapas.gov.co/",
+        publisher: "IGAC",
+        description: "Mapas, imágenes y datos geoespaciales oficiales.",
+        topics: ["geoespacial"],
+        kind: "datos",
+      },
+      {
+        id: "co-ideam",
+        name: "IDEAM",
+        url: "https://www.ideam.gov.co/",
+        publisher: "Instituto de Hidrología, Meteorología y Estudios Ambientales",
+        description: "Información hidrometeorológica y ambiental oficial.",
+        topics: ["ambiente", "estadistica"],
+        kind: "estadistica",
+      },
     ],
     sources: [
+      {
+        label: "Ley 1712",
+        url: "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=56882",
+      },
       { label: "datos.gov.co", url: "https://www.datos.gov.co/" },
-      { label: "Secretaría de Transparencia", url: "https://www.secretariatransparencia.gov.co/" },
     ],
   },
   {
@@ -116,46 +156,53 @@ export const andes: Country[] = [
     region: "andes",
     lawStatus: "limitada",
     summary:
-      "La Constitución dice que toda persona tiene derecho a ser informada por la administración y a acceder a archivos y registros administrativos. No hay un portal nacional de solicitudes ni un órgano garante que vuelva exigible ese derecho frente al Ejecutivo. La publicación estadística oficial es irregular.",
+      "Hay una ley de 2021, pero es estrecha: cubre «información de interés público», no todo lo que el Estado tiene. No hay portal nacional de solicitudes ni un garante autónomo verificado. El plazo escrito es de 20 días hábiles y, en la práctica, la respuesta sigue siendo irregular.",
     constitution:
-      "Artículo 143 de la Constitución de la República Bolivariana de Venezuela.",
+      "Artículo 143 de la Constitución de la República Bolivariana de Venezuela, junto con los artículos 28, 51 y 141.",
     lawName:
-      "No hay una ley general de acceso, con plazo, folio y recurso independiente, que esté operando como procedimiento útil. El artículo 143 admite límites fijados por ley para la información interna y confidencial.",
+      "Ley de Transparencia y Acceso a la Información de Interés Público, sancionada el 17 de septiembre de 2021 y publicada en la Gaceta Oficial Extraordinaria 6.649 del 20 de septiembre de 2021. Está en vigor, con un objeto más estrecho que las leyes de acceso de la región.",
+    lawUrl:
+      "https://www.asambleanacional.gob.ve/leyes/sancionadas/ley-de-transparencia-y-acceso-a-la-informacion-de-interes-publico",
     obligated:
-      "La administración pública, según el texto constitucional. En la práctica, la respuesta depende de la voluntad de cada oficina.",
-    deadline: "La Constitución no fija un número de días y no hay un plazo nacional verificable en un portal de solicitudes.",
-    deadlineShort: "Sin plazo operativo",
-    deadlineDays: null,
-    extension: "No hay una prórroga reglada que puedas cobrar en un recurso.",
+      "Los sujetos que la ley de 2021 obliga respecto de información de interés público. No hay un padrón nacional de oficinas de acceso que se pueda consultar en un solo sitio.",
+    deadline:
+      "20 días hábiles desde la recepción de una petición que cumpla los requisitos de la ley (artículo 10).",
+    deadlineShort: "20 días hábiles",
+    deadlineDays: 20,
+    extension:
+      "Prórroga de hasta 20 días hábiles más si hay que revisar muchos documentos, las oficinas están separadas o hay que consultar a otro sujeto obligado.",
     silence:
-      "El silencio es la respuesta habitual y no abre un recurso ante un garante autónomo.",
+      "La ley no crea un silencio positivo ni un garante que cobre el plazo. La falta de respuesta abre los recursos administrativos de la Ley Orgánica de Procedimientos Administrativos y la acción judicial del artículo 12.",
     appeal:
-      "En teoría caben acciones judiciales de acceso a la información. No son una vía rápida ni predecible.",
-    oversight: "No hay órgano garante autónomo de acceso a la información.",
+      "Recursos administrativos de la Ley Orgánica de Procedimientos Administrativos y acción judicial según el artículo 12 de la ley de 2021. No hay un tribunal especializado de acceso ni un plazo único de apelación verificado aparte de esa remisión.",
+    oversight:
+      "La ley de 2021 no crea un órgano garante autónomo que hayamos podido verificar. La Defensoría del Pueblo existe, pero no está confirmada como garante de este trámite.",
     requestPortalName: "No hay portal nacional de solicitudes",
     channels: ["Escrito ante la administración, con resultado incierto"],
     whoCanRequest:
-      "El artículo 143 reconoce el derecho a toda persona. No describe un trámite disponible.",
+      "Cualquier persona, según la Constitución y la ley de 2021, para información de interés público. No hay un formulario nacional.",
     steps: [
-      "Busca primero si el indicador que necesitas lo publicó el Banco Central u otra fuente oficial todavía en línea.",
-      "No cuentes con un formulario nacional ni con un folio.",
-      "Si decides escribir, cita el artículo 143, describe documentos concretos y guarda copia. Asume que puede no haber respuesta.",
-      "Evita intermediarios que prometan acceso privilegiado a registros públicos.",
+      "Busca primero si el indicador ya está en el Instituto Nacional de Estadística o en otra fuente oficial todavía en línea.",
+      "No hay un formulario nacional. El escrito va a la oficina que tiene el documento, con constancia de recepción.",
+      "Cita la ley de 2021 y el artículo 143. Describe documentos concretos, el periodo y un medio de notificación.",
+      "El artículo 10 escribe 20 días hábiles, con una prórroga posible de otros 20. Guarda el sello: sin él no hay cómo contar.",
+      "Si no responden, los recursos son los administrativos generales y la acción judicial. No hay un consejo de transparencia al que apelar.",
     ],
     tips: [
-      "Esta ficha no te recomienda presentar solicitudes sensibles. Describe el hueco institucional para que no pierdas tiempo buscando un portal que no existe.",
-      "Las series históricas del Banco Central han tenido interrupciones. Contrasta con fuentes regionales, como CEPALSTAT, cuando la serie local se corta.",
+      "La ley no cubre cualquier papel del Estado: su objeto es la información de interés público. Una negativa puede discutir ese límite.",
+      "Al revisar este directorio, datos.gob.ve y el sitio del Banco Central no respondieron de forma estable. No los trates como un trámite de solicitudes.",
+      "Contrasta series cortadas con CEPALSTAT cuando la publicación local se interrumpe.",
     ],
     exemptions: [
-      "El artículo 143 remite a la ley los límites sobre información interna, reservada o confidencial.",
-      "Sin un procedimiento, esos límites no se discuten en un recurso ordinario.",
+      "La ley limita el acceso a la información de interés público y remite las reservas a su propio texto y a otras normas.",
+      "No hay un catálogo público único de esas reservas ni un garante que las revise de oficio.",
     ],
     notes:
-      "Al revisar este directorio, el sitio del Banco Central presentaba fallos de certificado. Si lo usas, confirma que el dominio sea bcv.org.ve antes de ingresar cualquier dato.",
+      "La Asamblea Nacional publica el texto de la ley de 2021. Eso no equivale a un portal de solicitudes. El certificado de bcv.org.ve fallaba al armar esta ficha: si lo usas, confirma el dominio antes de ingresar datos.",
     letterBasis:
-      "el artículo 143 de la Constitución de la República Bolivariana de Venezuela",
+      "el artículo 143 de la Constitución y la Ley de Transparencia y Acceso a la Información de Interés Público de 2021",
     letterWarning:
-      "No existe un procedimiento nacional de acceso que esta carta pueda activar. Sirve como constancia, no como un trámite con plazo.",
+      "Hay ley y hay plazo escrito, pero no hay portal nacional ni garante autónomo verificado. La carta deja constancia ante la oficina que tenga el documento. No promete una respuesta.",
     requestLanguage: "es",
     resources: [
       {
@@ -168,12 +215,23 @@ export const andes: Country[] = [
         topics: ["economia", "estadistica"],
         kind: "estadistica",
       },
+      {
+        id: "ve-ine",
+        name: "Instituto Nacional de Estadística",
+        url: "https://www.ine.gob.ve/",
+        publisher: "Instituto Nacional de Estadística",
+        description:
+          "Sitio de estadísticas nacionales, publicaciones y referencias de censos. Varias series históricas no se mantienen al día.",
+        topics: ["estadistica", "economia"],
+        kind: "estadistica",
+      },
     ],
     sources: [
       {
-        label: "Banco Central de Venezuela",
-        url: "https://www.bcv.org.ve/",
+        label: "Ley de 2021 en la Asamblea Nacional",
+        url: "https://www.asambleanacional.gob.ve/leyes/sancionadas/ley-de-transparencia-y-acceso-a-la-informacion-de-interes-publico",
       },
+      { label: "Instituto Nacional de Estadística", url: "https://www.ine.gob.ve/" },
     ],
   },
   {
@@ -183,24 +241,27 @@ export const andes: Country[] = [
     region: "andes",
     lawStatus: "vigente",
     summary:
-      "La LOTAIP obliga a las instituciones a publicar información y a responder solicitudes en un plazo de días. La Constitución, además, crea una acción judicial específica de acceso a la información pública. El catálogo de datos abiertos y las cifras del INEC cubren una parte del pedido habitual.",
+      "La LOTAIP de 2023, que reemplazó a la de 2004, obliga a las instituciones a publicar información y a responder solicitudes. La Constitución, además, crea una acción judicial específica de acceso a la información pública. El catálogo de datos abiertos y las cifras del INEC cubren una parte del pedido habitual.",
     constitution:
-      "Artículos 18 y 91 de la Constitución: derecho a acceder a información pública y acción de acceso a la información pública.",
+      "Artículos 18 y 91 de la Constitución: derecho a acceder a información pública y acción de acceso a la información pública. La Defensoría del Pueblo está en el artículo 215.",
     lawName:
-      "Ley Orgánica de Transparencia y Acceso a la Información Pública (LOTAIP), publicada en el Registro Oficial Suplemento 337 del 18 de mayo de 2004.",
+      "Ley Orgánica de Transparencia y Acceso a la Información Pública (LOTAIP), Registro Oficial Segundo Suplemento 245 del 7 de febrero de 2023. Derogó la LOTAIP de 2004. Reglamento: Decreto Ejecutivo 124, de enero de 2024.",
+    lawUrl: "https://www.gob.ec/sites/default/files/regulations/2023-10/Lotaip-2023.pdf",
     obligated:
       "Instituciones del Estado y personas jurídicas de derecho privado que tengan participación del Estado o sean concesionarias de servicios públicos, respecto de la información pública que manejen.",
-    deadline: "10 días desde la presentación de la solicitud.",
-    deadlineShort: "10 días",
+    deadline:
+      "10 días, prorrogables por 5 más con causa justificada e informada al solicitante (artículo 34). La ley no dice si son hábiles o calendario: el SRI ha citado el Código Orgánico Administrativo y una guía ciudadana habló de días calendario. Pide por escrito qué fecha va a aplicar la entidad.",
+    deadlineShort: "10 días + 5",
     deadlineDays: 10,
     extension:
-      "La LOTAIP permite ampliar el plazo de forma excepcional y motivada, por pocos días. Pide que la ampliación llegue por escrito dentro del término original.",
+      "Cinco días más, por causa justificada, avisada al solicitante. No está escrito en la ley si el cómputo excluye sábados y feriados.",
     silence:
-      "Si no responden, no tienes que esperar un órgano intermedio: la Constitución te da la acción de acceso a la información pública ante un juez.",
+      "No responder dentro del plazo es una negativa, no un silencio positivo. Abre la gestión oficiosa ante la Defensoría del Pueblo y la acción de acceso del artículo 91.",
     appeal:
-      "Acción de acceso a la información pública, artículo 91 de la Constitución, que se tramita de forma sencilla y sin necesidad de citar la norma de memoria en un escrito perfecto. La Defensoría del Pueblo puede orientar, pero el juez es quien ordena la entrega.",
+      "Gestión oficiosa ante la Defensoría del Pueblo dentro de los 30 días siguientes al vencimiento, y acción de acceso a la información pública del artículo 91. La gestión oficiosa no es requisito para ir al juez.",
     oversight:
-      "No hay un consejo único equivalente al chileno. La acción judicial del artículo 91 es la garantía específica. Cada institución debe tener un comité o responsable de transparencia según la LOTAIP.",
+      "Defensoría del Pueblo, órgano rector del seguimiento de la LOTAIP. La acción judicial del artículo 91 sigue siendo la garantía que ordena la entrega.",
+    oversightUrl: "https://www.defensoria.gob.ec/",
     requestPortalName: "La institución que posee la información",
     channels: [
       "Escrito en la institución",
@@ -209,10 +270,10 @@ export const andes: Country[] = [
     whoCanRequest:
       "Cualquier persona, grupo o asociación, sin necesidad de justificar la razón del pedido.",
     steps: [
-      "Revisa la sección de transparencia de la institución y el portal de datos abiertos. La LOTAIP obliga a publicar sueldos, contratos y servicios de forma activa.",
+      "Revisa la sección de transparencia de la institución y el portal de datos abiertos. La LOTAIP de 2023 obliga a publicar información de forma activa.",
       "Si el documento no está, presenta la solicitud ante esa institución con tu nombre, la información que pides y un domicilio o correo para notificaciones.",
       "No expliques el motivo. Describe archivos, fechas y el formato.",
-      "Pide constancia. El plazo de la LOTAIP es de 10 días.",
+      "Pide constancia. El artículo 34 da 10 días, con una prórroga posible de 5.",
       "Si hay silencio o negativa, presenta la acción de acceso a la información pública. Es un proceso propio, distinto de un juicio largo.",
     ],
     tips: [
@@ -227,9 +288,9 @@ export const andes: Country[] = [
       "La reserva debe ser excepcional y motivada. La duda favorece el acceso.",
     ],
     notes:
-      "El portal datosabiertos.gob.ec existe, aunque bloquea visitas automatizadas. El sistema de compras públicas a veces no responde a verificaciones externas; el dominio oficial sigue siendo compraspublicas.gob.ec.",
+      "El portal datosabiertos.gob.ec existe, aunque a veces bloquea visitas automatizadas. La LOTAIP que rige es la de 2023, no la de 2004. SERCOP redirige su sitio a portal.compraspublicas.gob.ec.",
     letterBasis:
-      "los artículos 18 y 91 de la Constitución y la Ley Orgánica de Transparencia y Acceso a la Información Pública",
+      "los artículos 18 y 91 de la Constitución y la Ley Orgánica de Transparencia y Acceso a la Información Pública de 2023",
     requestLanguage: "es",
     resources: [
       {
@@ -245,10 +306,10 @@ export const andes: Country[] = [
       {
         id: "ec-compras",
         name: "Compras públicas",
-        url: "https://www.compraspublicas.gob.ec/",
+        url: "https://portal.compraspublicas.gob.ec/sercop/",
         publisher: "SERCOP",
         description:
-          "Sistema oficial de contratación pública para consultar procesos y contratos.",
+          "Sitio del Servicio Nacional de Contratación Pública. sercop.gob.ec redirige aquí.",
         topics: ["contrataciones", "presupuesto"],
         kind: "compras",
       },
@@ -262,8 +323,31 @@ export const andes: Country[] = [
         topics: ["estadistica", "economia", "salud", "educacion"],
         kind: "estadistica",
       },
+      {
+        id: "ec-iedg",
+        name: "Infraestructura Ecuatoriana de Datos Geoespaciales",
+        url: "https://www.iedg.gob.ec/",
+        publisher: "IEDG",
+        description: "Visor, catálogo de metadatos y geoportales institucionales.",
+        topics: ["geoespacial"],
+        kind: "datos",
+      },
+      {
+        id: "ec-defensoria",
+        name: "Defensoría del Pueblo",
+        url: "https://www.defensoria.gob.ec/",
+        publisher: "Defensoría del Pueblo",
+        description:
+          "Órgano de seguimiento de la LOTAIP y puerta de la gestión oficiosa cuando una institución no responde.",
+        topics: ["transparencia", "justicia"],
+        kind: "solicitudes",
+      },
     ],
     sources: [
+      {
+        label: "LOTAIP 2023",
+        url: "https://www.gob.ec/sites/default/files/regulations/2023-10/Lotaip-2023.pdf",
+      },
       { label: "Ecuador en cifras", url: "https://www.ecuadorencifras.gob.ec/" },
       { label: "Datos abiertos", url: "https://www.datosabiertos.gob.ec/" },
     ],
@@ -279,21 +363,22 @@ export const andes: Country[] = [
     constitution:
       "Artículo 2, inciso 5, de la Constitución: derecho a solicitar información a cualquier entidad pública sin expresión de causa.",
     lawName:
-      "Ley 27806, Ley de Transparencia y Acceso a la Información Pública, y su Texto Único Ordenado.",
+      "Ley 27806, Ley de Transparencia y Acceso a la Información Pública. Texto Único Ordenado: Decreto Supremo 021-2019-JUS. Reglamento: Decreto Supremo 007-2024-JUS.",
+    lawUrl: "https://www.gob.pe/institucion/congreso-de-la-republica/normas-legales/118374-27806",
     obligated:
       "Entidades de la administración pública, incluyendo gobiernos regionales y locales, y personas que presten servicios públicos o ejerzan función administrativa, respecto de esa información.",
     deadline: "10 días hábiles desde la presentación de la solicitud.",
     deadlineShort: "10 días hábiles",
     deadlineDays: 10,
     extension:
-      "Prórroga excepcional de hasta 5 días hábiles cuando la información es difícil de reunir, notificada antes de que venza el plazo original.",
+      "No es una prórroga fija de cinco días. Si es materialmente imposible entregar, la entidad debe decirlo dentro de los 2 días hábiles de recibido el pedido, con la fecha de entrega y las razones. Una guía del Ministerio de Cultura añade un cronograma si esa fecha pasa de 30 días hábiles; eso está en la guía, no como tope escrito en la Ley 27806.",
     silence:
-      "El silencio es una denegatoria tácita y permite reclamar. No te entrega el documento por sí solo.",
+      "El silencio es una denegatoria tácita, no un silencio positivo. Una respuesta ambigua o incompleta también se trata como denegatoria.",
     appeal:
-      "Recurso ante el superior de la entidad y, en el marco de la autoridad nacional de transparencia del Ministerio de Justicia, los procedimientos que esa autoridad tenga habilitados. También cabe la vía judicial.",
+      "Apelación ante el Tribunal de Transparencia y Acceso a la Información Pública dentro de los 15 días calendario. El Tribunal decide en un máximo de 10 días hábiles. Si no lo hace, se agota la vía administrativa. Una consulta interpretativa a la ANTAIP no es una apelación.",
     oversight:
-      "Autoridad Nacional de Transparencia y Acceso a la Información Pública, en el Ministerio de Justicia y Derechos Humanos.",
-    oversightUrl: "https://www.gob.pe/",
+      "Autoridad Nacional de Transparencia y Acceso a la Información Pública (ANTAIP), en el Ministerio de Justicia y Derechos Humanos. No es la mesa de partes: el pedido se presenta en cada entidad.",
+    oversightUrl: "https://www.gob.pe/antaip",
     requestPortalName: "Mesa de partes o canal de la entidad en gob.pe",
     requestPortalUrl: "https://www.gob.pe/",
     channels: [
@@ -307,8 +392,8 @@ export const andes: Country[] = [
       "Busca el conjunto en datosabiertos.gob.pe y el procedimiento de compra en el OECE antes de redactar.",
       "Presenta la solicitud ante la entidad que tiene la información, por mesa de partes o por el formulario que publique. La Constitución prohíbe exigirte la causa.",
       "Identifícate, describe la información, el periodo y el formato, y señala un correo o domicilio.",
-      "Guarda el cargo. El plazo es de 10 días hábiles, con una prórroga máxima de 5.",
-      "Si niegan o no responden, apela dentro de la entidad y revisa el canal de la autoridad nacional de transparencia en gob.pe.",
+      "Guarda el cargo. El plazo del artículo 11 es de 10 días hábiles.",
+      "Si niegan o no responden, apela al Tribunal de Transparencia dentro de 15 días calendario. La ficha de la ANTAIP está en gob.pe/antaip.",
     ],
     tips: [
       "El costo, si lo hay, es el de reproducción. Preguntar no se tasa.",
@@ -367,9 +452,53 @@ export const andes: Country[] = [
         topics: ["contrataciones", "presupuesto"],
         kind: "compras",
       },
+      {
+        id: "pe-seace",
+        name: "Buscadores del SEACE",
+        url: "https://www.gob.pe/7505",
+        publisher: "OECE",
+        description:
+          "Búsqueda pública, sin certificado, de procedimientos de selección, contratos y planes anuales. El operador en 2026 es el OECE.",
+        topics: ["contrataciones", "presupuesto"],
+        kind: "compras",
+      },
+      {
+        id: "pe-consulta",
+        name: "Consulta Amigable",
+        url: "https://apps5.mineco.gob.pe/transparencia/Navegador/default.aspx",
+        publisher: "Ministerio de Economía y Finanzas",
+        description:
+          "Gasto e ingreso diario de gobiernos nacional, regional y local: presupuesto, compromiso, devengado y pago.",
+        topics: ["presupuesto", "economia"],
+        kind: "presupuesto",
+      },
+      {
+        id: "pe-mef-datos",
+        name: "Datos abiertos del MEF",
+        url: "https://datosabiertos.mef.gob.pe/",
+        publisher: "Ministerio de Economía y Finanzas",
+        description:
+          "Bases abiertas de gasto, ingreso, inversión pública, compras y recursos humanos.",
+        topics: ["presupuesto", "economia", "contrataciones"],
+        kind: "datos",
+      },
+      {
+        id: "pe-antaip",
+        name: "ANTAIP",
+        url: "https://www.gob.pe/antaip",
+        publisher: "Ministerio de Justicia y Derechos Humanos",
+        description:
+          "Autoridad nacional de transparencia. Orienta y publica el modelo de solicitud. No recibe el pedido de otras entidades.",
+        topics: ["transparencia", "justicia"],
+        kind: "solicitudes",
+      },
     ],
     sources: [
-      { label: "Plataforma del Estado peruano", url: "https://www.gob.pe/" },
+      {
+        label: "Ley 27806",
+        url: "https://www.gob.pe/institucion/congreso-de-la-republica/normas-legales/118374-27806",
+      },
+      { label: "ANTAIP", url: "https://www.gob.pe/antaip" },
       { label: "Datos abiertos", url: "https://www.datosabiertos.gob.pe/" },
     ],
   },
@@ -390,12 +519,13 @@ export const andes: Country[] = [
     obligated:
       "El proyecto aprobado en el Senado alcanzaría a órganos del Estado, empresas y universidades públicas y a quien administre recursos públicos. Hoy ese alcance no es ley.",
     deadline:
-      "No hay un plazo legal nacional en vigor. No uses un número de días de un proyecto que todavía no se publica en la Gaceta.",
-    deadlineShort: "Sin plazo de ley",
+      "No hay plazo de una ley general. Para el Ejecutivo, el Decreto Supremo 28168 de 2005 pone la información a disposición en un máximo de 15 días hábiles, salvo negativa justificada. Ese número no se extiende, por ese decreto, al Legislativo, al Judicial ni al órgano electoral.",
+    deadlineShort: "15 días hábiles solo en el Ejecutivo",
     deadlineDays: null,
-    extension: "No hay prórroga reglada mientras el proyecto no se sancione y promulgue.",
+    extension:
+      "El Decreto Supremo 28168 no escribe una prórroga del plazo inicial de 15 días hábiles. El proyecto de ley todavía no es norma y no presta sus plazos.",
     silence:
-      "No hay un silencio con efecto definido en una ley general. Una falta de respuesta se discute, si acaso, como incumplimiento constitucional ante la vía que corresponda.",
+      "Fuera del Ejecutivo no hay un silencio con efecto definido. En el Ejecutivo, si no hay respuesta, hay negativa indebida o restricción ilegal, cabe queja ante el superior o el Defensor del Pueblo.",
     appeal:
       "No hay órgano garante creado por una ley de acceso. La Defensoría del Pueblo y los jueces pueden ser vías de hecho, no un recurso administrativo uniforme.",
     oversight:
@@ -412,7 +542,7 @@ export const andes: Country[] = [
       "Busca el dato en gob.bo, en el INE y en el SICOES antes de escribir.",
       "Si no está, presenta un escrito a la entidad citando los artículos 21.6 y 237 de la Constitución. Describe documentos, no opiniones.",
       "Guarda sello o correo de recepción. No hay un folio nacional.",
-      "No cuentes un plazo de ley: el proyecto aún no es norma.",
+      "Si escribes al Ejecutivo, el Decreto Supremo 28168 habla de 15 días hábiles. No uses ese número con el Legislativo, el Judicial o el órgano electoral, y no uses los plazos del proyecto.",
       "Sigue el trámite legislativo del proyecto 066 si necesitas saber si el plazo y el recurso ya nacieron.",
     ],
     tips: [
@@ -429,7 +559,7 @@ export const andes: Country[] = [
     letterBasis:
       "los artículos 21 numeral 6 y 237 de la Constitución Política del Estado",
     letterWarning:
-      "No hay una ley general en vigor. La carta se apoya en la Constitución. No inventes un plazo que el proyecto todavía no tiene.",
+      "No hay una ley general en vigor. En el Ejecutivo existe el Decreto Supremo 28168, con 15 días hábiles. Fuera de ese ámbito la carta se apoya en la Constitución y no tiene un plazo de ley.",
     requestLanguage: "es",
     resources: [
       {
@@ -472,11 +602,54 @@ export const andes: Country[] = [
         topics: ["transparencia", "registros"],
         kind: "datos",
       },
+      {
+        id: "bo-datos",
+        name: "Datos Abiertos del Estado",
+        url: "https://datos.gob.bo/",
+        publisher: "AGETIC",
+        description:
+          "Catálogo reutilizable previsto por el Decreto Supremo 5340. El dominio respondía al revisar esta ficha, a veces con bloqueo a visitas automatizadas.",
+        topics: ["transparencia", "economia"],
+        kind: "datos",
+      },
+      {
+        id: "bo-presupuesto",
+        name: "Presupuesto Abierto",
+        url: "https://abierto.economiayfinanzas.gob.bo/",
+        publisher: "Ministerio de Economía y Finanzas Públicas",
+        description:
+          "Explorador del presupuesto del Estado, con ejecución e historia desde 2005 y descarga.",
+        topics: ["presupuesto", "economia"],
+        kind: "presupuesto",
+      },
+      {
+        id: "bo-sigep",
+        name: "SIGEP",
+        url: "https://sigep.gob.bo/",
+        publisher: "Ministerio de Economía y Finanzas Públicas",
+        description:
+          "Sistema de gestión del presupuesto. La consulta ciudadana más directa está en Presupuesto Abierto.",
+        topics: ["presupuesto"],
+        kind: "presupuesto",
+      },
+      {
+        id: "bo-oep",
+        name: "Órgano Electoral Plurinacional",
+        url: "https://www.oep.org.bo/",
+        publisher: "Órgano Electoral Plurinacional",
+        description: "Procesos electorales y organización del voto.",
+        topics: ["elecciones"],
+        kind: "datos",
+      },
     ],
     sources: [
       {
         label: "ABI: el Senado aprueba el proyecto y lo remite a Diputados, 27 de agosto de 2026",
         url: "https://abi.bo/senado-aprueba-proyecto-de-ley-de-acceso-a-la-informacion-y-lo-remite-a-diputados/",
+      },
+      {
+        label: "Proyectos de ley en revisión",
+        url: "https://diputados.gob.bo/proyectos-de-ley-en-revision/",
       },
       { label: "gob.bo", url: "https://www.gob.bo/" },
     ],

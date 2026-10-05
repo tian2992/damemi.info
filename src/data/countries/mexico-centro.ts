@@ -141,8 +141,9 @@ export const mexicoCentro: Country[] = [
     lawName: "Ley de Acceso a la Información Pública, Decreto 57-2008 del Congreso de la República.",
     obligated:
       "Organismos del Estado, entidades autónomas y descentralizadas, municipalidades, y personas o entidades que administren o ejecuten recursos públicos, respecto de esos recursos.",
-    deadline: "10 días hábiles a partir de la recepción de la solicitud.",
-    deadlineShort: "10 días hábiles",
+    deadline:
+      "El artículo 42 manda resolver dentro de los diez días siguientes a que la solicitud se presente y se admita. El decreto no escribe «hábiles»; SAT y RENAP lo aplican como días hábiles.",
+    deadlineShort: "10 días",
     deadlineDays: 10,
     extension:
       "La unidad puede ampliar el plazo hasta por otros 10 días hábiles si explica por qué la información no puede entregarse en el primero.",
@@ -224,8 +225,32 @@ export const mexicoCentro: Country[] = [
         topics: ["presupuesto", "economia"],
         kind: "presupuesto",
       },
+      {
+        id: "gt-senacyt",
+        name: "Portal Nacional de Datos Abiertos",
+        url: "https://catalogo.senacyt.gob.gt/",
+        publisher: "SENACYT",
+        description:
+          "Catálogo reutilizable de la SENACYT, con conjuntos de ejecución presupuestaria y acuerdos gubernativos.",
+        topics: ["transparencia", "presupuesto"],
+        kind: "datos",
+      },
+      {
+        id: "gt-presupuesto",
+        name: "Transparencia Presupuestaria",
+        url: "https://transparenciapresupuestaria.minfin.gob.gt/consulta-interactiva/",
+        publisher: "Ministerio de Finanzas Públicas",
+        description:
+          "Consulta de ingresos, formulación y ejecución desde SICOIN. El acceso ciudadano no es el login interno de SICOIN.",
+        topics: ["presupuesto", "economia"],
+        kind: "presupuesto",
+      },
     ],
     sources: [
+      {
+        label: "Decreto 57-2008",
+        url: "https://www.congreso.gob.gt/detalle_pdf/decretos/13082",
+      },
       { label: "Instituto Nacional de Estadística", url: "https://www.ine.gob.gt/" },
       { label: "Guatecompras", url: "https://www.guatecompras.gt/" },
     ],
@@ -241,21 +266,24 @@ export const mexicoCentro: Country[] = [
     constitution:
       "La vía ordinaria es la Freedom of Information Act, no un artículo constitucional autónomo de acceso a expedientes.",
     lawName:
-      "Freedom of Information Act, Chapter 13 de las leyes de Belice (originada en la década de 1990 y mantenida en la edición revisada de las leyes).",
+      "Freedom of Information Act, Chapter 13, de 1994. El texto usado es la edición revisada de 2020, con el derecho sustantivo al 31 de diciembre de 2020.",
+    lawUrl:
+      "https://www.agm.gov.bz/uploads/laws/63976dad2084d_Cap_13_Freedom_of_Information_Act.pdf",
     obligated:
       "Ministerios, departamentos y otras autoridades públicas comprendidas en la ley.",
     deadline:
-      "La ley pide una decisión tan pronto como sea practicable. Confirma en el texto vigente el número exacto de días antes de dar por vencido un plazo: las compilaciones en circulación no siempre coinciden.",
-    deadlineShort: "Plazo corto, ver la ley",
-    deadlineDays: null,
+      "Si la solicitud es escrita, invoca la ley y se entrega en la dirección habilitada, la decisión debe notificarse tan pronto como sea practicable y a más tardar dos semanas después del día de recepción (sección 16). Si pasan 14 días sin aviso, la solicitud se tiene por denegada el último día de ese periodo, a efectos del Ombudsman (sección 37).",
+    deadlineShort: "2 semanas",
+    deadlineDays: 14,
     extension:
-      "La autoridad puede ampliar el trámite cuando necesita localizar o revisar documentos. Pide que cualquier ampliación quede por escrito.",
+      "El acceso puede diferirse (sección 18). Pide que cualquier ampliación quede por escrito.",
     silence:
-      "Si no hay decisión, la propia ley abre una revisión. No des por concedida la información solo porque pasó el tiempo.",
+      "A los 14 días sin aviso, la ley trata la solicitud como denegada para poder ir al Ombudsman. No entrega el documento.",
     appeal:
-      "Revisión prevista en la Freedom of Information Act, y después la vía judicial que corresponda. El detalle del revisor está en el texto de la ley, no en un portal único.",
+      "Revisión interna del ministro o del principal officer dentro de 28 días. Si la niegan o no hay resultado en 14 días, solicitud al Ombudsman dentro de 21 días. De la decisión del Ombudsman cabe apelación a la Supreme Court.",
     oversight:
-      "No hay un consejo de transparencia al estilo chileno o uruguayo. La supervisión de la solicitud queda en el procedimiento de la propia ley.",
+      "Office of the Ombudsman. No hay un consejo de transparencia al estilo chileno.",
+    oversightUrl: "https://ombudsman.gov.bz/freedom-of-information-act/",
     requestPortalName: "Solicitud escrita a la autoridad pública",
     channels: ["Escrito en inglés dirigido al ministerio o departamento", "Entrega presencial o el canal que publique la autoridad"],
     whoCanRequest:
@@ -293,8 +321,42 @@ export const mexicoCentro: Country[] = [
         topics: ["estadistica", "economia"],
         kind: "estadistica",
       },
+      {
+        id: "bz-procurement",
+        name: "Procurement Portal",
+        url: "https://procurement.gov.bz/",
+        publisher: "Government of Belize",
+        description: "Licitaciones, avisos de adjudicación y documentos estándar de compra.",
+        topics: ["contrataciones", "presupuesto"],
+        kind: "compras",
+      },
+      {
+        id: "bz-mof",
+        name: "Ministry of Finance",
+        url: "https://mof.gov.bz/",
+        publisher: "Ministry of Finance",
+        description: "Estimaciones y discursos de presupuesto. Los documentos más visibles al revisar esta ficha eran del ejercicio 2024-2025.",
+        topics: ["presupuesto", "economia"],
+        kind: "presupuesto",
+      },
+      {
+        id: "bz-elections",
+        name: "Elections and Boundaries Department",
+        url: "https://elections.gov.bz/",
+        publisher: "Elections and Boundaries Department",
+        description: "Avisos, resultados y consulta de centros de votación.",
+        topics: ["elecciones"],
+        kind: "datos",
+      },
     ],
-    sources: [{ label: "Statistical Institute of Belize", url: "https://sib.org.bz/" }],
+    sources: [
+      {
+        label: "Freedom of Information Act, Chapter 13",
+        url: "https://www.agm.gov.bz/uploads/laws/63976dad2084d_Cap_13_Freedom_of_Information_Act.pdf",
+      },
+      { label: "Ombudsman", url: "https://ombudsman.gov.bz/freedom-of-information-act/" },
+      { label: "Statistical Institute of Belize", url: "https://sib.org.bz/" },
+    ],
   },
   {
     slug: "honduras",
@@ -321,10 +383,10 @@ export const mexicoCentro: Country[] = [
       "Denuncia o recurso ante el IAIP, que puede ordenar la entrega. La decisión del instituto puede llevarse después a la vía judicial.",
     oversight: "Instituto de Acceso a la Información Pública (IAIP).",
     oversightUrl: "https://portalunico.iaip.gob.hn/",
-    requestPortalName: "Portal Único de Transparencia del IAIP",
-    requestPortalUrl: "https://portalunico.iaip.gob.hn/",
+    requestPortalName: "SIELHO",
+    requestPortalUrl: "https://sielho.iaip.gob.hn/inicio/",
     channels: [
-      "Portal Único del IAIP",
+      "SIELHO, el sistema electrónico del IAIP",
       "Oficial de información de la institución",
       "Escrito presencial",
     ],
@@ -374,8 +436,29 @@ export const mexicoCentro: Country[] = [
         topics: ["estadistica", "economia", "salud", "educacion"],
         kind: "estadistica",
       },
+      {
+        id: "hn-sielho",
+        name: "SIELHO",
+        url: "https://sielho.iaip.gob.hn/inicio/",
+        publisher: "Instituto de Acceso a la Información Pública",
+        description:
+          "Sistema electrónico para presentar solicitudes de información y recursos de revisión.",
+        topics: ["transparencia"],
+        kind: "solicitudes",
+      },
+      {
+        id: "hn-sefin",
+        name: "Datos abiertos de la SEFIN",
+        url: "https://www.sefin.gob.hn/datos-abiertos/",
+        publisher: "Secretaría de Finanzas",
+        description:
+          "Formulación y ejecución del presupuesto, inversión pública y descargas de compras.",
+        topics: ["presupuesto", "economia", "contrataciones"],
+        kind: "presupuesto",
+      },
     ],
     sources: [
+      { label: "SIELHO", url: "https://sielho.iaip.gob.hn/inicio/" },
       { label: "Portal Único del IAIP", url: "https://portalunico.iaip.gob.hn/" },
       { label: "INE Honduras", url: "https://ine.gob.hn/" },
     ],
@@ -395,11 +478,12 @@ export const mexicoCentro: Country[] = [
     lawUrl: "https://www.iaip.gob.sv/",
     obligated:
       "Órganos del Estado, municipalidades, entidades autónomas y personas que manejen recursos o información pública.",
-    deadline: "10 días hábiles desde la presentación de la solicitud.",
+    deadline:
+      "10 días hábiles desde la presentación si la información tiene cinco años o menos. Si es más vieja, pueden sumarse otros 10 días hábiles. Por complejidad, una resolución motivada puede añadir 5 días hábiles (artículo 71).",
     deadlineShort: "10 días hábiles",
     deadlineDays: 10,
     extension:
-      "La ley permite una prórroga corta, de alrededor de cinco días hábiles, cuando la información es voluminosa. Exige que te avisen dentro del plazo original.",
+      "Diez días hábiles más si la información supera los cinco años, y cinco días hábiles adicionales por una circunstancia excepcional, con resolución motivada.",
     silence:
       "La falta de respuesta habilita el recurso ante el Instituto de Acceso a la Información Pública.",
     appeal:
@@ -466,6 +550,35 @@ export const mexicoCentro: Country[] = [
         description:
           "Estadísticas económicas, financieras y de precios que el banco produce o compila.",
         topics: ["economia", "estadistica"],
+        kind: "estadistica",
+      },
+      {
+        id: "sv-transparencia",
+        name: "Portal de Transparencia",
+        url: "https://www.transparencia.gob.sv/",
+        publisher: "Gobierno de El Salvador",
+        description:
+          "Directorio de oficiales de información y publicación proactiva. No es un buzón único para todas las instituciones.",
+        topics: ["transparencia"],
+        kind: "solicitudes",
+      },
+      {
+        id: "sv-fiscal",
+        name: "Portal de Transparencia Fiscal",
+        url: "https://www.transparenciafiscal.gob.sv/ptf/es/PTF2-Index.html",
+        publisher: "Ministerio de Hacienda",
+        description: "Ingresos, gasto y deuda.",
+        topics: ["presupuesto", "economia"],
+        kind: "presupuesto",
+      },
+      {
+        id: "sv-onec",
+        name: "Catálogo de la ONEC",
+        url: "https://onec.bcr.gob.sv/metadatos/index.php/catalog/",
+        publisher: "Oficina Nacional de Estadística y Censos, Banco Central de Reserva",
+        description:
+          "Encuestas y metadatos. DIGESTYC pasó a la ONEC del Banco Central en noviembre de 2022. Varias series del catálogo consultado llegan solo hasta 2020-2022.",
+        topics: ["estadistica", "economia"],
         kind: "estadistica",
       },
     ],
@@ -600,10 +713,10 @@ export const mexicoCentro: Country[] = [
       {
         id: "cr-datos",
         name: "Portal de Datos Abiertos",
-        url: "https://www.datos.go.cr/",
-        publisher: "Ministerio de la Presidencia y MICITT",
+        url: "https://datosabiertos.gob.go.cr/",
+        publisher: "Gobierno de Costa Rica",
         description:
-          "Catálogo nacional de datos abiertos. Lo administran Presidencia y el ministerio de ciencia y tecnología, con apoyo de la OEA y la CAF en su relanzamiento.",
+          "Catálogo nacional de datos abiertos. En octubre de 2026 todavía tenía pocos conjuntos. datos.go.cr también responde y no lo sustituye esta ficha.",
         topics: ["transparencia", "economia", "ambiente"],
         kind: "datos",
       },
@@ -657,26 +770,26 @@ export const mexicoCentro: Country[] = [
     constitution:
       "El artículo 43 de la Constitución reconoce el derecho de solicitar información de acceso público y el habeas data.",
     lawName: "Ley 6 del 22 de enero de 2002, que dicta normas de transparencia en la gestión pública.",
-    lawUrl: "https://www.antai.gob.pa/",
+    lawUrl: "https://www.antai.gob.pa/wp-content/uploads/2015/04/Ley-6-de-22-enero-2002.pdf",
     obligated:
       "Instituciones del Estado, incluyendo gobiernos locales y entidades que manejen fondos públicos, en lo que la ley dispone.",
     deadline: "30 días calendario desde la presentación de la solicitud.",
     deadlineShort: "30 días calendario",
     deadlineDays: 30,
     extension:
-      "La Ley 6 no ofrece la prórroga corta de las leyes más nuevas. El plazo largo ya es, en sí, la regla. Confirma en la ANTAI si un reglamento posterior partió ese plazo.",
+      "Si la solicitud es compleja o extensa, dentro de los primeros 30 días deben avisar por escrito una extensión que no pase de otros 30 días calendario (artículo 7).",
     silence:
       "Vencidos los 30 días sin respuesta, la negativa se entiende producida y puedes acudir a la ANTAI y a la vía judicial.",
     appeal:
       "Queja o recurso ante la Autoridad Nacional de Transparencia y Acceso a la Información, y acciones judiciales, incluido el habeas data cuando corresponde.",
     oversight: "Autoridad Nacional de Transparencia y Acceso a la Información (ANTAI).",
     oversightUrl: "https://www.antai.gob.pa/",
-    requestPortalName: "Autoridad Nacional de Transparencia y Acceso a la Información",
-    requestPortalUrl: "https://www.antai.gob.pa/",
+    requestPortalName: "ANTAI Smart CID",
+    requestPortalUrl: "https://smart.antai.gob.pa/",
     channels: [
-      "Escrito ante la institución",
-      "Canales que publique la ANTAI",
-      "Correo o formulario de la entidad, si existe",
+      "ANTAI Smart CID, para las instituciones aliadas",
+      "Escrito, correo o formulario de la institución",
+      "Presencial, con constancia de recepción",
     ],
     whoCanRequest:
       "Cualquier persona puede solicitar información de acceso público o datos personales suyos. No hace falta una motivación elaborada.",
@@ -709,7 +822,7 @@ export const mexicoCentro: Country[] = [
         url: "https://www.antai.gob.pa/",
         publisher: "Autoridad Nacional de Transparencia y Acceso a la Información",
         description:
-          "Autoridad de aplicación de la ley de transparencia y puerta de orientación para quejas de acceso.",
+          "Autoridad de aplicación de la ley de transparencia. Las solicitudes a instituciones aliadas entran por Smart CID (smart.antai.gob.pa), no por el módulo de compras llamado «Solicitud de Información».",
         topics: ["transparencia"],
         kind: "solicitudes",
       },
@@ -742,6 +855,25 @@ export const mexicoCentro: Country[] = [
           "Estadísticas demográficas, económicas y sociales de la Contraloría General.",
         topics: ["estadistica", "economia"],
         kind: "estadistica",
+      },
+      {
+        id: "pa-gestion",
+        name: "Gestión Transparente Panamá",
+        url: "https://gestiontransparentepanama.mef.gob.pa/",
+        publisher: "Ministerio de Economía y Finanzas",
+        description: "Ejecución presupuestaria y mapa de inversión pública.",
+        topics: ["presupuesto", "economia"],
+        kind: "presupuesto",
+      },
+      {
+        id: "pa-smart",
+        name: "ANTAI Smart CID",
+        url: "https://smart.antai.gob.pa/",
+        publisher: "ANTAI",
+        description:
+          "Cuenta digital para solicitudes de acceso a las instituciones aliadas. No cubre a todo el Estado y no es el módulo de quejas anónimas.",
+        topics: ["transparencia"],
+        kind: "solicitudes",
       },
     ],
     sources: [
