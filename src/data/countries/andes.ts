@@ -140,6 +140,24 @@ export const andes: Country[] = [
         topics: ["ambiente", "estadistica"],
         kind: "estadistica",
       },
+      {
+        id: "co-sispro",
+        name: "SISPRO",
+        url: "https://www.sispro.gov.co/",
+        publisher: "Ministerio de Salud y Protección Social",
+        description: "Sistema integrado de información de la protección social, con indicadores de salud.",
+        topics: ["salud", "estadistica"],
+        kind: "estadistica",
+      },
+      {
+        id: "co-registraduria",
+        name: "Registraduría Nacional del Estado Civil",
+        url: "https://www.registraduria.gov.co/",
+        publisher: "Registraduría Nacional del Estado Civil",
+        description: "Identificación y procesos electorales, incluidos resultados de votación.",
+        topics: ["elecciones", "registros"],
+        kind: "datos",
+      },
     ],
     sources: [
       {

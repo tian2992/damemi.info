@@ -123,6 +123,10 @@ export const mexicoCentro: Country[] = [
         url: "https://dof.gob.mx/nota_detalle.php?codigo=5752569&fecha=20/03/2025",
       },
       {
+        label: "Texto de la Cámara de Diputados, 20 de marzo de 2025",
+        url: "https://www.diputados.gob.mx/LeyesBiblio/ref/lgtaip/LGTAIP_orig_20mar25.pdf",
+      },
+      {
         label: "Ley General en el sitio de la Suprema Corte",
         url: "https://www.scjn.gob.mx/sites/default/files/marco_normativo/documeto/2025-04/Ley-General-de-Transparencia-y-Acceso-a-la-Informacion-Publica-20250320_1.pdf",
       },
@@ -139,6 +143,7 @@ export const mexicoCentro: Country[] = [
     constitution:
       "Artículos 30 y 31 de la Constitución Política de la República de Guatemala: publicidad de los actos y acceso a archivos y registros estatales.",
     lawName: "Ley de Acceso a la Información Pública, Decreto 57-2008 del Congreso de la República.",
+    lawUrl: "https://www.congreso.gob.gt/detalle_pdf/decretos/13082",
     obligated:
       "Organismos del Estado, entidades autónomas y descentralizadas, municipalidades, y personas o entidades que administren o ejecuten recursos públicos, respecto de esos recursos.",
     deadline:
@@ -146,11 +151,11 @@ export const mexicoCentro: Country[] = [
     deadlineShort: "10 días",
     deadlineDays: 10,
     extension:
-      "La unidad puede ampliar el plazo hasta por otros 10 días hábiles si explica por qué la información no puede entregarse en el primero.",
+      "El artículo 43 permite ampliar hasta diez días más si el volumen lo justifica, con aviso dentro de los dos días anteriores al vencimiento.",
     silence:
-      "Si la autoridad no responde en el plazo, la solicitud se tiene por denegada y queda abierto el recurso. No recibes la información por el solo silencio.",
+      "Afirmativa ficta: si no hay respuesta en plazo, el sujeto obligado debe entregar la información en no más de diez días después del vencimiento, sin costo y sin una solicitud nueva (artículo 44). La falta de respuesta también abre el recurso de revisión.",
     appeal:
-      "Recurso de revisión ante el superior jerárquico de la entidad. Si esa vía no resuelve el derecho, el camino siguiente es judicial, en particular el amparo.",
+      "Recurso de revisión ante la máxima autoridad del mismo sujeto obligado, dentro de los quince días siguientes a la notificación de la negativa. Esa autoridad no es la Procuraduría de los Derechos Humanos. Después cabe el amparo.",
     oversight:
       "No hay un instituto nacional de transparencia. Cada sujeto obligado tiene su Unidad de Información Pública. La Procuraduría de los Derechos Humanos puede orientar, pero no sustituye al superior jerárquico ni al juez.",
     requestPortalName: "Unidad de Información de cada institución",
@@ -475,7 +480,7 @@ export const mexicoCentro: Country[] = [
       "La Constitución reconoce el derecho de petición y la publicidad de la administración. El procedimiento concreto está en la ley de acceso.",
     lawName:
       "Ley de Acceso a la Información Pública, Decreto Legislativo 534, vigente desde 2011.",
-    lawUrl: "https://www.iaip.gob.sv/",
+    lawUrl: "https://www.asamblea.gob.sv/leyes-y-decretos/view/493",
     obligated:
       "Órganos del Estado, municipalidades, entidades autónomas y personas que manejen recursos o información pública.",
     deadline:
@@ -485,16 +490,16 @@ export const mexicoCentro: Country[] = [
     extension:
       "Diez días hábiles más si la información supera los cinco años, y cinco días hábiles adicionales por una circunstancia excepcional, con resolución motivada.",
     silence:
-      "La falta de respuesta habilita el recurso ante el Instituto de Acceso a la Información Pública.",
+      "No es silencio positivo. La falta de respuesta permite acudir al IAIP dentro de los 15 días hábiles siguientes. Si la información es pública, el Instituto ordena el acceso y el ente debe entregarla en no más de 3 días hábiles.",
     appeal:
-      "Recurso ante el IAIP. Su resolución puede impugnarse después en sede judicial.",
+      "Apelación ante el IAIP dentro de los 5 días hábiles de notificada la denegatoria. La Sala de lo Constitucional ha tutelado el derecho por amparo.",
     oversight: "Instituto de Acceso a la Información Pública (IAIP).",
     oversightUrl: "https://www.iaip.gob.sv/",
-    requestPortalName: "Instituto de Acceso a la Información Pública",
-    requestPortalUrl: "https://www.iaip.gob.sv/",
+    requestPortalName: "Oficial de Información de cada ente",
+    requestPortalUrl: "https://www.transparencia.gob.sv/",
     channels: [
-      "Canal electrónico del IAIP o de la unidad de la institución",
-      "Escrito ante el oficial de información",
+      "Escrito, verbal o electrónico ante el Oficial de Información",
+      "Directorio de oficiales en el Portal de Transparencia",
     ],
     whoCanRequest:
       "Cualquier persona, sin deber de explicar las razones de la solicitud.",
@@ -597,18 +602,21 @@ export const mexicoCentro: Country[] = [
       "En el papel existe la Ley de Acceso a la Información Pública, Ley 621. En la práctica no hay un garante independiente ni un portal de solicitudes que funcione como vía segura y eficaz. Quien pide información a una institución nicaragüense debe asumir que la respuesta es discrecional y valorar el riesgo personal.",
     constitution:
       "La Constitución reconoce el derecho de petición y el acceso a información personal. La ley especial es la Ley 621.",
-    lawName: "Ley de Acceso a la Información Pública, Ley 621, de 2007.",
+    lawName:
+      "Ley de Acceso a la Información Pública, Ley 621, aprobada el 16 de mayo de 2007. Texto consolidado al 29 de octubre de 2020. Reglamento: Decreto Ejecutivo 81-2007.",
+    lawUrl:
+      "http://legislacion.asamblea.gob.ni/normaweb.nsf/9e314815a08d4a6206257265005d21f9/1fcfa8d7aa8727620625872f0077462e?OpenDocument=",
     obligated:
       "Entes del Estado y particulares que administren recursos públicos, según el texto de la ley. El cumplimiento real es otro asunto.",
     deadline: "15 días hábiles, según el procedimiento escrito en la Ley 621.",
     deadlineShort: "15 días hábiles en la ley",
     deadlineDays: 15,
     extension:
-      "La ley contempla ampliaciones acotadas. En la práctica, el problema suele ser la ausencia de respuesta y no la prórroga.",
+      "Prórroga excepcional de 10 días hábiles si la información está en otra dependencia, es voluminosa o exige analizar una excepción. Deben avisar las razones antes de que venzan los 15 días.",
     silence:
-      "El silencio no entrega la información. Tampoco hay un recurso ante un órgano autónomo que hoy resulte útil.",
+      "En el texto, vencido el plazo sin resolución la solicitud se tiene por aceptada si la información no es reservada ni confidencial (artículo 35). No hay un garante autónomo que haga cumplir ese silencio. En la práctica, no cuentes con la entrega.",
     appeal:
-      "La ley preveía recursos administrativos y judiciales. No hay un instituto independiente en funcionamiento que ordene entregar documentos al Ejecutivo.",
+      "Apelación en seis días ante la oficina de coordinación del mismo poder, consejo regional o municipal. Esa instancia no es independiente. También cabe ir directo al contencioso-administrativo.",
     oversight:
       "No hay un órgano garante autónomo operativo. Las oficinas de acceso, donde existen, dependen de la propia institución.",
     requestPortalName: "No hay un portal nacional de solicitudes",
@@ -647,8 +655,21 @@ export const mexicoCentro: Country[] = [
         topics: ["estadistica", "economia"],
         kind: "estadistica",
       },
+      {
+        id: "ni-bcn",
+        name: "Estadísticas del Banco Central",
+        url: "https://www.bcn.gob.ni/estadisticas",
+        publisher: "Banco Central de Nicaragua",
+        description:
+          "Indicadores monetarios, fiscales, cuentas nacionales y sector externo.",
+        topics: ["economia", "estadistica"],
+        kind: "estadistica",
+      },
     ],
-    sources: [{ label: "INIDE", url: "https://www.inide.gob.ni/" }],
+    sources: [
+      { label: "INIDE", url: "https://www.inide.gob.ni/" },
+      { label: "Banco Central de Nicaragua", url: "https://www.bcn.gob.ni/estadisticas" },
+    ],
   },
   {
     slug: "costa-rica",
@@ -663,7 +684,7 @@ export const mexicoCentro: Country[] = [
     lawName:
       "Ley Marco de Acceso a la Información Pública, Ley N.° 10554, del 23 de octubre de 2024, en vigor desde el 1 de noviembre de 2024.",
     lawUrl:
-      "https://sinalevi.go.cr/ResultadosNormativa/Informacion?param1=103157&param2=&param3=1&param4=",
+      "https://pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?nValor1=1&nValor2=103157&nValor3=143061&param1=NRTC&strTipM=TC",
     obligated:
       "Los sujetos obligados de la administración pública y las entidades privadas que gestionen información de interés público o manejen fondos públicos, en lo que la ley alcanza.",
     deadline:
@@ -750,13 +771,44 @@ export const mexicoCentro: Country[] = [
         topics: ["presupuesto", "justicia", "transparencia"],
         kind: "presupuesto",
       },
+      {
+        id: "cr-inec-datos",
+        name: "Datos abiertos del INEC",
+        url: "https://datosabiertos.inec.cr/",
+        publisher: "Instituto Nacional de Estadística y Censos",
+        description: "Microdatos y conjuntos descargables del INEC.",
+        topics: ["estadistica"],
+        kind: "datos",
+      },
+      {
+        id: "cr-observatorio",
+        name: "Observatorio de Compra Pública",
+        url: "https://www.observatoriocomprapublica.go.cr/observatorio-2/",
+        publisher: "Observatorio de Compra Pública",
+        description: "Indicadores de compras tomados de SICOP y del SIAC de la Contraloría.",
+        topics: ["contrataciones", "presupuesto"],
+        kind: "compras",
+      },
+      {
+        id: "cr-pj",
+        name: "Datos abiertos del Poder Judicial",
+        url: "https://datosabiertospj.poder-judicial.go.cr/",
+        publisher: "Poder Judicial",
+        description: "Estadísticas judiciales y de defensa pública.",
+        topics: ["justicia", "estadistica"],
+        kind: "datos",
+      },
     ],
     sources: [
+      {
+        label: "Ley 10554 en el Sistema Costarricense de Información Jurídica",
+        url: "https://pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?nValor1=1&nValor2=103157&nValor3=143061&param1=NRTC&strTipM=TC",
+      },
       {
         label: "Ley 10554 en el Sistema Nacional de Legislación Vigente",
         url: "https://sinalevi.go.cr/ResultadosNormativa/Informacion?param1=103157&param2=&param3=1&param4=",
       },
-      { label: "Portal de datos abiertos", url: "https://www.datos.go.cr/" },
+      { label: "Portal de datos abiertos", url: "https://datosabiertos.gob.go.cr/" },
     ],
   },
   {

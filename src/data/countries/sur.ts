@@ -258,8 +258,30 @@ export const sur: Country[] = [
         topics: ["presupuesto", "economia"],
         kind: "presupuesto",
       },
+      {
+        id: "py-microdatos",
+        name: "Microdatos del INE",
+        url: "https://www.ine.gov.py/microdatos/index.php?cant=99&tema=TODOS",
+        publisher: "Instituto Nacional de Estadística",
+        description: "Microdatos de población, censos y vivienda.",
+        topics: ["estadistica"],
+        kind: "estadistica",
+      },
+      {
+        id: "py-contraloria",
+        name: "Rendiciones de la Contraloría",
+        url: "https://datos-rendicion.contraloria.gov.py/datos-abiertos/",
+        publisher: "Contraloría General de la República",
+        description: "Rendiciones de cuentas de organismos y entidades del Estado, en datos abiertos.",
+        topics: ["presupuesto", "transparencia"],
+        kind: "presupuesto",
+      },
     ],
     sources: [
+      {
+        label: "Ley 5282/2014",
+        url: "https://www.bacn.gov.py/leyes-paraguayas/3013/ley-n-5282-libre-acceso-ciudadano-a-la-informacion-publica-y-transparencia-gubernamental",
+      },
       {
         label: "Portal de información pública",
         url: "https://informacionpublica.paraguay.gov.py/",
@@ -418,8 +440,8 @@ export const sur: Country[] = [
     oversight:
       "Agencia de Acceso a la Información Pública, ente autárquico en la órbita de la Jefatura de Gabinete de Ministros.",
     oversightUrl: "https://www.argentina.gob.ar/aaip",
-    requestPortalName: "Trámites a Distancia y Portal Nacional de Transparencia",
-    requestPortalUrl: "https://portal.transparencia.gob.ar/",
+    requestPortalName: "Trámites a Distancia",
+    requestPortalUrl: "https://www.argentina.gob.ar/solicitar-informacion-publica",
     channels: [
       "Trámites a Distancia (TAD), trámite «Acceso a la Información Pública»",
       "Guía en argentina.gob.ar/solicitar-informacion-publica",
@@ -448,7 +470,7 @@ export const sur: Country[] = [
       "Las excepciones son taxativas y se interpretan de forma restrictiva.",
     ],
     notes:
-      "La Agencia seguía publicada en argentina.gob.ar al armar esta ficha, con el reclamo por incumplimiento como trámite activo. El atajo «solicitar-informacion-publica» dentro de argentina.gob.ar devolvía error: el circuito vigente pasa por el Portal Nacional de Transparencia y por TAD.",
+      "La guía vigente para presentar el pedido nacional es argentina.gob.ar/solicitar-informacion-publica. El trámite se carga en Trámites a Distancia. La AAIP seguía publicada en octubre de 2026, y desde el 1 de enero de 2026 no gestionar las solicitudes en su sistema de seguimiento puede activar el procedimiento de la Resolución AAIP 80/2024.",
     letterBasis:
       "la Ley 27.275 de Derecho de Acceso a la Información Pública",
     requestLanguage: "es",
