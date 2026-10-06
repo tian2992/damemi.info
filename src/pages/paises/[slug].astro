@@ -180,7 +180,7 @@ const description = `${country.name}: ${country.deadlineShort}. ${country.summar
             Ir a {country.requestPortalName}
           </a>
         ) : (
-          <p class="mt-5 rounded-md border border-line px-3 py-2 text-sm">{country.requestPortalName}</p>
+          <p class="mt-5 rounded-md border border-line px-3 py-2 text-sm"><strong>Contacta a:</strong> {country.requestPortalName}</p>
         )
       }
       <a class="mt-2 block rounded-md border border-ink px-4 py-2.5 text-center text-sm font-semibold hover:bg-paper-deep" href={`/plantilla?pais=${country.slug}`}>
