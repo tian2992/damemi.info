@@ -1,12 +1,8 @@
-@import "@fontsource/ibm-plex-sans/latin-400.css";
-@import "@fontsource/ibm-plex-sans/latin-500.css";
-@import "@fontsource/ibm-plex-sans/latin-600.css";
-@import "@fontsource/ibm-plex-sans/latin-700.css";
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "IBM Plex Sans", "Segoe UI", sans-serif;
-  --font-sans: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --font-serif: "Segoe UI", sans-serif;
+  --font-sans: "Segoe UI", sans-serif;
   --color-paper: #e7eef6;
   --color-paper-deep: #d4e0ee;
   --color-card: #ffffff;
