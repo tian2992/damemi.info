@@ -24,28 +24,29 @@ function orBlank(value: string, fallback: string): string {
 function mediumLabel(language: LetterCountry["requestLanguage"], key: string): string {
   const labels: Record<LetterCountry["requestLanguage"], Record<string, string>> = {
     es: {
-      email: "correo electrónico, en formato abierto",
+      email: "correo electrónico",
       link: "un enlace de descarga",
       pdf: "copia digital en PDF con texto seleccionable",
       office: "consulta en la oficina, con posibilidad de copia",
       excelzip: "un archivo ZIP con las correspondientes hojas de cálculo",
+
     },
     en: {
-      email: "email, in an open format",
+      email: "email",
       link: "a download link",
       pdf: "a digital PDF with selectable text",
       office: "inspection at your office, with the option to copy",
       excelzip: "zip file containing the respective spreadsheets",
     },
     fr: {
-      email: "courriel, dans un format ouvert",
+      email: "courriel",
       link: "un lien de téléchargement",
       pdf: "une copie numérique en PDF avec texte sélectionnable",
       office: "consultation sur place, avec possibilité de copie",
       excelzip: "un fichier ZIP contenant les feuilles de calcul correspondantes",
     },
     pt: {
-      email: "correio eletrônico, em formato aberto",
+      email: "correio eletrônico",
       link: "um link para download",
       pdf: "cópia digital em PDF com texto selecionável",
       office: "consulta no local, com possibilidade de cópia",
@@ -162,7 +163,7 @@ Periodo o alcance: ${period}
 
 Pido que la entrega se haga por ${medium}, en formato abierto y reutilizable si la información ya existe en ese formato. Si parte de lo solicitado no obra en esa autoridad, pido que indiquen cuál dependencia la tiene.
 
-No me es obligado el explicar el motivo de esta solicitud. Agradezco el acuse de recibo, con fecha y número, para computar el plazo de ${country.deadlineShort}.
+No me es obligatorio el explicar el motivo de esta solicitud. Agradezco el acuse de recibo, con fecha y número, para computar el plazo de ${country.deadlineShort}.
 
 Atentamente,
 
