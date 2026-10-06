@@ -187,5 +187,40 @@ export const regionalResources: Resource[] = [
     topics: ["transparencia", "economia", "contrataciones", "gobierno", "presupuesto"],
     kind: "red",
     countryId: "regional",
-  }
+  },
+  {
+    id: "reg-ocds",
+    name: "Open Contracting Data Standard",
+    url: "https://standard.open-contracting.org/",
+    publisher: "Open Contracting Partnership",
+    description:
+      "Estándar de datos abiertos para la transparencia y rendición de cuentas en los procesos de contratación pública.",
+    topics: ["transparencia", "economia", "contrataciones", "gobierno", "presupuesto"],
+    kind: "datos",
+    countryId: "regional",
+  },
+  {
+    id: "reg-ocds-tools",
+    name: "Open Contracting Data Standard - Tools",
+    url: "https://standard.open-contracting.org/tools/",
+    publisher: "Open Contracting Partnership",
+    description:
+      "Herramientas para consumir, implementar y utilizar el estándar de datos abiertos para la transparencia y rendición de cuentas en los procesos de contratación pública.",
+    topics: ["transparencia", "economia", "contrataciones", "gobierno", "presupuesto"],
+    kind: "datos",
+    countryId: "regional",
+  },
+  { 
+    id: "reg-scoda",
+    name: "Escuela de Datos - School of Data",
+    url: "https://escueladedatos.online/",
+    publisher: "Escuela de Datos",
+    description:
+      "Iniciativa global que ofrece recursos y formación en habilidades de datos para periodistas, activistas y ciudadanos interesados en el uso de datos abiertos.",
+    topics: ["transparencia", "educacion"],
+    kind: "red",
+    countryId: "regional",
+  },
+  
+
 ];
