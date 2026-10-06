@@ -28,24 +28,28 @@ function mediumLabel(language: LetterCountry["requestLanguage"], key: string): s
       link: "un enlace de descarga",
       pdf: "copia digital en PDF con texto seleccionable",
       office: "consulta en la oficina, con posibilidad de copia",
+      excelzip: "un archivo ZIP con las correspondientes hojas de cálculo",
     },
     en: {
       email: "email, in an open format",
       link: "a download link",
       pdf: "a digital PDF with selectable text",
       office: "inspection at your office, with the option to copy",
+      excelzip: "zip file containing the respective spreadsheets",
     },
     fr: {
       email: "courriel, dans un format ouvert",
       link: "un lien de téléchargement",
       pdf: "une copie numérique en PDF avec texte sélectionnable",
       office: "consultation sur place, avec possibilité de copie",
+      excelzip: "un fichier ZIP contenant les feuilles de calcul correspondantes",
     },
     pt: {
       email: "correio eletrônico, em formato aberto",
       link: "um link para download",
       pdf: "cópia digital em PDF com texto selecionável",
       office: "consulta no local, com possibilidade de cópia",
+      excelzip: "um arquivo ZIP com as respectivas planilhas",
     },
   };
   return labels[language][key] ?? labels.es[key] ?? "[medio de entrega]";
@@ -156,9 +160,9 @@ ${description}
 
 Periodo o alcance: ${period}
 
-Pido que la entrega se haga por ${medium}, en formato abierto y reutilizable si la información ya existe en ese soporte. Si parte de lo solicitado no obra en esa autoridad, pido que indiquen cuál dependencia la tiene.
+Pido que la entrega se haga por ${medium}, en formato abierto y reutilizable si la información ya existe en ese formato. Si parte de lo solicitado no obra en esa autoridad, pido que indiquen cuál dependencia la tiene.
 
-No estoy obligado(a) a explicar el motivo de esta solicitud. Agradezco el acuse de recibo, con fecha y número, para computar el plazo de ${country.deadlineShort}.
+No me es obligado el explicar el motivo de esta solicitud. Agradezco el acuse de recibo, con fecha y número, para computar el plazo de ${country.deadlineShort}.
 
 Atentamente,
 
