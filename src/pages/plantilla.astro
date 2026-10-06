@@ -36,9 +36,14 @@ Atentamente,
 >
   <div class="mx-auto max-w-6xl px-4 py-10">
     <p class="text-xs font-semibold uppercase tracking-[0.16em] text-gold">Plantilla</p>
-    <h1 class="mt-2 max-w-3xl font-serif text-4xl tracking-tight sm:text-5xl">La carta, con la ley del país</h1>
+    <h1 class="mt-2 max-w-3xl font-serif text-4xl tracking-tight sm:text-5xl">Cartas para pedir información con la ley de tú país</h1>
     <p class="mt-4 max-w-2xl text-lg text-ink-soft">
-      Completa los huecos. La carta cita la norma de la ficha y, si el trámite es en inglés, francés o portugués, sale en ese idioma. Nada de lo que escribes sale de esta página.
+      Llená el formulario. La carta cita la norma de la ficha y, si el trámite es en inglés, francés o portugués, sale en ese idioma. 
+    </p>
+    <p class="mt-4 max-w-2xl text-lg text-ink-soft">
+      <strong>Nada de lo que escribes sale de esta página y todo se procesa localmente en tu navegador.</strong> Copiala, imprimila o mandala por correo electrónico.
+
+      Si no te gusta el fraseo o te interesa aportar una plantilla, <a class='font-semibold text-teal' href='acerca'>contáctanos</a> y colabora <a class="font-semibold text-teal" href="">en el catálogo</a>
     </p>
 
     <div class="mt-8 grid gap-8 lg:grid-cols-2">
@@ -87,6 +92,7 @@ Atentamente,
             <select id="medio" class="mt-1 w-full rounded-md border border-line bg-card px-3 py-2">
               <option value="email">Correo electrónico, en formato abierto</option>
               <option value="link">Enlace de descarga</option>
+              <option value="excelzip">Archivo ZIP de hojas de calculo</option>
               <option value="pdf">Copia digital en PDF con texto seleccionable</option>
               <option value="office">Consulta en la oficina, con posibilidad de copia</option>
             </select>
@@ -96,11 +102,11 @@ Atentamente,
 
       <div>
         <p id="carta-aviso" hidden class="mb-3 rounded-md border border-terra/40 bg-note px-3 py-2 text-sm leading-relaxed text-ink"></p>
-        <label class="text-sm font-semibold" for="carta">Carta</label>
+        <label class="text-sm font-semibold" for="carta">Carta (¡es editable!)</label>
         <textarea id="carta" readonly class="letter-sheet mt-1 min-h-[460px] w-full rounded-md border border-line bg-white px-4 py-4 font-sans text-[1.02rem] leading-relaxed text-ink">{generic}</textarea>
         <div class="no-print mt-3 flex flex-wrap gap-2">
           <button id="copiar" class="rounded-md bg-terra px-4 py-2 text-sm font-semibold text-white hover:bg-terra-deep" type="button">Copiar carta</button>
-          <button id="imprimir" class="rounded-md border border-ink px-4 py-2 text-sm font-semibold hover:bg-paper-deep" type="button">Imprimir</button>
+          <!-- <button id="imprimir" class="rounded-md border border-ink px-4 py-2 text-sm font-semibold hover:bg-paper-deep" type="button">Imprimir</button>  --> 
         </div>
         <p id="carta-meta" class="mt-3 text-sm leading-relaxed text-muted"></p>
         <noscript>
