@@ -38,24 +38,10 @@ El dominio es [https://damemi.info](https://damemi.info). El sitio se sirve en l
 - `public/CNAME` contiene `damemi.info`. El build lo copia a `dist/CNAME`.
 - `.github/workflows/deploy.yml` instala, construye y publica el sitio en cada push a `main`.
 
-En el repositorio de GitHub, en Settings → Pages → Build and deployment, elige Source: **GitHub Actions**. Un repositorio privado necesita un plan de GitHub que incluya Pages.
-
-En el DNS del dominio, apunta el ápice a las direcciones de GitHub Pages y `www` al sitio del usuario o de la organización:
-
-| Nombre | Tipo | Valor |
-| --- | --- | --- |
-| `damemi.info` | A | `185.199.108.153` |
-| `damemi.info` | A | `185.199.109.153` |
-| `damemi.info` | A | `185.199.110.153` |
-| `damemi.info` | A | `185.199.111.153` |
-| `www` | CNAME | `<usuario>.github.io` |
-
-Cuando el certificado esté listo, activa **Enforce HTTPS** en la misma pantalla de Pages.
-
 ## Dónde está el contenido
 
 Las fichas viven en `src/data/countries/`. Cada país es un archivo que exporta `country`; hay que importarlo en `src/data/countries/index.ts`. Los recursos regionales están en `src/data/regional.ts`. La guía que alimenta el buscador está en `src/data/guide.ts`.
 
 ## Aviso
 
-La información se cerró el 5 de octubre de 2026. Las leyes cambian: México ya no tiene INAI, Costa Rica tiene ley marco desde 2024 y Bolivia tenía un proyecto en Diputados, no una ley promulgada.
+La información se cerró el 5 de octubre de 2026. Las leyes y estatutos cambian. **No es asesoría legal ni un sitio del Estado**. Toda la información esta disponible de buena fé pero sin ninguna garantía. Confirma el canal y el plazo en el portal oficial antes de presentar la solicitud.
