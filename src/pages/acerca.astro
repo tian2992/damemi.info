@@ -14,10 +14,12 @@ import { site } from "../data/site";
     <h1 class="mt-2 font-serif text-4xl tracking-tight text-ink sm:text-5xl">Qué es damemi</h1>
     <blockquote class="my-6 border-l-2 border-gold pl-5 italic leading-relaxed text-lg text-ink">
       <p>
-        Obtuve el dominio damemi.info hace varios años. Lo registré el 2018-04-25, pero hasta Hoy en Octubre 2026 paso a algo que valiera la pena compartir. Desde el inicio me pareció pegadizo e irónico que tengamos que pedir información que se extrae de nosotres. La información pública es nuestra, no es un favor del Estado.
-        Este sitio es un intento de recopilar una variedad de recursos, organizarlos de manera sistemática y hacerlos fáciles de encontrar para cualquiera que lo necesite. El sitio fue iniciado hace 8 años como un app de Ruby que no compilaba en un sitio estático, ahora reencarna en un golem basofIA pero con la esperanza de convertirse en un espacio de colaboración humana. Dedicado a la comunidad de datos abiertos de Latinoamérica. Con cariño.
+        Obtuve el dominio damemi.info hace varios años. Lo registré el 2018-04-25, pero hasta Hoy en Octubre 2026 paso a ser algo que valiera la pena compartir. Desde el inicio me pareció pegadizo e irónico que tengamos que pedir información que se extrae de nosotres. <strong>La información pública es nuestra, no es un favor del Estado.</strong> Pero existen muchos impedimentos burocráticos y de diseño del sistema, para que la información que el Estado ya tiene, llegue a nuestras manos. Por eso este sitio. <br />
+
+        Este sitio es un intento de recopilar una variedad de recursos, organizarlos de manera sistemática y hacerlos fáciles de encontrar para cualquiera que lo necesite; Y de colaborar, para quienes saben. Este sitio fue iniciado hace 8 años como un app de Ruby que no compilaba en un sitio estático, ahora reencarna en un golem basof<em>IA</em> pero con la esperanza de convertirse en un espacio de colaboración humana. 
+        Dedicado a la comunidad de datos abiertos de Latinoamérica. Con cariño.
       </p>
-      <footer class="mt-3 text-sm not-italic font-semibold uppercase tracking-[0.12em] text-gold">— tian <span class="small">[2026-10-05]</span></footer>
+      <footer class="mt-3 text-sm not-italic font-semibold uppercase tracking-[0.12em] text-gold">Sebastian Oliva - tian2992 <span class="small">[2026-10-05]</span></footer>
     </blockquote>
     <p>
       Este sitio reúne, en un solo directorio, cómo pedirla en América Latina y el Caribe y dónde están los datos que el Estado ya publicó.
@@ -25,7 +27,7 @@ import { site } from "../data/site";
     </p>
     <h2>Cómo se armó</h2>
     <p>
-      Las fichas se cerraron el {site.updatedLabel} mediante scrapping y una busqueda automatizada. Se asistió en el desarollo mediante un agente LLM. <strong>Existen errores y ceguera de espacios de información.</strong> De manera automatizada se contrastaron con textos oficiales y portales en línea, diarios y gacetas, órganos de acceso, catálogos de datos y sistemas de compras. La ficha usa el nombre actual de las instituciones (Perú lista al OECE no al antiguo OSCE, etc). Costa Rica tiene ley marco desde noviembre de 2024. Bolivia, al 27 de agosto de 2026, tenía un proyecto aprobado por el Senado y todavía no una ley promulgada.
+      Las fichas se cerraron el {site.updatedLabel} mediante scrapping y una busqueda automatizada. Se asistió en el desarollo mediante un agente LLM, el cual fue supervisado por un adulto irresponsable. <strong>Existen errores y ceguera de espacios de información.</strong> De manera automatizada se contrastaron con textos oficiales y portales en línea, diarios y gacetas, órganos de acceso, catálogos de datos y sistemas de compras. La ficha usa el nombre actual de las instituciones (Perú lista al OECE no al antiguo OSCE, etc). Costa Rica tiene ley marco desde noviembre de 2024. Bolivia, al 27 de agosto de 2026, tenía un proyecto aprobado por el Senado y todavía no una ley promulgada.
     </p>
     <p>
       Si un país no tiene un trámite, la ficha lo dice. Algunos sitios oficiales bloquean visitas automatizadas o tienen el certificado vencido; lo cual se anota en la ficha.
@@ -39,9 +41,10 @@ import { site } from "../data/site";
     </p>
     <h2>Qué revisar si una ficha envejece</h2>
     <ul>
-      <li>Si Bolivia promulga la ley, el plazo y el recurso dejan de ser «sin ley».</li>
+      <li>Por ejemplo, si Bolivia promulga la ley, el plazo y el recurso dejan de ser «sin ley».</li>
       <li>Si un estado mexicano conserva o elimina su instituto local, el recurso de ese estado cambia.</li>
       <li>Si un dominio de compras se muda, manda el de la ficha y no un buscador.</li>
+      <li>Si algo está incompleto o erroneo, ¡corrigelo!.</li>
     </ul>
     <p>
       El código es un sitio estático. Generado con Astro y hospedado en Github pages. Los datos viven en <a href="https://github.com/tian2992/damemi.info" class="font-semibold text-ink">src/data en el proyecto de github</a>. Una ficha nueva es un objeto más en esa carpeta. ¡Enviá un pull request!
