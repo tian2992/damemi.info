@@ -11,12 +11,12 @@ export const country: Country = {
   constitution:
     "Artículos 30 y 31 de la Constitución Política de la República de Guatemala: publicidad de los actos y acceso a archivos y registros estatales.",
   lawName: "Ley de Acceso a la Información Pública, Decreto 57-2008 del Congreso de la República.",
-  lawUrl: "https://www.congreso.gob.gt/detalle_pdf/decretos/13082",
+  lawUrl: "https://gae.gob.gt/wp-content/uploads/2025/06/Decreto-57-2008.V2025.pdf", // https://www.congreso.gob.gt/detalle_pdf/decretos/13082
   obligated:
     "Organismos del Estado, entidades autónomas y descentralizadas, municipalidades, y personas o entidades que administren o ejecuten recursos públicos, respecto de esos recursos.",
   deadline:
-    "El artículo 42 manda resolver dentro de los diez días siguientes a que la solicitud se presente y se admita. El decreto no escribe «hábiles»; SAT y RENAP lo aplican como días hábiles.",
-  deadlineShort: "10 días",
+    "El artículo 42 manda resolver dentro de los diez días siguientes a que la solicitud se presente y se admita. El decreto no escribe «hábiles», diciendo literalmente “Siguientes”; SAT, RENAP, MINECO y otras entidades lo aplican como días hábiles.",
+  deadlineShort: "10 días hábiles*",
   deadlineDays: 10,
   extension:
     "El artículo 43 permite ampliar hasta diez días más si el volumen lo justifica, con aviso dentro de los dos días anteriores al vencimiento.",
