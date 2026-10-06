@@ -75,7 +75,7 @@ export interface Country {
   summary: string;
   constitution: string;
   lawName: string;
-  lawUrl?: string;
+  lawUrl?: string;  //TODO: make more than one URL
   obligated: string;
   deadline: string;
   deadlineShort: string;
