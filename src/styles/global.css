@@ -14,8 +14,8 @@
   --color-ink-soft: #1c3148;
   --color-muted: #4a5e73;
   --color-line: #c5d4e4;
-  --color-terra: #d3541a;
-  --color-terra-deep: #9a3412;
+  --color-terra: #eb1919;
+  --color-terra-deep: hsl(0, 98%, 45%);
   --color-teal: #0b4f71;
   --color-teal-mid: #0e7490;
   --color-gold: #0c5f78;
