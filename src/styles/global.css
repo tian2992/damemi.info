@@ -1,29 +1,25 @@
-@import "@fontsource/fraunces/latin-400.css";
-@import "@fontsource/fraunces/latin-500.css";
-@import "@fontsource/fraunces/latin-600.css";
-@import "@fontsource/fraunces/latin-700.css";
-@import "@fontsource/fraunces/latin-400-italic.css";
-@import "@fontsource/fraunces/latin-600-italic.css";
-@import "@fontsource/source-sans-3/latin-400.css";
-@import "@fontsource/source-sans-3/latin-600.css";
-@import "@fontsource/source-sans-3/latin-700.css";
+@import "@fontsource/ibm-plex-sans/latin-400.css";
+@import "@fontsource/ibm-plex-sans/latin-500.css";
+@import "@fontsource/ibm-plex-sans/latin-600.css";
+@import "@fontsource/ibm-plex-sans/latin-700.css";
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Fraunces", "Iowan Old Style", Palatino, serif;
-  --font-sans: "Source Sans 3", "Source Sans Pro", "Segoe UI", sans-serif;
-  --color-paper: #f3eee4;
-  --color-paper-deep: #e6dfd0;
-  --color-card: #fbf7f0;
-  --color-ink: #1b1713;
-  --color-ink-soft: #3c362f;
-  --color-muted: #5c564e;
-  --color-line: #d5cdbf;
-  --color-terra: #b8431f;
-  --color-terra-deep: #8a3014;
-  --color-teal: #163f3a;
-  --color-teal-mid: #1f5c54;
-  --color-gold: #8d6b2f;
+  --font-serif: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --font-sans: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --color-paper: #e7eef6;
+  --color-paper-deep: #d4e0ee;
+  --color-card: #ffffff;
+  --color-ink: #0a1c30;
+  --color-ink-soft: #1c3148;
+  --color-muted: #4a5e73;
+  --color-line: #c5d4e4;
+  --color-terra: #d3541a;
+  --color-terra-deep: #9a3412;
+  --color-teal: #0b4f71;
+  --color-teal-mid: #0e7490;
+  --color-gold: #0c5f78;
+  --color-note: #fff3ea;
 }
 
 html {
@@ -33,11 +29,52 @@ html {
 body {
   background-color: var(--color-paper);
   background-image:
-    radial-gradient(ellipse at top left, rgba(184, 67, 31, 0.07), transparent 42%),
-    linear-gradient(180deg, rgba(255, 252, 246, 0.65), transparent 320px);
+    linear-gradient(180deg, #f8fbfe 0, transparent 240px),
+    radial-gradient(ellipse 62% 42% at 100% -8%, rgba(211, 84, 26, 0.16), transparent 52%),
+    radial-gradient(ellipse 48% 36% at -8% 0%, rgba(11, 79, 113, 0.18), transparent 48%);
   color: var(--color-ink);
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+.font-serif {
+  font-family: var(--font-sans);
+  letter-spacing: -0.025em;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 3.25rem;
+  height: 3px;
+  margin-top: 0.85rem;
+  border-radius: 999px;
+  background: var(--color-terra);
+}
+
+.rail-teal {
+  border-top: 4px solid var(--color-teal);
+}
+
+.rail-terra {
+  border-top: 4px solid var(--color-terra);
+}
+
+.rail-gold {
+  border-top: 4px solid var(--color-gold);
+}
+
+.rail-side {
+  border-left: 4px solid var(--color-teal);
 }
 
 :focus-visible {
@@ -45,31 +82,20 @@ body {
   outline-offset: 3px;
 }
 
+header :focus-visible,
+footer :focus-visible {
+  outline-color: #7dd3fc;
+}
+
 ::selection {
-  background: #efd3c4;
+  background: #c9e4f2;
   color: var(--color-ink);
 }
 
 .topic-chip:has(input:checked) {
-  border-color: var(--color-ink);
-  background: var(--color-ink);
-  color: var(--color-paper);
-}
-
-.stamp {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid var(--color-terra);
-  color: var(--color-terra-deep);
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-weight: 700;
-  font-size: 0.68rem;
-  line-height: 1;
-  padding: 0.45rem 0.55rem;
-  border-radius: 2px;
-  transform: rotate(-8deg);
+  border-color: var(--color-teal);
+  background: var(--color-teal);
+  color: white;
 }
 
 .prose-guide {
@@ -79,18 +105,17 @@ body {
 }
 
 .prose-guide h2 {
-  font-family: var(--font-serif);
-  font-weight: 560;
-  font-size: 1.85rem;
-  line-height: 1.15;
+  font-weight: 600;
+  font-size: 1.7rem;
+  line-height: 1.2;
   color: var(--color-ink);
   margin-top: 2.75rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
 
 .prose-guide h3 {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
+  font-weight: 600;
   margin-top: 1.5rem;
   color: var(--color-ink);
 }
@@ -119,7 +144,7 @@ body {
 
 .prose-guide strong {
   color: var(--color-ink);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 @media print {

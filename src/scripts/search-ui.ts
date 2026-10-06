@@ -95,7 +95,7 @@ function renderPage(docs: SearchDoc[], query: string, target: HTMLElement) {
           <li>
             <a class="flex flex-col gap-1 py-4 hover:bg-card sm:flex-row sm:items-baseline sm:justify-between" href="${doc.href}">
               <span>
-                <span class="block font-serif text-2xl text-ink">${escapeHtml(doc.title)}</span>
+                <span class="block text-xl font-semibold text-ink">${escapeHtml(doc.title)}</span>
                 <span class="text-sm text-muted">${escapeHtml(doc.kicker)}</span>
               </span>
               <span class="text-sm font-semibold text-teal">Abrir</span>

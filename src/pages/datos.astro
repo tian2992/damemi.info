@@ -80,12 +80,12 @@ const places = [
             data-kind={resource.kind}
             data-topics={resource.topics.join(",")}
             data-blob={`${resource.name} ${resource.description} ${resource.publisher} ${placeName(resource.countryId)}`}
-            class="scroll-mt-28 rounded-md border border-line bg-card p-4"
+            class="rail-side scroll-mt-28 rounded-lg border border-line bg-card p-4 shadow-sm"
           >
             <p class="text-xs font-semibold uppercase tracking-wider text-muted">
               {placeName(resource.countryId)} · {kindLabel(resource.kind)}
             </p>
-            <a class="mt-1 block font-serif text-2xl leading-tight text-ink underline decoration-line underline-offset-4 hover:decoration-terra" href={resource.url}>
+            <a class="mt-1 block text-xl font-semibold leading-tight text-ink underline decoration-line underline-offset-4 hover:decoration-terra" href={resource.url}>
               {resource.name}
             </a>
             <p class="mt-2 text-sm leading-relaxed text-ink-soft">{resource.description}</p>

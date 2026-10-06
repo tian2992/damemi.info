@@ -18,7 +18,7 @@ const grouped = regions.map((region) => ({
   <section class="mx-auto grid max-w-6xl items-end gap-10 px-4 pb-8 pt-12 md:grid-cols-12 md:pt-16">
     <div class="md:col-span-7">
       <p class="text-xs font-semibold uppercase tracking-[0.18em] text-gold">América Latina y el Caribe</p>
-      <h1 class="mt-3 max-w-xl font-serif text-4xl leading-[1.05] tracking-tight text-ink sm:text-6xl">
+      <h1 class="mt-3 max-w-xl font-sans text-4xl font-semibold leading-[1.08] tracking-tight text-ink sm:text-6xl">
         La información pública ya es tuya. Aquí está cómo pedirla.
       </h1>
       <p class="mt-5 max-w-xl text-lg leading-relaxed text-ink-soft">
@@ -32,71 +32,72 @@ const grouped = regions.map((region) => ({
           data-search-input
           autocomplete="off"
           placeholder="México, Ley 1712, datos…"
-          class="w-full rounded-md border border-ink/20 bg-card px-4 py-3.5 text-lg text-ink shadow-sm placeholder:text-muted sm:pr-28"
+          class="w-full rounded-md border border-ink/15 bg-card px-4 py-3.5 text-lg text-ink shadow-sm placeholder:text-muted sm:pr-28"
         />
-        <button class="mt-3 rounded-md bg-ink px-4 py-2.5 text-sm font-semibold text-paper hover:bg-teal sm:absolute sm:right-1.5 sm:top-1.5 sm:mt-0" type="submit">
+        <button class="mt-3 rounded-md bg-terra px-4 py-2.5 text-sm font-semibold text-white hover:bg-terra-deep sm:absolute sm:right-1.5 sm:top-1.5 sm:mt-0" type="submit">
           Buscar
         </button>
         <div data-search-panel hidden class="absolute left-0 right-0 top-full z-30 mt-2 overflow-hidden rounded-md border border-line bg-card shadow-lg"></div>
       </form>
-      <p class="mt-3 text-xs text-muted">Pulsa <kbd class="rounded border border-line bg-paper-deep px-1.5 py-0.5 font-sans">/</kbd> para buscar desde cualquier página.</p>
+      <p class="mt-3 text-xs text-muted">Pulsa <kbd class="rounded border border-line bg-card px-1.5 py-0.5 font-sans font-semibold">/</kbd> para buscar desde cualquier página.</p>
     </div>
     <aside class="md:col-span-5">
-      <div class="relative rounded-md border border-line bg-card p-5 shadow-sm">
-        <span class="stamp absolute -right-1 -top-3 bg-card">público</span>
-        <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">Tres fichas para empezar</p>
-        <ul class="mt-4 divide-y divide-line">
+      <div class="overflow-hidden rounded-lg border border-line bg-card shadow-sm">
+        <div class="bg-ink px-5 py-3 text-white">
+          <p class="text-xs font-semibold uppercase tracking-[0.16em] text-white/70">Tres fichas para empezar</p>
+        </div>
+        <ul class="divide-y divide-line px-5">
           <li class="flex items-baseline justify-between gap-3 py-3">
-            <a class="font-serif text-2xl hover:text-terra-deep" href="/paises/mexico">México</a>
+            <a class="text-xl font-semibold hover:text-terra-deep" href="/paises/mexico">México</a>
             <span class="text-sm text-muted">20 días hábiles · PNT</span>
           </li>
           <li class="flex items-baseline justify-between gap-3 py-3">
-            <a class="font-serif text-2xl hover:text-terra-deep" href="/paises/argentina">Argentina</a>
+            <a class="text-xl font-semibold hover:text-terra-deep" href="/paises/argentina">Argentina</a>
             <span class="text-sm text-muted">15 días hábiles · AAIP</span>
           </li>
           <li class="flex items-baseline justify-between gap-3 py-3">
-            <a class="font-serif text-2xl hover:text-terra-deep" href="/paises/chile">Chile</a>
+            <a class="text-xl font-semibold hover:text-terra-deep" href="/paises/chile">Chile</a>
             <span class="text-sm text-muted">20 días hábiles · Portal</span>
           </li>
         </ul>
-        <a class="mt-2 inline-block text-sm font-semibold text-teal" href="/paises">Ver los {countries.length} países</a>
+        <a class="block border-t border-line px-5 py-3 text-sm font-semibold text-teal hover:bg-paper" href="/paises">Ver los {countries.length} países</a>
       </div>
     </aside>
   </section>
 
-  <section class="mx-auto max-w-6xl px-4 py-6">
-    <dl class="grid grid-cols-3 gap-3 border-y border-line py-5">
-      <div>
+  <section class="mx-auto max-w-6xl px-4 py-2">
+    <dl class="grid gap-3 sm:grid-cols-3">
+      <div class="rail-teal rounded-lg border border-line bg-card px-4 py-4 shadow-sm">
         <dt class="text-xs font-semibold uppercase tracking-wider text-muted">Países</dt>
-        <dd class="font-serif text-3xl italic text-ink">{countries.length}</dd>
+        <dd class="mt-1 text-4xl font-semibold tracking-tight text-ink">{countries.length}</dd>
       </div>
-      <div>
+      <div class="rail-terra rounded-lg border border-line bg-card px-4 py-4 shadow-sm">
         <dt class="text-xs font-semibold uppercase tracking-wider text-muted">Con ley general</dt>
-        <dd class="font-serif text-3xl italic text-ink">{withLaw}</dd>
+        <dd class="mt-1 text-4xl font-semibold tracking-tight text-ink">{withLaw}</dd>
       </div>
-      <div>
+      <div class="rail-gold rounded-lg border border-line bg-card px-4 py-4 shadow-sm">
         <dt class="text-xs font-semibold uppercase tracking-wider text-muted">Recursos</dt>
-        <dd class="font-serif text-3xl italic text-ink">{resourceCount}</dd>
+        <dd class="mt-1 text-4xl font-semibold tracking-tight text-ink">{resourceCount}</dd>
       </div>
     </dl>
   </section>
 
   <section class="mx-auto max-w-6xl px-4 py-8">
-    <h2 class="font-serif text-3xl tracking-tight">Por dónde entrar</h2>
+    <h2 class="text-3xl font-semibold tracking-tight">Por dónde entrar</h2>
     <div class="mt-5 grid gap-4 md:grid-cols-3">
-      <a class="rounded-md border border-line bg-card p-5 hover:border-ink/30" href="/guia">
-        <p class="text-xs font-semibold uppercase tracking-wider text-gold">01</p>
-        <h3 class="mt-2 font-serif text-2xl">Quiero un documento</h3>
+      <a class="rail-teal rounded-lg border border-line bg-card p-5 shadow-sm hover:border-teal/40" href="/guia">
+        <p class="text-xs font-semibold uppercase tracking-wider text-teal">01</p>
+        <h3 class="mt-2 text-2xl font-semibold">Quiero un documento</h3>
         <p class="mt-2 text-sm leading-relaxed text-ink-soft">Qué pedir, qué no pedir y qué hacer si la autoridad calla.</p>
       </a>
-      <a class="rounded-md border border-line bg-card p-5 hover:border-ink/30" href="/datos">
-        <p class="text-xs font-semibold uppercase tracking-wider text-gold">02</p>
-        <h3 class="mt-2 font-serif text-2xl">Quiero datos para usar</h3>
+      <a class="rail-terra rounded-lg border border-line bg-card p-5 shadow-sm hover:border-terra/40" href="/datos">
+        <p class="text-xs font-semibold uppercase tracking-wider text-terra-deep">02</p>
+        <h3 class="mt-2 text-2xl font-semibold">Quiero datos para usar</h3>
         <p class="mt-2 text-sm leading-relaxed text-ink-soft">Catálogos, compras, presupuesto y estadística, filtrados por país y tema.</p>
       </a>
-      <a class="rounded-md border border-line bg-card p-5 hover:border-ink/30" href="/plantilla">
+      <a class="rail-gold rounded-lg border border-line bg-card p-5 shadow-sm hover:border-gold/40" href="/plantilla">
         <p class="text-xs font-semibold uppercase tracking-wider text-gold">03</p>
-        <h3 class="mt-2 font-serif text-2xl">Quiero la carta hecha</h3>
+        <h3 class="mt-2 text-2xl font-semibold">Quiero la carta hecha</h3>
         <p class="mt-2 text-sm leading-relaxed text-ink-soft">Una plantilla que cita la ley del país y se arma en tu navegador.</p>
       </a>
     </div>
@@ -116,7 +117,7 @@ const grouped = regions.map((region) => ({
               {region.countries.map((country) => (
                 <li>
                   <a class="grid gap-1 py-3 sm:grid-cols-[1.2fr_1.4fr_auto] sm:items-baseline sm:gap-4" href={`/paises/${country.slug}`}>
-                    <span class="font-serif text-2xl text-ink">{country.name}</span>
+                    <span class="text-xl font-semibold text-ink">{country.name}</span>
                     <span class="text-sm text-muted">{lawStatusLabel(country.lawStatus)}</span>
                     <span class="text-sm font-semibold text-teal-mid">{country.deadlineShort}</span>
                   </a>

@@ -27,7 +27,7 @@ const description = `${country.name}: ${country.deadlineShort}. ${country.summar
         {regionLabel(country.region)}
       </p>
       <div class="mt-3 flex items-start gap-4">
-        <span class="mt-1 inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-line bg-card font-serif text-lg" aria-hidden="true">
+        <span class="mt-1 inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-ink text-sm font-semibold tracking-wide text-white" aria-hidden="true">
           {country.iso}
         </span>
         <div>
@@ -100,7 +100,7 @@ const description = `${country.name}: ${country.deadlineShort}. ${country.summar
         <ul class="mt-4 space-y-3">
           {
             country.tips.map((tip) => (
-              <li class="rounded-md border border-line bg-card px-4 py-3 leading-relaxed text-ink-soft">{tip}</li>
+              <li class="rounded-lg border border-line bg-card px-4 py-3 leading-relaxed text-ink-soft shadow-sm">{tip}</li>
             ))
           }
         </ul>
@@ -119,9 +119,9 @@ const description = `${country.name}: ${country.deadlineShort}. ${country.summar
         <ul class="mt-4 space-y-3">
           {
             country.resources.map((resource) => (
-              <li class="rounded-md border border-line bg-card p-4" id={resource.id}>
+              <li class="rail-side rounded-lg border border-line bg-card p-4 shadow-sm" id={resource.id}>
                 <div class="flex flex-wrap items-baseline justify-between gap-2">
-                  <a class="font-serif text-2xl text-ink underline decoration-line underline-offset-4 hover:decoration-terra" href={resource.url}>
+                  <a class="text-xl font-semibold text-ink underline decoration-line underline-offset-4 hover:decoration-terra" href={resource.url}>
                     {resource.name}
                   </a>
                   <span class="text-xs font-semibold uppercase tracking-wider text-muted">{kindLabel(resource.kind)}</span>
@@ -134,7 +134,7 @@ const description = `${country.name}: ${country.deadlineShort}. ${country.summar
         </ul>
       </section>
 
-      <section class="mt-10 rounded-md border border-terra/30 bg-[#f8efe8] p-5" id="nota">
+      <section class="mt-10 rounded-lg border border-terra/30 bg-note p-5" id="nota">
         <h2 class="font-serif text-2xl">Contexto</h2>
         <p class="mt-2 leading-relaxed text-ink-soft">{country.notes}</p>
       </section>
@@ -172,11 +172,11 @@ const description = `${country.name}: ${country.deadlineShort}. ${country.summar
 
     <aside class="no-print h-fit rounded-md border border-line bg-card p-5 lg:sticky lg:top-28">
       <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">Plazo</p>
-      <p class="mt-1 font-serif text-3xl italic leading-tight text-terra-deep">{country.deadlineShort}</p>
+      <p class="mt-1 text-3xl font-semibold leading-tight text-terra-deep">{country.deadlineShort}</p>
       <p class="mt-4 text-sm leading-relaxed text-ink-soft">{country.oversight}</p>
       {
         country.requestPortalUrl ? (
-          <a class="mt-5 block rounded-md bg-ink px-4 py-2.5 text-center text-sm font-semibold text-paper hover:bg-teal" href={country.requestPortalUrl}>
+          <a class="mt-5 block rounded-md bg-terra px-4 py-2.5 text-center text-sm font-semibold text-white hover:bg-terra-deep" href={country.requestPortalUrl}>
             Ir a {country.requestPortalName}
           </a>
         ) : (

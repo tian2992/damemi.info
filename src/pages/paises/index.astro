@@ -46,7 +46,7 @@ import { lawStatusLabel } from "../../data/labels";
                   <tbody>
                     {group.map((country) => (
                       <tr class="border-b border-line align-top">
-                        <th class="py-3 pr-4 font-serif text-xl font-medium" scope="row">
+                        <th class="py-3 pr-4 text-lg font-semibold" scope="row">
                           <a class="hover:text-terra-deep" href={`/paises/${country.slug}`}>{country.name}</a>
                         </th>
                         <td class="py-3 pr-4">{lawStatusLabel(country.lawStatus)}</td>
