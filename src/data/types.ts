@@ -12,6 +12,7 @@ export const topics = [
   { id: "registros", label: "Registros" },
   { id: "transparencia", label: "Transparencia" },
   { id: "economia", label: "Economía" },
+  { id: "gobierno", label: "Gobierno" },
 ] as const;
 
 export type TopicId = (typeof topics)[number]["id"];

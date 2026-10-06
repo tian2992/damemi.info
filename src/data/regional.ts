@@ -177,4 +177,15 @@ export const regionalResources: Resource[] = [
     kind: "red",
     countryId: "regional",
   },
+  {
+    id: "reg-ocp",
+    name: "Open Contracting Partnership",
+    url: "https://www.open-contracting.org/es/",
+    publisher: "Open Contracting Partnership",
+    description:
+      "Iniciativa para mejorar la transparencia y rendición de cuentas en los procesos de contratación pública. Incluye estandares de datos abiertos (OCDS) y herramientas para monitorear licitaciones y contratos.",
+    topics: ["transparencia", "economia", "contrataciones", "gobierno", "presupuesto"],
+    kind: "red",
+    countryId: "regional",
+  }
 ];
