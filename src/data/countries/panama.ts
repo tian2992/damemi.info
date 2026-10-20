@@ -66,6 +66,7 @@ export const country: Country = {
         "Autoridad de aplicación de la ley de transparencia. Las solicitudes a instituciones aliadas entran por Smart CID (smart.antai.gob.pa), no por el módulo de compras llamado «Solicitud de Información».",
       topics: ["transparencia"],
       kind: "solicitudes",
+      origin: "oficial",
     },
     {
       id: "pa-datos",
@@ -76,6 +77,7 @@ export const country: Country = {
         "Catálogo nacional de datos abiertos publicados por instituciones panameñas.",
       topics: ["transparencia", "economia", "estadistica"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "pa-compras",
@@ -86,6 +88,7 @@ export const country: Country = {
         "Licitaciones y contratos del Estado. Conviene mirarlo antes de pedir un expediente de compra.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      origin: "oficial",
     },
     {
       id: "pa-inec",
@@ -96,6 +99,7 @@ export const country: Country = {
         "Estadísticas demográficas, económicas y sociales de la Contraloría General.",
       topics: ["estadistica", "economia"],
       kind: "estadistica",
+      origin: "oficial",
     },
     {
       id: "pa-gestion",
@@ -105,6 +109,7 @@ export const country: Country = {
       description: "Ejecución presupuestaria y mapa de inversión pública.",
       topics: ["presupuesto", "economia"],
       kind: "presupuesto",
+      origin: "oficial",
     },
     {
       id: "pa-smart",
@@ -115,6 +120,7 @@ export const country: Country = {
         "Cuenta digital para solicitudes de acceso a las instituciones aliadas. No cubre a todo el Estado y no es el módulo de quejas anónimas.",
       topics: ["transparencia"],
       kind: "solicitudes",
+      origin: "oficial",
     },
   ],
   sources: [

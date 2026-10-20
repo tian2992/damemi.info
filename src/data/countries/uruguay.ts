@@ -68,6 +68,7 @@ export const country: Country = {
         "Formulario electrónico para pedir información a los organismos que están en el sistema. No cubre a todos.",
       topics: ["transparencia"],
       kind: "solicitudes",
+      origin: "oficial",
     },
     {
       id: "uy-uaip",
@@ -78,6 +79,7 @@ export const country: Country = {
         "Órgano de control del acceso a la información y de la protección de datos personales. Publica guías para solicitar.",
       topics: ["transparencia", "justicia"],
       kind: "solicitudes",
+      origin: "oficial",
     },
     {
       id: "uy-catalogo",
@@ -88,6 +90,7 @@ export const country: Country = {
         "Catálogo nacional de datos abiertos del Estado uruguayo, con conjuntos descargables y metadatos.",
       topics: ["transparencia", "economia", "transporte", "salud"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "uy-compras",
@@ -98,6 +101,7 @@ export const country: Country = {
         "Institución que hoy concentra la regulación de las compras estatales. El dominio histórico de compras redirige aquí.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      origin: "oficial",
     },
     {
       id: "uy-ine",
@@ -107,6 +111,7 @@ export const country: Country = {
       description: "Estadísticas demográficas, económicas y sociales.",
       topics: ["estadistica", "economia"],
       kind: "estadistica",
+      origin: "oficial",
     },
     {
       id: "uy-presupuesto",
@@ -117,6 +122,7 @@ export const country: Country = {
         "Recursos, créditos y partidas del presupuesto 2025-2029, en CSV.",
       topics: ["presupuesto", "economia"],
       kind: "presupuesto",
+      origin: "oficial",
     },
   ],
   sources: [

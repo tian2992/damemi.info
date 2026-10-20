@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { countries, getCountry } from "../../data/countries";
-import { kindLabel, languageLabel, lawStatusLabel, regionLabel, topicLabel } from "../../data/labels";
+import { kindLabel, languageLabel, lawStatusLabel, originClass, originLabel, regionLabel, topicLabel } from "../../data/labels";
 
 export function getStaticPaths() {
   return countries.map((country) => ({ params: { slug: country.slug } }));
@@ -116,6 +116,7 @@ const description = `${country.name}: ${country.deadlineShort}. ${country.summar
 
       <section class="mt-10" id="datos">
         <h2 class="font-serif text-3xl">Dónde están los datos</h2>
+        <p class="mt-2 text-sm text-muted">La etiqueta dice si el sitio es del Estado, si recopila datos de otros, o si lo armó la comunidad.</p>
         <ul class="mt-4 space-y-3">
           {
             country.resources.map((resource) => (
@@ -127,7 +128,10 @@ const description = `${country.name}: ${country.deadlineShort}. ${country.summar
                   <span class="text-xs font-semibold uppercase tracking-wider text-muted">{kindLabel(resource.kind)}</span>
                 </div>
                 <p class="mt-2 text-sm leading-relaxed text-ink-soft">{resource.description}</p>
-                <p class="mt-2 text-xs text-muted">{resource.publisher} · {resource.topics.map((topic) => topicLabel(topic)).join(" · ")}</p>
+                <p class="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted">
+                  <span class={originClass(resource.origin)}>{originLabel(resource.origin)}</span>
+                  <span>{resource.publisher} · {resource.topics.map((topic) => topicLabel(topic)).join(" · ")}</span>
+                </p>
               </li>
             ))
           }

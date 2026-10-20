@@ -62,6 +62,7 @@ export const country: Country = {
         "Estadísticas oficiales de población, economía y condiciones de vida. Es el acervo público más claro del país.",
       topics: ["estadistica", "economia"],
       kind: "estadistica",
+      origin: "oficial",
     },
     {
       id: "ni-bcn",
@@ -72,6 +73,7 @@ export const country: Country = {
         "Indicadores monetarios, fiscales, cuentas nacionales y sector externo.",
       topics: ["economia", "estadistica"],
       kind: "estadistica",
+      origin: "oficial",
     },
   ],
   sources: [

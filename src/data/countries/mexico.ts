@@ -74,6 +74,7 @@ export const country: Country = {
         "Puerta de entrada para presentar solicitudes, darles seguimiento y consultar obligaciones de transparencia de los sujetos obligados.",
       topics: ["transparencia", "registros"],
       kind: "solicitudes",
+      origin: "oficial",
     },
     {
       id: "mx-datos",
@@ -84,6 +85,7 @@ export const country: Country = {
         "Catálogo nacional de datos abiertos del gobierno federal, con conjuntos descargables por institución y tema.",
       topics: ["transparencia", "economia", "estadistica"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "mx-compras",
@@ -94,6 +96,7 @@ export const country: Country = {
         "Plataforma de contrataciones de la Administración Pública Federal. Sustituye la consulta pública que antes se hacía en CompraNet e incluye históricos y datos abiertos de contratos.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      origin: "oficial",
     },
     {
       id: "mx-presupuesto",
@@ -104,6 +107,7 @@ export const country: Country = {
         "Consulta del presupuesto federal, su ejercicio y las contrataciones abiertas asociadas al gasto.",
       topics: ["presupuesto", "economia"],
       kind: "presupuesto",
+      origin: "oficial",
     },
     {
       id: "mx-inegi",
@@ -114,6 +118,7 @@ export const country: Country = {
         "Censos, encuestas, indicadores económicos y geografía. Es la fuente estadística oficial antes de pedir microdatos a otra dependencia.",
       topics: ["estadistica", "economia", "geoespacial", "salud", "educacion"],
       kind: "estadistica",
+      origin: "oficial",
     },
   ],
   sources: [

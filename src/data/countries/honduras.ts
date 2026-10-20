@@ -67,6 +67,7 @@ export const country: Country = {
         "Canal para presentar solicitudes de información y consultar portales institucionales de transparencia activa.",
       topics: ["transparencia"],
       kind: "solicitudes",
+      origin: "oficial",
     },
     {
       id: "hn-ine",
@@ -77,6 +78,7 @@ export const country: Country = {
         "Estadísticas demográficas, económicas y sociales producidas por el sistema estadístico nacional.",
       topics: ["estadistica", "economia", "salud", "educacion"],
       kind: "estadistica",
+      origin: "oficial",
     },
     {
       id: "hn-sielho",
@@ -87,6 +89,7 @@ export const country: Country = {
         "Sistema electrónico para presentar solicitudes de información y recursos de revisión.",
       topics: ["transparencia"],
       kind: "solicitudes",
+      origin: "oficial",
     },
     {
       id: "hn-sefin",
@@ -97,6 +100,7 @@ export const country: Country = {
         "Formulación y ejecución del presupuesto, inversión pública y descargas de compras.",
       topics: ["presupuesto", "economia", "contrataciones"],
       kind: "presupuesto",
+      origin: "oficial",
     },
   ],
   sources: [

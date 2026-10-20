@@ -70,6 +70,7 @@ export const country: Country = {
         "Sitio para consultar transparencia activa y presentar solicitudes de acceso a los órganos de la administración.",
       topics: ["transparencia"],
       kind: "solicitudes",
+      origin: "oficial",
     },
     {
       id: "cl-cplt",
@@ -80,6 +81,7 @@ export const country: Country = {
         "Órgano autónomo que resuelve los amparos de acceso a la información y publica sus decisiones.",
       topics: ["transparencia", "justicia"],
       kind: "solicitudes",
+      origin: "oficial",
     },
     {
       id: "cl-datos",
@@ -89,6 +91,7 @@ export const country: Country = {
       description: "Catálogo nacional de datos abiertos.",
       topics: ["transparencia", "economia", "transporte", "salud"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "cl-mercado",
@@ -98,6 +101,7 @@ export const country: Country = {
       description: "Licitaciones y órdenes de compra de los organismos públicos.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      origin: "oficial",
     },
     {
       id: "cl-dipres",
@@ -107,6 +111,7 @@ export const country: Country = {
       description: "Ley de presupuestos, ejecución y reportes fiscales.",
       topics: ["presupuesto", "economia"],
       kind: "presupuesto",
+      origin: "oficial",
     },
     {
       id: "cl-ine",
@@ -116,6 +121,7 @@ export const country: Country = {
       description: "Censos, encuestas de empleo, precios y estadísticas vitales.",
       topics: ["estadistica", "economia"],
       kind: "estadistica",
+      origin: "oficial",
     },
     {
       id: "cl-presupuesto",
@@ -126,6 +132,7 @@ export const country: Country = {
         "Presupuesto del gobierno central y ejecución mensual, en un explorador público.",
       topics: ["presupuesto", "economia"],
       kind: "presupuesto",
+      origin: "oficial",
     },
   ],
   sources: [

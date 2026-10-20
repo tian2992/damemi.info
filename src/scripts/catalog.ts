@@ -10,10 +10,11 @@ export function initCatalog(): void {
   const query = document.querySelector<HTMLInputElement>("[data-catalog-query]");
   const country = document.querySelector<HTMLSelectElement>("[data-catalog-country]");
   const kind = document.querySelector<HTMLSelectElement>("[data-catalog-kind]");
+  const origin = document.querySelector<HTMLSelectElement>("[data-catalog-origin]");
   const count = document.querySelector<HTMLElement>("[data-catalog-count]");
   const empty = document.querySelector<HTMLElement>("[data-catalog-empty]");
   const topicBoxes = [...document.querySelectorAll<HTMLInputElement>("[data-topic-filter]")];
-  if (!query || !country || !kind || !count || !empty) return;
+  if (!query || !country || !kind || !origin || !count || !empty) return;
 
   const blobs = new Map(
     cards.map((card) => [card, norm(`${card.dataset.blob ?? ""} ${card.textContent ?? ""}`)]),
@@ -23,15 +24,17 @@ export function initCatalog(): void {
     const q = norm(query.value.trim());
     const selectedCountry = country.value;
     const selectedKind = kind.value;
+    const selectedOrigin = origin.value;
     const selectedTopics = topicBoxes.filter((box) => box.checked).map((box) => box.value);
     let visible = 0;
     for (const card of cards) {
       const topics = (card.dataset.topics ?? "").split(",").filter(Boolean);
       const matchesCountry = !selectedCountry || card.dataset.country === selectedCountry;
       const matchesKind = !selectedKind || card.dataset.kind === selectedKind;
+      const matchesOrigin = !selectedOrigin || card.dataset.origin === selectedOrigin;
       const matchesTopics = selectedTopics.every((topic) => topics.includes(topic));
       const matchesQuery = !q || (blobs.get(card) ?? "").includes(q);
-      const show = matchesCountry && matchesKind && matchesTopics && matchesQuery;
+      const show = matchesCountry && matchesKind && matchesOrigin && matchesTopics && matchesQuery;
       card.hidden = !show;
       if (show) visible += 1;
     }
@@ -42,11 +45,13 @@ export function initCatalog(): void {
   query.addEventListener("input", apply);
   country.addEventListener("change", apply);
   kind.addEventListener("change", apply);
+  origin.addEventListener("change", apply);
   topicBoxes.forEach((box) => box.addEventListener("change", apply));
   document.querySelector("[data-catalog-reset]")?.addEventListener("click", () => {
     query.value = "";
     country.value = "";
     kind.value = "";
+    origin.value = "";
     topicBoxes.forEach((box) => {
       box.checked = false;
     });

@@ -61,6 +61,7 @@ export const country: Country = {
       description: "Portal para consultar información pública y presentar solicitudes.",
       topics: ["transparencia"],
       kind: "solicitudes",
+      origin: "oficial",
     },
     {
       id: "pr-datos",
@@ -71,6 +72,7 @@ export const country: Country = {
         "Dirección legal del portal de datos abiertos de la Ley 122-2019. El 5 de octubre de 2026 redirigía a un aviso de mantenimiento.",
       topics: ["transparencia", "economia"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "pr-prits",
@@ -80,6 +82,7 @@ export const country: Country = {
       description: "Agencia que opera los portales del ejecutivo, incluida la transparencia.",
       topics: ["transparencia", "registros"],
       kind: "datos",
+      origin: "oficial",
     },
   ],
   sources: [

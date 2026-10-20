@@ -69,6 +69,7 @@ export const country: Country = {
         "Catálogo nacional de datos abiertos. En octubre de 2026 todavía tenía pocos conjuntos. datos.go.cr también responde y no lo sustituye esta ficha.",
       topics: ["transparencia", "economia", "ambiente"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "cr-inec",
@@ -79,6 +80,7 @@ export const country: Country = {
         "Censos, encuestas y tabulados interactivos. El sitio institucional del INEC a veces bloquea visitas automatizadas; este portal de cifras es el de consulta.",
       topics: ["estadistica", "economia", "salud", "educacion"],
       kind: "estadistica",
+      origin: "oficial",
     },
     {
       id: "cr-sicop",
@@ -89,6 +91,7 @@ export const country: Country = {
         "Compras públicas electrónicas: concursos, contratos y documentos de los procedimientos.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      origin: "oficial",
     },
     {
       id: "cr-cgr",
@@ -99,6 +102,7 @@ export const country: Country = {
         "Informes de fiscalización y presupuestos públicos. No es el órgano de acceso a la información, pero publica una parte grande del control del gasto.",
       topics: ["presupuesto", "justicia", "transparencia"],
       kind: "presupuesto",
+      origin: "oficial",
     },
     {
       id: "cr-inec-datos",
@@ -108,6 +112,7 @@ export const country: Country = {
       description: "Microdatos y conjuntos descargables del INEC.",
       topics: ["estadistica"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "cr-observatorio",
@@ -117,6 +122,8 @@ export const country: Country = {
       description: "Indicadores de compras tomados de SICOP y del SIAC de la Contraloría.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      // Sitio estatal que reúne indicadores de SICOP y de la Contraloría. Oficial por el operador.
+      origin: "oficial",
     },
     {
       id: "cr-pj",
@@ -126,6 +133,7 @@ export const country: Country = {
       description: "Estadísticas judiciales y de defensa pública.",
       topics: ["justicia", "estadistica"],
       kind: "datos",
+      origin: "oficial",
     },
   ],
   sources: [

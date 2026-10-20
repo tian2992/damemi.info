@@ -47,6 +47,19 @@ export const resourceKinds = [
 
 export type ResourceKind = (typeof resourceKinds)[number]["id"];
 
+// Quién sostiene la fuente. Una por recurso.
+// oficial: autoridad pública (nacional, autónoma o intergubernamental) que publica su propio canal o dato.
+//   Un .gob/.gov/.gub/.go/.gouv alcanza, pero no es el único caso.
+// agregada: recopila, compara o republica lo que producen otros.
+// comunitaria: sociedad civil, red cívica o proyecto fuera del Estado.
+export const origins = [
+  { id: "oficial", label: "Oficial" },
+  { id: "agregada", label: "Secundaria o agregada" },
+  { id: "comunitaria", label: "Comunitaria" },
+] as const;
+
+export type OriginId = (typeof origins)[number]["id"];
+
 export type RequestLanguage = "es" | "en" | "fr" | "pt";
 
 export interface Resource {
@@ -57,6 +70,7 @@ export interface Resource {
   description: string;
   topics: TopicId[];
   kind: ResourceKind;
+  origin: OriginId;
   countryId: string;
 }
 

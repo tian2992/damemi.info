@@ -66,6 +66,7 @@ export const country: Country = {
         "Portal unificado para presentar solicitudes de acceso a la información pública.",
       topics: ["transparencia"],
       kind: "solicitudes",
+      origin: "oficial",
     },
     {
       id: "py-datos",
@@ -75,6 +76,7 @@ export const country: Country = {
       description: "Catálogo nacional de datos abiertos.",
       topics: ["transparencia", "economia", "estadistica"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "py-contrataciones",
@@ -84,6 +86,7 @@ export const country: Country = {
       description: "Licitaciones y contratos del Estado.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      origin: "oficial",
     },
     {
       id: "py-ine",
@@ -93,6 +96,7 @@ export const country: Country = {
       description: "Censos, encuestas e indicadores oficiales.",
       topics: ["estadistica", "economia"],
       kind: "estadistica",
+      origin: "oficial",
     },
     {
       id: "py-hacienda",
@@ -103,6 +107,7 @@ export const country: Country = {
         "Presupuesto, ingresos, ejecución, deuda y nómina, con API. El sitio sigue diciendo Hacienda.",
       topics: ["presupuesto", "economia"],
       kind: "presupuesto",
+      origin: "oficial",
     },
     {
       id: "py-microdatos",
@@ -112,6 +117,7 @@ export const country: Country = {
       description: "Microdatos de población, censos y vivienda.",
       topics: ["estadistica"],
       kind: "estadistica",
+      origin: "oficial",
     },
     {
       id: "py-contraloria",
@@ -121,6 +127,7 @@ export const country: Country = {
       description: "Rendiciones de cuentas de organismos y entidades del Estado, en datos abiertos.",
       topics: ["presupuesto", "transparencia"],
       kind: "presupuesto",
+      origin: "oficial",
     },
   ],
   sources: [

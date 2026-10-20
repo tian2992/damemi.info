@@ -65,6 +65,7 @@ export const country: Country = {
         "Indicadores monetarios y de precios que el banco alcanza a publicar. El certificado del sitio fallaba al armar este directorio: verifica el dominio.",
       topics: ["economia", "estadistica"],
       kind: "estadistica",
+      origin: "oficial",
     },
     {
       id: "ve-ine",
@@ -75,6 +76,7 @@ export const country: Country = {
         "Sitio de estadísticas nacionales, publicaciones y referencias de censos. Varias series históricas no se mantienen al día.",
       topics: ["estadistica", "economia"],
       kind: "estadistica",
+      origin: "oficial",
     },
   ],
   sources: [

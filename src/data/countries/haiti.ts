@@ -54,6 +54,7 @@ export const country: Country = {
         "Cuentas nacionales, precios y otras estadísticas oficiales. Es el sitio del instituto: no uses ihsi.ht, que no lleva al IHSI.",
       topics: ["estadistica", "economia"],
       kind: "estadistica",
+      origin: "oficial",
     },
     {
       id: "ht-haitidata",
@@ -64,6 +65,8 @@ export const country: Country = {
         "Capas y mapas del territorio, riesgos y estudios socioeconómicos. El sitio del CNIGS es cnigs.ht.",
       topics: ["geoespacial", "ambiente"],
       kind: "datos",
+      // Dominio .org del CNIGS, organismo público. Oficial aunque no sea .gouv.ht.
+      origin: "oficial",
     },
   ],
   sources: [

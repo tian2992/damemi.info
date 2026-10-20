@@ -69,6 +69,7 @@ export const country: Country = {
         "Plataforma digital del Estado creada por el Decreto Supremo 5340 de 2025: sitios institucionales, trámites, datos abiertos y observatorios.",
       topics: ["transparencia", "registros"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "bo-sicoes",
@@ -79,6 +80,7 @@ export const country: Country = {
         "Contrataciones del Estado. Es la fuente para seguir compras públicas sin una solicitud.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      origin: "oficial",
     },
     {
       id: "bo-ine",
@@ -89,6 +91,7 @@ export const country: Country = {
         "Censos e indicadores demográficos, económicos y sociales.",
       topics: ["estadistica", "economia"],
       kind: "estadistica",
+      origin: "oficial",
     },
     {
       id: "bo-agetic",
@@ -99,6 +102,7 @@ export const country: Country = {
         "Administra gob.bo y publica lineamientos de datos abiertos y trámites digitales.",
       topics: ["transparencia", "registros"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "bo-datos",
@@ -109,6 +113,7 @@ export const country: Country = {
         "Catálogo reutilizable previsto por el Decreto Supremo 5340. El dominio respondía al revisar esta ficha, a veces con bloqueo a visitas automatizadas.",
       topics: ["transparencia", "economia"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "bo-presupuesto",
@@ -119,6 +124,7 @@ export const country: Country = {
         "Explorador del presupuesto del Estado, con ejecución e historia desde 2005 y descarga.",
       topics: ["presupuesto", "economia"],
       kind: "presupuesto",
+      origin: "oficial",
     },
     {
       id: "bo-sigep",
@@ -129,6 +135,7 @@ export const country: Country = {
         "Sistema de gestión del presupuesto. La consulta ciudadana más directa está en Presupuesto Abierto.",
       topics: ["presupuesto"],
       kind: "presupuesto",
+      origin: "oficial",
     },
     {
       id: "bo-oep",
@@ -138,6 +145,7 @@ export const country: Country = {
       description: "Procesos electorales y organización del voto.",
       topics: ["elecciones"],
       kind: "datos",
+      origin: "oficial",
     },
   ],
   sources: [

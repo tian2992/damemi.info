@@ -71,6 +71,7 @@ export const country: Country = {
         "Autoridad de aplicación de la Ley 27.275 en el Poder Ejecutivo nacional y sede del reclamo por incumplimiento.",
       topics: ["transparencia", "justicia"],
       kind: "solicitudes",
+      origin: "oficial",
     },
     {
       id: "ar-portal",
@@ -81,6 +82,7 @@ export const country: Country = {
         "Explica cómo pedir información al Estado nacional y publica el registro de incumplimientos.",
       topics: ["transparencia"],
       kind: "solicitudes",
+      origin: "oficial",
     },
     {
       id: "ar-tad",
@@ -91,6 +93,7 @@ export const country: Country = {
         "Plataforma donde se inicia la solicitud de acceso y el reclamo ante la Agencia, con identificación.",
       topics: ["transparencia", "registros"],
       kind: "solicitudes",
+      origin: "oficial",
     },
     {
       id: "ar-datos",
@@ -100,6 +103,7 @@ export const country: Country = {
       description: "Catálogo de datos abiertos de la administración pública nacional.",
       topics: ["transparencia", "economia", "transporte", "salud"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "ar-presupuesto",
@@ -109,6 +113,7 @@ export const country: Country = {
       description: "Consulta y descarga de la ejecución presupuestaria nacional.",
       topics: ["presupuesto", "economia"],
       kind: "presupuesto",
+      origin: "oficial",
     },
     {
       id: "ar-comprar",
@@ -118,6 +123,7 @@ export const country: Country = {
       description: "Sistema electrónico de contrataciones de la administración nacional.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      origin: "oficial",
     },
     {
       id: "ar-indec",
@@ -127,6 +133,7 @@ export const country: Country = {
       description: "Censos, índices de precios y estadísticas económicas y sociales.",
       topics: ["estadistica", "economia"],
       kind: "estadistica",
+      origin: "oficial",
     },
   ],
   sources: [

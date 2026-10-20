@@ -1,5 +1,13 @@
 import type { Resource } from "./types";
 
+// Origen (`origin`): ver la nota en types.ts.
+// Límites en este archivo:
+// - reg-rta, reg-oea y reg-oea-pdf son oficiales de una red o de la OEA, no de un país.
+// - reg-cepalstat, reg-p10, reg-bid, reg-wb y reg-unesco los edita un organismo oficial, pero el contenido recopila o compara lo de otros.
+// - reg-ogp mezcla gobiernos y sociedad civil; queda como agregada porque reúne planes, no es el portal nacional.
+// - reg-rti, reg-odin y reg-gdb son índices de terceros: agregados por el producto, comunitarios por quién los publica.
+// - reg-alianza, reg-charter, reg-ocp, reg-ocds y reg-ocds-tools son de sociedad civil. La Alianza también recopila normas; OCDS es un estándar que implementan gobiernos.
+
 export const regionalResources: Resource[] = [
   {
     id: "reg-rta",
@@ -10,6 +18,7 @@ export const regionalResources: Resource[] = [
       "Red de órganos garantes de acceso a la información. El sitio vigente es rtared.org. redrta.org ya no es la red.",
     topics: ["transparencia", "justicia"],
     kind: "red",
+    origin: "oficial",
     countryId: "regional",
   },
   {
@@ -21,6 +30,7 @@ export const regionalResources: Resource[] = [
       "Red de organizaciones de la sociedad civil que documenta leyes de acceso, opacidad y casos de la región.",
     topics: ["transparencia", "justicia"],
     kind: "red",
+    origin: "comunitaria",
     countryId: "regional",
   },
   {
@@ -32,6 +42,7 @@ export const regionalResources: Resource[] = [
       "Planes de acción de gobierno abierto de los países miembros, con compromisos de transparencia y datos que a veces explican por qué existe un portal.",
     topics: ["transparencia"],
     kind: "red",
+    origin: "agregada",
     countryId: "regional",
   },
   {
@@ -43,6 +54,7 @@ export const regionalResources: Resource[] = [
       "Organización regional de datos abiertos. Investiga uso de datos, género y políticas de apertura. Su sitio actual es ilda.la.",
     topics: ["transparencia", "estadistica"],
     kind: "red",
+    origin: "comunitaria",
     countryId: "regional",
   },
   {
@@ -54,6 +66,7 @@ export const regionalResources: Resource[] = [
       "Principios para publicar datos abiertos: abiertos por defecto, oportunos, comparables y pensados para usarse. Varios gobiernos de la región la adoptaron.",
     topics: ["transparencia"],
     kind: "red",
+    origin: "comunitaria",
     countryId: "regional",
   },
   {
@@ -65,6 +78,7 @@ export const regionalResources: Resource[] = [
       "Índice que puntúa la fortaleza jurídica de las leyes de acceso a la información, artículo por artículo. Sirve para comparar textos, no para medir si la ley se cumple.",
     topics: ["transparencia", "justicia"],
     kind: "red",
+    origin: "agregada",
     countryId: "regional",
   },
   {
@@ -76,6 +90,7 @@ export const regionalResources: Resource[] = [
       "Estándar aprobado por la Asamblea General de la OEA en 2020. No es ley nacional: es la vara con la que se comparan las leyes de la región.",
     topics: ["transparencia", "justicia"],
     kind: "red",
+    origin: "oficial",
     countryId: "regional",
   },
   {
@@ -87,6 +102,7 @@ export const regionalResources: Resource[] = [
       "PDF oficial de la Ley Modelo Interamericana 2.0 sobre acceso a la información pública, con principios, plazos de referencia y transparencia activa.",
     topics: ["transparencia", "justicia"],
     kind: "red",
+    origin: "oficial",
     countryId: "regional",
   },
   {
@@ -98,6 +114,7 @@ export const regionalResources: Resource[] = [
       "Base estadística regional de la CEPAL: indicadores comparables de población, economía, ambiente y temas sociales cuando la serie nacional se corta.",
     topics: ["estadistica", "economia", "ambiente", "educacion", "salud"],
     kind: "estadistica",
+    origin: "agregada",
     countryId: "regional",
   },
   {
@@ -109,6 +126,7 @@ export const regionalResources: Resource[] = [
       "Fichas de leyes ambientales y de acceso a la información en América Latina y el Caribe, útiles para encontrar el texto de una norma.",
     topics: ["ambiente", "justicia", "transparencia"],
     kind: "red",
+    origin: "agregada",
     countryId: "regional",
   },
   {
@@ -120,6 +138,7 @@ export const regionalResources: Resource[] = [
       "Catálogo abierto del BID, con indicadores sociales, económicos y de infraestructura. «Números para el Desarrollo» quedó como librería, no como el tablero principal.",
     topics: ["economia", "estadistica", "educacion", "salud"],
     kind: "datos",
+    origin: "agregada",
     countryId: "regional",
   },
   {
@@ -131,6 +150,7 @@ export const regionalResources: Resource[] = [
       "Indicadores de desarrollo comparables entre países. Sirven de contraste, no reemplazan la cifra oficial de un instituto nacional.",
     topics: ["economia", "estadistica", "salud", "educacion"],
     kind: "datos",
+    origin: "agregada",
     countryId: "regional",
   },
   {
@@ -142,6 +162,7 @@ export const regionalResources: Resource[] = [
       "Evaluación del estado de los datos en los países: disponibilidad, gobernanza y uso. ILDA ha participado en la mirada latinoamericana.",
     topics: ["transparencia", "estadistica"],
     kind: "red",
+    origin: "agregada",
     countryId: "regional",
   },
   {
@@ -153,6 +174,7 @@ export const regionalResources: Resource[] = [
       "Inventario que mide qué tan completas y abiertas están las estadísticas oficiales de cada país.",
     topics: ["estadistica", "transparencia"],
     kind: "red",
+    origin: "agregada",
     countryId: "regional",
   },
   {
@@ -164,6 +186,7 @@ export const regionalResources: Resource[] = [
       "Materiales y cursos de la UNESCO sobre marcos legales de acceso a la información, ligados al indicador de los ODS sobre garantías legales.",
     topics: ["transparencia", "educacion"],
     kind: "red",
+    origin: "agregada",
     countryId: "regional",
   },
   {
@@ -175,6 +198,7 @@ export const regionalResources: Resource[] = [
       "Encuentro regional de datos abiertos. La edición de 2025 fue en La Paz y la de 2026 está convocada del 7 al 9 de octubre en Ciudad de Guatemala.",
     topics: ["transparencia"],
     kind: "red",
+    origin: "comunitaria",
     countryId: "regional",
   },
   {
@@ -186,6 +210,7 @@ export const regionalResources: Resource[] = [
       "Iniciativa para mejorar la transparencia y rendición de cuentas en los procesos de contratación pública. Incluye estandares de datos abiertos (OCDS) y herramientas para monitorear licitaciones y contratos.",
     topics: ["transparencia", "economia", "contrataciones", "gobierno", "presupuesto"],
     kind: "red",
+    origin: "comunitaria",
     countryId: "regional",
   },
   {
@@ -197,6 +222,7 @@ export const regionalResources: Resource[] = [
       "Estándar de datos abiertos para la transparencia y rendición de cuentas en los procesos de contratación pública.",
     topics: ["transparencia", "economia", "contrataciones", "gobierno", "presupuesto"],
     kind: "datos",
+    origin: "comunitaria",
     countryId: "regional",
   },
   {
@@ -208,6 +234,7 @@ export const regionalResources: Resource[] = [
       "Herramientas para consumir, implementar y utilizar el estándar de datos abiertos para la transparencia y rendición de cuentas en los procesos de contratación pública.",
     topics: ["transparencia", "economia", "contrataciones", "gobierno", "presupuesto"],
     kind: "datos",
+    origin: "comunitaria",
     countryId: "regional",
   },
   { 
@@ -219,6 +246,7 @@ export const regionalResources: Resource[] = [
       "Iniciativa global que ofrece recursos y formación en habilidades de datos para periodistas, activistas y ciudadanos interesados en el uso de datos abiertos.",
     topics: ["transparencia", "educacion"],
     kind: "red",
+    origin: "comunitaria",
     countryId: "regional",
   },
   

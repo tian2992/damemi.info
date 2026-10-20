@@ -63,6 +63,7 @@ export const country: Country = {
         "Sistema para presentar y seguir solicitudes de acceso a la información pública.",
       topics: ["transparencia"],
       kind: "solicitudes",
+      origin: "oficial",
     },
     {
       id: "do-digeig",
@@ -73,6 +74,7 @@ export const country: Country = {
         "Órgano de ética e integridad gubernamental y referencia institucional del acceso a la información.",
       topics: ["transparencia", "justicia"],
       kind: "solicitudes",
+      origin: "oficial",
     },
     {
       id: "do-datos",
@@ -82,6 +84,7 @@ export const country: Country = {
       description: "Catálogo nacional de datos abiertos.",
       topics: ["transparencia", "economia", "salud", "educacion"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "do-compras",
@@ -91,6 +94,7 @@ export const country: Country = {
       description: "Compras y contrataciones del Estado.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      origin: "oficial",
     },
     {
       id: "do-datos-compras",
@@ -100,6 +104,7 @@ export const country: Country = {
       description: "Procesos, ofertas y contratos en datos reutilizables.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      origin: "oficial",
     },
     {
       id: "do-transparencia",
@@ -110,6 +115,7 @@ export const country: Country = {
         "Transparencia activa: nómina, directorio, contratos y normas. No es el SAIP ni el catálogo de datos abiertos.",
       topics: ["transparencia", "presupuesto"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "do-one",
@@ -120,6 +126,7 @@ export const country: Country = {
         "Censos y estadísticas oficiales. Al revisar esta ficha el sitio respondía con un bloqueo y no se pudo leer el catálogo.",
       topics: ["estadistica", "economia"],
       kind: "estadistica",
+      origin: "oficial",
     },
   ],
   sources: [

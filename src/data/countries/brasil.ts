@@ -71,6 +71,7 @@ export const country: Country = {
         "Plataforma para presentar pedidos de acceso a la información al Poder Ejecutivo federal y para recurrir la respuesta. Reemplazó a Fala.BR en ese trámite el 30 de junio de 2026.",
       topics: ["transparencia"],
       kind: "solicitudes",
+      origin: "oficial",
     },
     {
       id: "br-dados",
@@ -81,6 +82,7 @@ export const country: Country = {
         "Catálogo federal de datos abiertos. El dominio datos.gov.br, en español, no existe: el oficial es dados.gov.br.",
       topics: ["transparencia", "economia", "salud", "educacion"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "br-portal",
@@ -91,6 +93,7 @@ export const country: Country = {
         "Gasto federal, transferencias, convenios, servidores y sanciones, con descarga de datos.",
       topics: ["presupuesto", "transparencia", "economia"],
       kind: "presupuesto",
+      origin: "oficial",
     },
     {
       id: "br-compras",
@@ -101,6 +104,7 @@ export const country: Country = {
         "Entrada a las contrataciones públicas federales y a los paneles de compras.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      origin: "oficial",
     },
     {
       id: "br-ibge",
@@ -111,6 +115,7 @@ export const country: Country = {
         "Censos, cuentas nacionales, precios y cartografía estadística.",
       topics: ["estadistica", "economia", "geoespacial"],
       kind: "estadistica",
+      origin: "oficial",
     },
     {
       id: "br-pncp",
@@ -121,6 +126,7 @@ export const country: Country = {
         "Editais y contratos publicados bajo la Lei 14.133 de contrataciones públicas.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      origin: "oficial",
     },
     {
       id: "br-tesouro",
@@ -130,6 +136,7 @@ export const country: Country = {
       description: "Biblioteca de datos de finanzas públicas federales.",
       topics: ["presupuesto", "economia"],
       kind: "presupuesto",
+      origin: "oficial",
     },
     {
       id: "br-compras-dados",
@@ -139,6 +146,7 @@ export const country: Country = {
       description: "Bases y API de las contrataciones del gobierno federal.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      origin: "oficial",
     },
   ],
   sources: [

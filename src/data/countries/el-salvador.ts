@@ -68,6 +68,7 @@ export const country: Country = {
         "Órgano garante y punto de orientación para presentar o reclamar una solicitud de acceso.",
       topics: ["transparencia", "justicia"],
       kind: "solicitudes",
+      origin: "oficial",
     },
     {
       id: "sv-comprasal",
@@ -78,6 +79,7 @@ export const country: Country = {
         "Divulgación de compras y contrataciones de la administración pública.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      origin: "oficial",
     },
     {
       id: "sv-bcr",
@@ -88,6 +90,7 @@ export const country: Country = {
         "Estadísticas económicas, financieras y de precios que el banco produce o compila.",
       topics: ["economia", "estadistica"],
       kind: "estadistica",
+      origin: "oficial",
     },
     {
       id: "sv-transparencia",
@@ -98,6 +101,7 @@ export const country: Country = {
         "Directorio de oficiales de información y publicación proactiva. No es un buzón único para todas las instituciones.",
       topics: ["transparencia"],
       kind: "solicitudes",
+      origin: "oficial",
     },
     {
       id: "sv-fiscal",
@@ -107,6 +111,7 @@ export const country: Country = {
       description: "Ingresos, gasto y deuda.",
       topics: ["presupuesto", "economia"],
       kind: "presupuesto",
+      origin: "oficial",
     },
     {
       id: "sv-onec",
@@ -117,6 +122,7 @@ export const country: Country = {
         "Encuestas y metadatos. DIGESTYC pasó a la ONEC del Banco Central en noviembre de 2022. Varias series del catálogo consultado llegan solo hasta 2020-2022.",
       topics: ["estadistica", "economia"],
       kind: "estadistica",
+      origin: "oficial",
     },
   ],
   sources: [

@@ -67,6 +67,7 @@ export const country: Country = {
         "Sistema de contrataciones y adquisiciones del Estado. Sirve para localizar concursos, proveedores y documentos de compra antes de pedir el expediente completo.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      origin: "oficial",
     },
     {
       id: "gt-datos-minfin",
@@ -77,6 +78,7 @@ export const country: Country = {
         "Portal de datos abiertos de la cartera de finanzas, con conjuntos ligados al presupuesto y a la gestión financiera.",
       topics: ["presupuesto", "economia", "transparencia"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "gt-ine",
@@ -87,6 +89,7 @@ export const country: Country = {
         "Censos, encuestas y indicadores demográficos y económicos. Es la primera parada para cifras oficiales.",
       topics: ["estadistica", "economia", "salud", "educacion"],
       kind: "estadistica",
+      origin: "oficial",
     },
     {
       id: "gt-minfin",
@@ -97,6 +100,7 @@ export const country: Country = {
         "Sitio institucional con información presupuestaria y enlaces a los sistemas de compra y transparencia fiscal.",
       topics: ["presupuesto", "economia"],
       kind: "presupuesto",
+      origin: "oficial",
     },
     {
       id: "gt-senacyt",
@@ -107,6 +111,7 @@ export const country: Country = {
         "Catálogo reutilizable de la SENACYT, con conjuntos de ejecución presupuestaria y acuerdos gubernativos.",
       topics: ["transparencia", "presupuesto"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "gt-presupuesto",
@@ -117,6 +122,7 @@ export const country: Country = {
         "Consulta de ingresos, formulación y ejecución desde SICOIN. El acceso ciudadano no es el login interno de SICOIN.",
       topics: ["presupuesto", "economia"],
       kind: "presupuesto",
+      origin: "oficial",
     },
   ],
   sources: [

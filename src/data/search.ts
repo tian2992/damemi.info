@@ -1,7 +1,7 @@
 import { allResources, placeName } from "./catalog";
 import { countries } from "./countries";
 import { guideEntries } from "./guide";
-import { kindLabel, lawStatusLabel, regionLabel, topicLabel } from "./labels";
+import { kindLabel, lawStatusLabel, originLabel, regionLabel, topicLabel } from "./labels";
 
 export interface SearchDoc {
   id: string;
@@ -37,10 +37,11 @@ export function searchDocuments(): SearchDoc[] {
       kind: "recurso",
       title: resource.name,
       href: `/datos#${resource.id}`,
-      kicker: `${placeName(resource.countryId)} · ${kindLabel(resource.kind)}`,
+      kicker: `${placeName(resource.countryId)} · ${kindLabel(resource.kind)} · ${originLabel(resource.origin)}`,
       text: [
         resource.description,
         resource.publisher,
+        originLabel(resource.origin),
         ...resource.topics.map((topic) => topicLabel(topic)),
       ].join(" "),
     });

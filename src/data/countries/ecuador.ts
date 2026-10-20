@@ -68,6 +68,7 @@ export const country: Country = {
         "Catálogo nacional de datos abiertos de instituciones públicas.",
       topics: ["transparencia", "economia", "ambiente"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "ec-compras",
@@ -78,6 +79,7 @@ export const country: Country = {
         "Sitio del Servicio Nacional de Contratación Pública. sercop.gob.ec redirige aquí.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      origin: "oficial",
     },
     {
       id: "ec-inec",
@@ -88,6 +90,7 @@ export const country: Country = {
         "Censos, encuestas y estadísticas económicas y sociales del INEC.",
       topics: ["estadistica", "economia", "salud", "educacion"],
       kind: "estadistica",
+      origin: "oficial",
     },
     {
       id: "ec-iedg",
@@ -97,6 +100,7 @@ export const country: Country = {
       description: "Visor, catálogo de metadatos y geoportales institucionales.",
       topics: ["geoespacial"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "ec-defensoria",
@@ -107,6 +111,7 @@ export const country: Country = {
         "Órgano de seguimiento de la LOTAIP y puerta de la gestión oficiosa cuando una institución no responde.",
       topics: ["transparencia", "justicia"],
       kind: "solicitudes",
+      origin: "oficial",
     },
   ],
   sources: [

@@ -71,6 +71,7 @@ export const country: Country = {
         "Catálogo nacional de datos abiertos, con conjuntos de entidades del orden nacional y territorial.",
       topics: ["transparencia", "economia", "salud", "educacion", "ambiente"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "co-dane",
@@ -81,6 +82,7 @@ export const country: Country = {
         "Censos, encuestas de hogares, precios, cuentas nacionales y geografía estadística.",
       topics: ["estadistica", "economia", "geoespacial"],
       kind: "estadistica",
+      origin: "oficial",
     },
     {
       id: "co-compra",
@@ -91,6 +93,7 @@ export const country: Country = {
         "Entrada a la contratación pública y al SECOP, donde se publican procesos y contratos.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      origin: "oficial",
     },
     {
       id: "co-transparencia",
@@ -101,6 +104,7 @@ export const country: Country = {
         "Referencia de política de acceso a la información y lucha contra la corrupción. No radica ella sola todas las solicitudes del Estado.",
       topics: ["transparencia", "justicia"],
       kind: "solicitudes",
+      origin: "oficial",
     },
     {
       id: "co-pte",
@@ -111,6 +115,7 @@ export const country: Country = {
         "Consulta ciudadana de la ejecución del presupuesto nacional.",
       topics: ["presupuesto", "economia"],
       kind: "presupuesto",
+      origin: "oficial",
     },
     {
       id: "co-secop",
@@ -120,6 +125,7 @@ export const country: Country = {
       description: "Buscador público de procesos del SECOP.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      origin: "oficial",
     },
     {
       id: "co-mapas",
@@ -129,6 +135,7 @@ export const country: Country = {
       description: "Mapas, imágenes y datos geoespaciales oficiales.",
       topics: ["geoespacial"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "co-ideam",
@@ -138,6 +145,7 @@ export const country: Country = {
       description: "Información hidrometeorológica y ambiental oficial.",
       topics: ["ambiente", "estadistica"],
       kind: "estadistica",
+      origin: "oficial",
     },
     {
       id: "co-sispro",
@@ -147,6 +155,7 @@ export const country: Country = {
       description: "Sistema integrado de información de la protección social, con indicadores de salud.",
       topics: ["salud", "estadistica"],
       kind: "estadistica",
+      origin: "oficial",
     },
     {
       id: "co-registraduria",
@@ -156,6 +165,7 @@ export const country: Country = {
       description: "Identificación y procesos electorales, incluidos resultados de votación.",
       topics: ["elecciones", "registros"],
       kind: "datos",
+      origin: "oficial",
     },
   ],
   sources: [

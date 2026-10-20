@@ -65,6 +65,7 @@ export const country: Country = {
         "Censos, precios, empleo y cuentas nacionales. Es el acervo estadístico oficial más estable del país.",
       topics: ["estadistica", "economia"],
       kind: "estadistica",
+      origin: "oficial",
     },
     {
       id: "bz-procurement",
@@ -74,6 +75,7 @@ export const country: Country = {
       description: "Licitaciones, avisos de adjudicación y documentos estándar de compra.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      origin: "oficial",
     },
     {
       id: "bz-mof",
@@ -83,6 +85,7 @@ export const country: Country = {
       description: "Estimaciones y discursos de presupuesto. Los documentos más visibles al revisar esta ficha eran del ejercicio 2024-2025.",
       topics: ["presupuesto", "economia"],
       kind: "presupuesto",
+      origin: "oficial",
     },
     {
       id: "bz-elections",
@@ -92,6 +95,7 @@ export const country: Country = {
       description: "Avisos, resultados y consulta de centros de votación.",
       topics: ["elecciones"],
       kind: "datos",
+      origin: "oficial",
     },
   ],
   sources: [

@@ -66,6 +66,7 @@ export const country: Country = {
       description: "Leyes, decretos y otras normas publicadas por el Estado.",
       topics: ["justicia", "registros", "transparencia"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "cu-onei",
@@ -76,6 +77,7 @@ export const country: Country = {
         "Anuario estadístico e indicadores oficiales. Usa este enlace en http: el certificado de la versión https estaba vencido.",
       topics: ["estadistica", "economia"],
       kind: "estadistica",
+      origin: "oficial",
     },
   ],
   sources: [

@@ -69,6 +69,7 @@ export const country: Country = {
         "Plataforma nacional de datos abiertos, con conjuntos publicados por entidades públicas.",
       topics: ["transparencia", "economia", "salud", "educacion"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "pe-gob",
@@ -79,6 +80,7 @@ export const country: Country = {
         "Directorio de entidades, trámites y normas. Desde aquí se llega al canal de cada institución y a la autoridad de transparencia.",
       topics: ["transparencia", "registros"],
       kind: "solicitudes",
+      origin: "oficial",
     },
     {
       id: "pe-inei",
@@ -89,6 +91,7 @@ export const country: Country = {
         "Censos, encuestas y series oficiales. El sitio histórico del INEI redirige a su ficha en gob.pe.",
       topics: ["estadistica", "economia", "geoespacial"],
       kind: "estadistica",
+      origin: "oficial",
     },
     {
       id: "pe-oece",
@@ -99,6 +102,7 @@ export const country: Country = {
         "Supervisión y difusión de la contratación pública. gob.pe redirige el antiguo atajo del OSCE a esta entidad.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      origin: "oficial",
     },
     {
       id: "pe-seace",
@@ -109,6 +113,7 @@ export const country: Country = {
         "Búsqueda pública, sin certificado, de procedimientos de selección, contratos y planes anuales. El operador en 2026 es el OECE.",
       topics: ["contrataciones", "presupuesto"],
       kind: "compras",
+      origin: "oficial",
     },
     {
       id: "pe-consulta",
@@ -119,6 +124,7 @@ export const country: Country = {
         "Gasto e ingreso diario de gobiernos nacional, regional y local: presupuesto, compromiso, devengado y pago.",
       topics: ["presupuesto", "economia"],
       kind: "presupuesto",
+      origin: "oficial",
     },
     {
       id: "pe-mef-datos",
@@ -129,6 +135,7 @@ export const country: Country = {
         "Bases abiertas de gasto, ingreso, inversión pública, compras y recursos humanos.",
       topics: ["presupuesto", "economia", "contrataciones"],
       kind: "datos",
+      origin: "oficial",
     },
     {
       id: "pe-antaip",
@@ -139,6 +146,7 @@ export const country: Country = {
         "Autoridad nacional de transparencia. Orienta y publica el modelo de solicitud. No recibe el pedido de otras entidades.",
       topics: ["transparencia", "justicia"],
       kind: "solicitudes",
+      origin: "oficial",
     },
   ],
   sources: [
