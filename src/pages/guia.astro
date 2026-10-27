@@ -9,13 +9,13 @@ const rows = regions.flatMap((region) => countries.filter((country) => country.r
 
 <Layout
   title="Cómo pedir información"
-  description="Guía práctica para redactar una petición de acceso a la información pública en América Latina: qué pedir, plazos, silencio y recursos."
+  description="Guía práctica para redactar una petición de acceso a la información pública en América Latina: qué pedir, plazos, silencio, recursos y cómo republicar la respuesta con una licencia abierta."
 >
   <article class="mx-auto max-w-3xl px-4 py-10">
     <p class="text-xs font-semibold uppercase tracking-[0.16em] text-gold">Guía</p>
     <h1 class="mt-2 font-serif text-4xl tracking-tight sm:text-5xl">Cómo hacer una petición de acceso a la información</h1>
     <p class="mt-4 text-lg leading-relaxed text-ink-soft">
-      El nombre cambia (solicitud, petición, pedido o derecho de petición) y el plazo también en cada región. La tarea es la misma: pedirle a una autoridad un documento que ya tiene, sin perder la razón en el intento.
+      El nombre cambia (solicitud, petición, pedido o derecho de petición) y el plazo también en cada región. La tarea es la misma: pedirle a una autoridad un documento que ya tiene, sin perder la razón en el intento. Cuando el archivo llega, la otra mitad es publicarlo de nuevo para que el trámite le sirva a alguien más.
     </p>
 
     <nav class="mt-6 rounded-md border border-line bg-card p-4 text-sm" aria-label="En esta guía">
@@ -28,6 +28,7 @@ const rows = regions.flatMap((region) => countries.filter((country) => country.r
         <li><a class="text-teal underline" href="#recursos">Si te niegan</a></li>
         <li><a class="text-teal underline" href="#datos-abiertos">Datos abiertos</a></li>
         <li><a class="text-teal underline" href="#errores">Errores frecuentes</a></li>
+        <li><a class="text-teal underline" href="#republicar">Republicar la respuesta</a></li>
       </ol>
     </nav>
 
@@ -70,7 +71,7 @@ const rows = regions.flatMap((region) => countries.filter((country) => country.r
         Pide documentos existentes. «Todos los contratos de obra de 2024 del ministerio, con anexos y montos» es una solicitud. «Explíquenme por qué la obra está mal» es una opinión. «Elabórenme un estudio de impacto» es un trabajo nuevo, y varias leyes permiten rechazarlo.
       </p>
       <p>
-        Si el expediente mezcla gestión pública y datos personales de terceros, pide la <strong>versión pública</strong>: que tachen teléfonos, domicilios o salud, y entreguen el resto. La reserva de un dato no cierra el documento entero.
+        Si el expediente mezcla gestión pública y datos personales de terceros, pide la <strong id="version-publica">versión pública</strong>: que tachen teléfonos, domicilios o salud, y entreguen el resto. La reserva de un dato no cierra el documento entero.
       </p>
 
       <h2 id="plazos">Plazos, días hábiles y silencio</h2>
@@ -130,12 +131,12 @@ const rows = regions.flatMap((region) => countries.filter((country) => country.r
         Pide por la ley de acceso cuando el portal no tiene el anexo, la serie está cortada, o la autoridad tiene el registro y no lo publica. No pidas por la ley de acceso el censo que el instituto de estadística ya dejó en su sitio.
       </p>
       <p>
-        La <a href="https://opendatacharter.org/">Carta Internacional de Datos Abiertos</a> y la <a href="https://www.oas.org/ext/es/democracia/acceso-a-la-informacion-publica">Ley Modelo interamericana 2.0</a> son estándares regionales, no leyes de tu país. Sirven para argumentar, no para reemplazar el artículo local.
+        La <a href="https://opendatacharter.org/">Carta Internacional de Datos Abiertos</a> y la <a href="https://www.oas.org/ext/es/democracia/acceso-a-la-informacion-publica">Ley Modelo interamericana 2.0</a> son estándares regionales, no leyes de tu país. Sirven para argumentar, no para reemplazar el artículo local. Si igual tuviste que pedir el archivo, más abajo está <a href="#republicar">cómo republicarlo</a>.
       </p>
 
       <h2 id="errores">Errores que retrasan la respuesta</h2>
       <ul>
-        <li>Pedir «toda la información sobre la corrupción».</li>
+        <li>Pedir «toda la información sobre la corrupción / compras / tráfico, <etc class=""></etc>».</li>
         <li>Mandar la solicitud a la institución equivocada y no guardar el rechazo.</li>
         <li>Olvidar el periodo. «Los contratos» son todos los contratos desde que existe el organismo.</li>
         <li>Explicar de más: el motivo no mejora el derecho y a veces lo complica.</li>
@@ -144,6 +145,162 @@ const rows = regions.flatMap((region) => countries.filter((country) => country.r
       </ul>
       <p>
         Cuando la carta esté clara, <a href="/plantilla">ármala con la ley del país</a> y preséntala por el canal de la ficha. Este sitio no la envía.
+      </p>
+
+      <h2 id="republicar">Republicar y reutilizar la respuesta</h2>
+      <p>
+        Una solicitud que se queda en tu correo sirve una vez. El archivo que la autoridad mandó, la tabla que limpiaste y la nota donde explicas qué falta son el producto del pedido: publícalos para que la siguiente persona no empiece de cero. Reutilizar con ética es devolver el dato al mismo público que pagó por producirlo, con la procedencia a la vista y sin exponer a quien no tenía que aparecer.
+      </p>
+
+      <h3 id="tres-capas">Tres capas, tres tratos</h3>
+      <p>Separa lo que recibiste de lo que tú hiciste. Cada capa se publica según lo que realmente es.</p>
+      <ul>
+        <li>
+          <strong>La entrega oficial.</strong> El PDF, el CSV o el oficio tal como llegó, con autoridad, fecha y folio. En muchos países de la región la ley, el decreto y el acto administrativo quedan fuera del derecho de autor: se pueden copiar. Eso no te vuelve autor del archivo. Márcalo como documento oficial y cita la fuente. Una base armada por el organismo, una foto o un estudio de consultora que viaja dentro del expediente pueden ser otra cosa: mira la norma de autor de tu país y los términos del portal antes de estamparle una licencia tuya.
+        </li>
+        <li>
+          <strong>Lo que tú añadiste.</strong> La tabla normalizada, el diccionario de campos, la metodología, el texto que cuenta qué pediste y qué tacharon. Ahí sí hay una obra, y ahí eliges la licencia.
+        </li>
+        <li>
+          <strong>El código.</strong> El programa que convierte el Excel imposible en un CSV, un sitio Web o un app. También es tuyo, y se licencia aparte.
+        </li>
+      </ul>
+      <p>
+        Los hechos y las cifras se pueden citar. El derecho, cuando existe, cubre la expresión: la redacción, la selección sistemática de una base, el programa. El copyleft agarra esa expresión que añadiste. Un CSV oficial renombrado sigue siendo el documento de la autoridad.
+      </p>
+
+      <h3 id="que-dejar-fuera">Qué dejar fuera</h3>
+      <p>Que te lo hayan entregado no alcanza para amplificarlo.</p>
+      <ul>
+        <li>
+          <strong>Datos personales.</strong> Teléfonos, domicilios, salud, identidad o datos de menores se quedan fuera. Publica la <a href="#version-publica">versión pública</a>, describe que tachaste, y censura la información personal sensible. Si la autoridad falló al reservar, no deberias de repetirlo en el archivo que subes.
+        </li>
+        <li>
+          <strong>Obra de terceros.</strong> Publica el acto administrativo y describe el anexo ajeno. Una foto, un plano o un informe de consultora pueden seguir siendo de quien los hizo. Revisa la legislación de tu país y los términos del portal antes de ponerle una licencia tuya.
+        </li>
+        <li>
+          <strong>Celdas que creaste o calculaste.</strong> Conserva el original intacto. Si interpretas, unificas unidades o quitas filas, anótalo al lado de la fuente. Quien llegue después tiene que poder distinguir donde inicia tu trabajo y como lo obtuviste.
+        </li>
+      </ul>
+
+      <h3 id="como-publicar">Cómo dejarlo listo para otra persona</h3>
+      <ol>
+        <li>Guarda el original sin tocarlo. El nombre puede llevar autoridad, año y folio.</li>
+        <li>Publica también el texto de la solicitud y, si hubo, la negativa parcial. Sin eso nadie puede ver qué falta.</li>
+        <li>Si limpias, sube las dos versiones y lista cada cambio: columnas renombradas, filas quitadas, unidades unificadas.</li>
+        <li>Prefiere un formato abierto: CSV, JSON, GeoJSON u ODS. Si solo llegó un escaneo, reporta si hiciste OCR.</li>
+        <li>Junto a los archivos, una nota breve: quién entregó el dato, fecha, folio o enlace, qué quitaste, qué licencia lleva cada capa y a quién escribir si hay un error.</li>
+        <li>Súbelo donde el archivo se descargue completo, sin cuenta y sin fecha de caducidad: un repositorio, un portal de datos o un archivo cívico comunitario. El <a href="https://archive.org/">Archivo de Internet (una biblioteca digital)</a>, o <a href="https://es.wikisource.org/wiki/Portada">Wikisource, un proyecto de la Fundación Wikimedia</a> pueden ser nuevos hogares ideales para lo que encontraste y no cuestan nada.</li>
+      </ol>
+      <p>
+        Atribuye en una línea que se pueda copiar: «Ministerio X, respuesta al folio N, 12 de marzo de 2026. Estructura y nota: Nombre del proyecto, licencia CC BY-SA 4.0.» Citar corresponde aunque la licencia no lo exija.
+      </p>
+
+      <h3 id="licencias">Panorama de licencias</h3>
+      <p>
+        Una licencia abierta le dice a la siguiente persona qué puede hacer con <strong>tu capa</strong>. Sin ese texto, quien encuentre la tabla tiene que adivinar y casi siempre no sabe que hacer. Estas son las que importan al republicar el producto de una solicitud. Las opciones resaltadas son copyleft: licencias donde la mejora tiene que seguir tan abierta como el original.
+      </p>
+
+      <div class="not-prose mt-6 overflow-x-auto">
+        <table class="w-full min-w-[720px] border-collapse text-left text-sm">
+          <caption class="mb-2 text-left text-xs font-semibold uppercase tracking-wider text-muted">
+            Licencias para republicar lo que pediste
+          </caption>
+          <thead class="border-b border-ink text-xs uppercase tracking-wider text-muted">
+            <tr>
+              <th class="py-2 pr-3 font-semibold" scope="col">Licencia</th>
+              <th class="py-2 pr-3 font-semibold" scope="col">Sirve para</th>
+              <th class="py-2 pr-3 font-semibold" scope="col">Condición</th>
+              <th class="py-2 font-semibold" scope="col">Copyleft</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-line">
+              <th class="py-2 pr-3 font-medium" scope="row">
+                <a class="underline decoration-line underline-offset-2" href="https://creativecommons.org/publicdomain/zero/1.0/deed.es">CC0 1.0</a>
+                {" y "}
+                <a class="underline decoration-line underline-offset-2" href="https://opendatacommons.org/licenses/pddl/summary/">PDDL</a>
+              </th>
+              <td class="py-2 pr-3">Dejar tu capa sin restricciones, en la práctica como el dominio público.</td>
+              <td class="py-2 pr-3">Ninguna. Citar queda como cortesía. Este sitio usa CC0.</td>
+              <td class="py-2 text-muted">No</td>
+            </tr>
+            <tr class="border-b border-line">
+              <th class="py-2 pr-3 font-medium" scope="row">
+                <a class="underline decoration-line underline-offset-2" href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a>
+                {" y "}
+                <a class="underline decoration-line underline-offset-2" href="https://opendatacommons.org/licenses/by/summary/">ODC-BY</a>
+              </th>
+              <td class="py-2 pr-3">Informes, fotos, notas y bases, cuando basta con el crédito.</td>
+              <td class="py-2 pr-3">Citar autor, fuente y licencia. La versión derivada puede llevar otra licencia.</td>
+              <td class="py-2 text-muted">No</td>
+            </tr>
+            <tr class="border-b border-line bg-card">
+              <th class="py-2 pr-3 font-medium" scope="row">
+                <a class="underline decoration-line underline-offset-2" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a>
+              </th>
+              <td class="py-2 pr-3">Metodología, fichas, visualizaciones y el texto que acompaña el dato.</td>
+              <td class="py-2 pr-3">Citar, y publicar la versión derivada también bajo BY-SA.</td>
+              <td class="py-2 font-semibold text-teal">Sí</td>
+            </tr>
+            <tr class="border-b border-line bg-card">
+              <th class="py-2 pr-3 font-medium" scope="row">
+                <a class="underline decoration-line underline-offset-2" href="https://opendatacommons.org/licenses/odbl/summary/">ODbL 1.0</a>
+              </th>
+              <td class="py-2 pr-3">La base de datos que estructuraste. Es la licencia de OpenStreetMap.</td>
+              <td class="py-2 pr-3">Citar. Compartir igual obliga sobre la base derivada. Un gráfico o una cifra se atribuyen y no heredan la ODbL.</td>
+              <td class="py-2 font-semibold text-teal">Sí</td>
+            </tr>
+            <tr class="border-b border-line bg-card">
+              <th class="py-2 pr-3 font-medium" scope="row">
+                <a class="underline decoration-line underline-offset-2" href="https://www.gnu.org/licenses/gpl-3.0.html">GPL 3.0</a>
+                {" y "}
+                <a class="underline decoration-line underline-offset-2" href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL 3.0</a>
+              </th>
+              <td class="py-2 pr-3">Los programas que limpian o publican el dato.</td>
+              <td class="py-2 pr-3">Quien distribuye una versión modificada entrega el código bajo la misma licencia. La AGPL cubre también el programa cuando corre como servicio en red.</td>
+              <td class="py-2 font-semibold text-teal">Sí</td>
+            </tr>
+            <tr class="border-b border-line">
+              <th class="py-2 pr-3 font-medium" scope="row">CC BY-NC, CC BY-ND y sus combinaciones</th>
+              <td class="py-2 pr-3">Obras con las que se quiere vetar el uso comercial o la adaptación.</td>
+              <td class="py-2 pr-3">Esas cláusulas impiden cobrar por un servicio, traducir, corregir o partir la tabla.</td>
+              <td class="py-2 text-muted">No</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 id="copyleft">El copyleft es re-compartir</h3>
+      <p>
+        Copyleft, o compartir igual, es la condición que viaja con la obra. Puedes usarla, adaptarla y republicarla, con o sin fin de lucro. Si distribuyes una versión derivada, la ofreces bajo la misma licencia, o bajo una compatible. La libertad llega a la tercera persona, no se corta en el primer intermediario.
+      </p>
+      <p>
+        Encaja con el producto de una solicitud. Pediste el dato para abrirlo. La versión que limpiaste es la que otra gente va a querer usar. Con copyleft, esa versión sigue descargable en los mismos términos: quien la mejore y la vuelva a publicar tiene que dejarla igual de abierta. Quien solo consulta, cita un monto o arma un gráfico atribuye la fuente, y su artículo queda bajo la licencia que esa persona elija. Si en cambio adapta un texto o una visualización que ya estaban en CC BY-SA, esa adaptación sigue en CC BY-SA. En una base ODbL, compartir igual obliga cuando se publica una base derivada. Un mapa o una cifra calculada con la base se atribuyen, y llevan la licencia que su autor elija.
+      </p>
+      <p>Si deseas multiplicar los resultados de tu trabajo, considera estas licencias:</p>
+      <ul>
+        <li>
+          <strong>Textos, metodología y visualizaciones:</strong> <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Creative Commons Atribución-CompartirIgual 4.0</a> (CC BY-SA). Es la licencia del texto de Wikipedia. Quien adapte tu nota te atribuye y mantiene el compartir igual.
+        </li>
+        <li>
+          <strong>La base que estructuraste:</strong> <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License 1.0</a> (ODbL). Atribuyes el documento oficial del que salió y licencias en ODbL la base que armaste.
+        </li>
+        <li>
+          <strong>El programa:</strong> <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU GPL 3.0 o posterior</a>. Si corre como servicio y quieres que esa mejora también se comparta, usa la <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL 3.0</a>.
+        </li>
+      </ul>
+      <p>
+        Las cláusulas no comercial (NC) y sin obras derivadas (ND) son otra familia. Dejan fuera a un medio, a una cooperativa o a quien traduce y corrige la tabla. Para el producto de un pedido de información pública, estorban. El <a href="https://creativecommons.org/chooser/">selector de Creative Commons</a> arma el aviso una vez que elegiste; para una base, el aviso de la ODbL va en la nota que acompaña los archivos.
+      </p>
+      <p>
+        CC0 y el dominio público dejan que el archivo entre en cualquier catálogo y se mezcle con cualquier otra base. Varios portales oficiales de la región publican así, o con CC BY 4.0. Esa vía sirve cuando la prioridad es que el conjunto circule sin condiciones. El copyleft sirve cuando la prioridad es que la versión trabajada siga abierta para quien venga después.
+      </p>
+      <p>
+        La compatibilidad cabe en una regla. Lo que entra con copyleft sale con copyleft. Puedes tomar un documento oficial o una base en CC0 y publicar tu derivada en CC BY-SA u ODbL. Una base ODbL o un texto BY-SA se redistribuye con esa misma licencia. Cuando mezcles fuentes, la licencia de cada capa se respeta por separado, y la más exigente entre las capas que sí son obras derivadas manda sobre el resultado.
+      </p>
+      <p>
+        Esto no es asesoría legal. Confirma en la ley de derecho de autor y en el portal oficial si el archivo que te entregaron ya es de uso libre. Si lo es, dilo en la nota y reserva el copyleft para la estructura, el texto y el código que sí escribiste.
       </p>
     </div>
   </article>

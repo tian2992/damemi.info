@@ -53,4 +53,10 @@ export const guideEntries: GuideEntry[] = [
     summary:
       "Pedir una opinión, un informe nuevo o «todo sobre un tema» empuja a la autoridad a devolverte la solicitud.",
   },
+  {
+    id: "republicar",
+    title: "Republicar y reutilizar la respuesta",
+    summary:
+      "Cómo volver a publicar lo que entregó la autoridad: documento oficial, base limpia y código. Licencias abiertas, con el copyleft en el centro (CC BY-SA, ODbL y GPL) para que la mejora siga siendo reutilizable.",
+  },
 ];

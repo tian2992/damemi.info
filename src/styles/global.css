@@ -124,7 +124,15 @@ footer :focus-visible {
 
 .prose-guide ul,
 .prose-guide ol {
-  padding-left: 1.2rem;
+  padding-left: 1.4rem;
+}
+
+.prose-guide ul {
+  list-style: disc;
+}
+
+.prose-guide ol {
+  list-style: decimal;
 }
 
 .prose-guide li + li {
